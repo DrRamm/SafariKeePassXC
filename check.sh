@@ -46,7 +46,7 @@ path = "SafariKeePassXC-1.2.3.dmg"
 if not os.path.exists(path):
     try:
         with urllib.request.urlopen(
-                "https://griesslehner.at/downloads/SafariKeePassXC-1.2.3.dmg", 30) as r:
+                "https://griesslehner.at/downloads/SafariKeePassXC-1.2.3.dmg", timeout=30) as r:
             open(path, "wb").write(r.read())
     except OSError as error:
         print("skip  DMG digest (unavailable: %s); README matches the published "
@@ -54,7 +54,19 @@ if not os.path.exists(path):
         raise SystemExit(0)
 digest = hashlib.sha256(open(path, "rb").read()).hexdigest()
 assert digest == published, "%s != %s" % (digest, published)
-print("ok   README references the DMG checksum %s (recomputed from the DMG)" % digest)
+# The committed DMG and the committed .sha256 come from the same commit, so the comparison above is
+# only self-consistent; cross-check against the published release asset whenever it is reachable.
+source = "committed files only (published asset not fetched)"
+try:
+    with urllib.request.urlopen(
+            "https://github.com/DrRamm/SafariKeePassXC/releases/download/"
+            "v1.2.3/SafariKeePassXC-1.2.3.dmg", timeout=30) as remote_response:
+        remote = hashlib.sha256(remote_response.read()).hexdigest()
+    assert remote == published, "published asset %s != %s" % (remote, published)
+    source = "committed files and the published fork release asset"
+except OSError as error:
+    print("     note: published asset not fetched (%s), provenance is local-only" % error)
+print("ok   README references the DMG checksum %s (verified against %s)" % (published, source))
 PY
 
 # 4 - popup.js clears the clipboard entries after both clipboard writes.
