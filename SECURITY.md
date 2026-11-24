@@ -23,11 +23,23 @@ Security-relevant areas include:
 ## Known Design Decisions
 
 - **The host app is not sandboxed.** It has to reach KeePassXC's Unix socket, which a sandboxed app cannot
-  do. The Safari extension itself stays sandboxed and only talks to the host app through the token-
-  authenticated bridge socket. A compromise of the host app therefore has the full privileges of the user.
+  do. `ENABLE_APP_SANDBOX = NO` is set for both host-app configurations in
+  `SafariKeePassXC.xcodeproj/project.pbxproj` (lines 611 and 653); the two extension-target configurations
+  use `ENABLE_APP_SANDBOX = YES` (lines 392 and 438). A compromise of the host app therefore has the full
+  privileges of the user.
+- **The extension ↔ host app relay is plaintext, length-prefixed JSON.** `HostBridgeConnection.swift`
+  frames every message as a `UInt32` little-endian byte length followed by the raw UTF-8 JSON body
+  (`BridgeServer.swift` uses the same wire format). These frames are *not* encrypted; the only
+  authentication on this link is the random bridge token from the data protection keychain that every
+  connection must present first (`BridgeToken.swift`). The socket is a local, user-owned Unix domain
+  socket and the frames never leave the Mac.
+- **The KeePassXC leg stays encrypted.** Host app ↔ KeePassXC uses the KeePassXC-Browser protocol with
+  NaCl/libsodium `crypto_box` encryption (`KeePassXCClient.swift`, `KeePassXCCrypto.swift`).
 - **Credentials are plaintext in process memory and on the local sockets.** Autofill needs the clear-text
-  password in the content script. The sockets are local, owned by the user, and the bridge requires the
-  token; the KeePassXC leg uses KeePassXC-Browser's encryption.
+  password in the content script, so the password, the login and the TOTP code also exist as ordinary
+  cleartext JavaScript/`String` values in the extension and host-app processes. The sockets are local,
+  owned by the user, and the bridge requires the token; the KeePassXC leg uses KeePassXC-Browser's
+  encryption.
 - **Autofill runs in the top frame only** (`all_frames` is disabled), so embedded cross-origin frames
   can't receive credentials.
 - **Socket timeouts** bound every connect, send and receive, so a hung peer can't block the app forever.

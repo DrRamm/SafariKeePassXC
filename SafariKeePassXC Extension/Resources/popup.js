@@ -6,6 +6,7 @@
 // Passwords are never rendered here.
 
 let requestId = 0;
+let renderedEntries = [];
 
 const statusView = document.getElementById("status");
 const entriesSection = document.getElementById("entries-section");
@@ -60,11 +61,28 @@ function showResult(text) {
     resultView.textContent = text;
 }
 
+// Once a clipboard write has settled, drop the cleartext copies the popup is
+// still holding on to (SECURITY.md: credentials are plaintext in process memory).
+// The rendered list is cleared too, because its click closures keep those same
+// entry objects alive for as long as the popup is open.
+function clearClipboardEntries(response) {
+    for (const result of [response?.result, { entries: renderedEntries }]) {
+        if (!result) continue;
+        if ("password" in result) result.password = null;
+        for (const entry of result.entries ?? []) {
+            if ("password" in entry) entry.password = null;
+            if ("totp" in entry) entry.totp = null;
+        }
+    }
+    renderedEntries = [];
+}
+
 // -- Entries --
 
 function renderEntries(entries) {
     entriesList.replaceChildren();
     entriesSection.hidden = !entries.length;
+    renderedEntries = entries;
     if (!entries.length) return;
 
     for (const entry of entries) {
@@ -183,6 +201,8 @@ async function generatePassword() {
     } catch {
         showResult(t("clipboard_failed"));
     }
+    clearClipboardEntries(response);
+    await loadEntries();
 }
 
 async function copyTotp() {
@@ -203,12 +223,16 @@ async function copyTotp() {
         showResult(t("totp_no_entry"));
         return;
     }
+    const totp = entry.totp;
+    const name = entry.name;
     try {
-        await navigator.clipboard.writeText(entry.totp);
-        showResult(`${entry.name}: ${entry.totp}\n\n` + t("copied_to_clipboard"));
+        await navigator.clipboard.writeText(totp);
+        showResult(`${name}: ${totp}\n\n` + t("copied_to_clipboard"));
     } catch {
-        showResult(`${entry.name}: ${entry.totp}`);
+        showResult(`${name}: ${totp}`);
     }
+    clearClipboardEntries(response);
+    await loadEntries();
 }
 
 // -- Startup --

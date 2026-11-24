@@ -40,6 +40,24 @@ Safari Extension (sandboxed)  <--Unix socket-->  Host App (BridgeServer)  <--Uni
 
 - [SafariKeePassXC Official Website](https://www.griesslehner.at/safarikeepassxc.html) 
 
+Each release also attaches the built disk image and its SHA-256 checksum file directly to the
+[GitHub Release](https://github.com/DrRamm/SafariKeePassXC/releases/tag/v1.2.3) record for that tag, so the
+artifact can be matched to the source without trusting the mutable website URLs. The two `v1.2.3` assets
+currently attached to a release live on this fork's `v1.2.3` tag; the upstream tag of the same name is
+still asset-less. Verify after download:
+
+```sh
+shasum -a 256 -c SafariKeePassXC-1.2.3.dmg.sha256
+```
+
+| Release | Asset | SHA-256 |
+| --- | --- | --- |
+| `v1.2.3` (`db08bc4d61a2a2b64d778d26cb6e4138bad3a825`) | `SafariKeePassXC-1.2.3.dmg` | `7dc6556e740bd865bf04cf316f8a9995530343f06dfe79d9af38aa0ed41f755a` |
+| `1.2.4` (pending, next release) | not yet published | added when the artifact is published |
+
+The manifest already declares `1.2.4`, but no `v1.2.4` tag, release or disk image exists yet: the
+top-frame (`all_frames: false`) fix is on `main` and is *pending* the next published release, not shipped.
+
 ## Building
 
 1. Open `SafariKeePassXC.xcodeproj` in Xcode.
