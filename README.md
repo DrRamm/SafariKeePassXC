@@ -40,6 +40,18 @@ Safari Extension (sandboxed)  <--Unix socket-->  Host App (BridgeServer)  <--Uni
 
 - [SafariKeePassXC Official Website](https://www.griesslehner.at/safarikeepassxc.html) 
 
+Each release also attaches the built disk image and its SHA-256 checksum file directly to the
+[GitHub Release](https://github.com/mgriesslehner/SafariKeePassXC/releases) record for that tag, so the
+artifact can be matched to the source without trusting the mutable website URLs. Verify after download:
+
+```sh
+shasum -a 256 -c SafariKeePassXC-1.2.3.dmg.sha256
+```
+
+| Release | Asset | SHA-256 |
+| --- | --- | --- |
+| `v1.2.3` (`db08bc4d61a2a2b64d778d26cb6e4138bad3a825`) | `SafariKeePassXC-1.2.3.dmg` | `7dc6556e740bd865bf04cf316f8a9995530343f06dfe79d9af38aa0ed41f755a` |
+
 ## Building
 
 1. Open `SafariKeePassXC.xcodeproj` in Xcode.
