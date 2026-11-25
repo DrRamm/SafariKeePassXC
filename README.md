@@ -290,7 +290,8 @@ How to create them:
 
 2. **App Store Connect API key** — in
    [App Store Connect → Users and Access → Integrations](https://appstoreconnect.apple.com/access/integrations/api)
-   create a key with the *App Manager* role. Download the `.p8` (it can only be downloaded once) and
+   request API access if prompted, then create a key with the *Admin* role (needed so Xcode can
+   manage signing certificates and profiles). Download the `.p8` (it can only be downloaded once) and
    copy the Key ID and Issuer ID.
 
 3. The App IDs `dev.kotsareu.SafariKeePassXC` and
