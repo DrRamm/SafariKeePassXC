@@ -71,16 +71,37 @@
 
     // -- Credential autofill --
 
+    function findUsernameOnlyField() {
+        // Two-step logins (x.com, Google, …) show the username field before
+        // the password field exists, so the popup must be able to fill just
+        // the login. Require either an explicit autocomplete hint or a real
+        // form, so a stray e-mail input elsewhere on the page is not touched.
+        const selector = 'input[autocomplete="username"], '
+            + 'input[type="email"], '
+            + 'input[name="username" i], input[name="email" i], '
+            + 'input[name="login" i], input[id="username" i], input[id="email" i]';
+        return [...document.querySelectorAll(selector)]
+            .filter((input) => input.type !== "password" && input.type !== "hidden")
+            .filter(isVisible)
+            .find((input) => input.autocomplete === "username" || input.form !== null)
+            ?? null;
+    }
+
     function findLoginFields() {
         const passwordField = [...document.querySelectorAll('input[type="password"]')].find(isVisible);
-        if (!passwordField) return null;
-        const usernameField = findUsernameField(passwordField, passwordField.form ?? document);
-        return { usernameField, passwordField };
+        if (passwordField) {
+            const usernameField = findUsernameField(passwordField, passwordField.form ?? document);
+            return { usernameField, passwordField };
+        }
+        const usernameField = findUsernameOnlyField();
+        if (usernameField) return { usernameField, passwordField: null };
+        return null;
     }
 
     async function attemptAutofill() {
         const fields = findLoginFields();
-        if (!fields || filledFields.has(fields.passwordField)) return;
+        if (!fields || !fields.passwordField) return;
+        if (filledFields.has(fields.passwordField)) return;
         if (fields.passwordField.value) return;
 
         const entries = await fetchLogins();
@@ -270,12 +291,14 @@
     browser.runtime.onMessage.addListener((request) => {
         if (request?.action !== "fill-credentials") return;
         const fields = findLoginFields();
-        if (!fields) return;
+        if (!fields) return Promise.resolve({ success: false, error: "no_form" });
         if (fields.usernameField) {
             setValue(fields.usernameField, request.login ?? "");
         }
-        setValue(fields.passwordField, request.password ?? "");
-        filledFields.add(fields.passwordField);
+        if (fields.passwordField) {
+            setValue(fields.passwordField, request.password ?? "");
+            filledFields.add(fields.passwordField);
+        }
         return Promise.resolve({ success: true });
     });
 

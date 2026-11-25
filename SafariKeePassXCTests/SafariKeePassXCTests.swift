@@ -429,6 +429,122 @@ private struct EchoListener {
     }
 }
 
+// MARK: - PasskeyRequest
+
+@Suite("PasskeyRequest") struct PasskeyRequestTests {
+
+    private let challenge = "AAAAAAAAAAAAAAAAAAAAAA" // 16 zero bytes, base64url
+
+    private func registerPublicKey(
+        challenge: String? = nil,
+        userId: String = "AQI"
+    ) -> [String: Any] {
+        [
+            "challenge": challenge ?? self.challenge,
+            "rp": ["id": "example.com", "name": "Example"],
+            "user": ["id": userId, "name": "alice", "displayName": "Alice"],
+            "pubKeyCredParams": [["type": "public-key", "alg": -7]],
+        ]
+    }
+
+    @Test func validRegistrationPasses() throws {
+        try PasskeyRequest.validate(
+            action: "passkeys-register",
+            origin: "https://login.example.com",
+            publicKey: registerPublicKey()
+        )
+    }
+
+    @Test func validAuthenticationPasses() throws {
+        try PasskeyRequest.validate(
+            action: "passkeys-get",
+            origin: "https://login.example.com",
+            publicKey: [
+                "challenge": challenge,
+                "rpId": "example.com",
+                "allowCredentials": [["id": "AQI", "type": "public-key"]],
+            ]
+        )
+    }
+
+    @Test func unknownActionIsRejected() {
+        #expect(throws: PasskeyRequest.ValidationError.self) {
+            try PasskeyRequest.validate(
+                action: "get-logins",
+                origin: "https://login.example.com",
+                publicKey: registerPublicKey()
+            )
+        }
+    }
+
+    @Test func nonHTTPSOriginIsRejected() {
+        for origin in [
+            "http://login.example.com",
+            "file:///tmp/test.html",
+            "https://user:pass@login.example.com",
+            "https:///nohost",
+            "not a url",
+        ] {
+            #expect(throws: PasskeyRequest.ValidationError.self) {
+                try PasskeyRequest.validate(
+                    action: "passkeys-register",
+                    origin: origin,
+                    publicKey: registerPublicKey()
+                )
+            }
+        }
+    }
+
+    @Test func shortChallengeIsRejected() {
+        #expect(throws: PasskeyRequest.ValidationError.self) {
+            try PasskeyRequest.validate(
+                action: "passkeys-register",
+                origin: "https://login.example.com",
+                publicKey: registerPublicKey(challenge: "AAAA")
+            )
+        }
+    }
+
+    @Test func emptyUserIDIsRejected() {
+        #expect(throws: PasskeyRequest.ValidationError.self) {
+            try PasskeyRequest.validate(
+                action: "passkeys-register",
+                origin: "https://login.example.com",
+                publicKey: registerPublicKey(userId: "")
+            )
+        }
+    }
+
+    @Test func emptyAlgorithmListIsRejected() {
+        var publicKey = registerPublicKey()
+        publicKey["pubKeyCredParams"] = []
+        #expect(throws: PasskeyRequest.ValidationError.self) {
+            try PasskeyRequest.validate(
+                action: "passkeys-register",
+                origin: "https://login.example.com",
+                publicKey: publicKey
+            )
+        }
+    }
+
+    @Test func emptyAuthenticationRpIDIsRejected() {
+        #expect(throws: PasskeyRequest.ValidationError.self) {
+            try PasskeyRequest.validate(
+                action: "passkeys-get",
+                origin: "https://login.example.com",
+                publicKey: ["challenge": challenge, "rpId": ""]
+            )
+        }
+    }
+
+    @Test func base64URLByteCountHandlesPaddingAndInvalidInput() {
+        #expect(PasskeyRequest.base64URLByteCount(challenge) == 16)
+        #expect(PasskeyRequest.base64URLByteCount("AQI") == 2)
+        #expect(PasskeyRequest.base64URLByteCount("") == nil)
+        #expect(PasskeyRequest.base64URLByteCount("not base64!") == nil)
+    }
+}
+
 // MARK: - Data hex extensions
 
 @Suite("Data hex extensions") struct DataHexExtensionTests {

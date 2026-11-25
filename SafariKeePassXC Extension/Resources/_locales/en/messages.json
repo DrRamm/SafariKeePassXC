@@ -62,6 +62,10 @@
         "message": "No login form found on this page.",
         "description": "Shown when filling failed because no form was found."
     },
+    "fill_no_access": {
+        "message": "The extension has no access to this page. Allow access to this website in Safari settings and reload the page.",
+        "description": "Shown when the content script is not injected."
+    },
     "status_associating": {
         "message": "Connecting… (please confirm the dialog in KeePassXC)",
         "description": "Shown while association is in progress."
@@ -133,5 +137,43 @@
     "save_group_default": {
         "message": "Default group (KeePassXC-Browser Passwords)",
         "description": "Dropdown option for KeePassXC's default browser group."
+    },
+    "passkeys_toggle_label": {
+        "message": "Use KeePassXC for passkeys",
+        "description": "Checkbox that routes WebAuthn passkey requests to KeePassXC."
+    },
+    "passkeys_toggle_hint": {
+        "message": "Applies after reloading the page. When off, Safari handles passkeys.",
+        "description": "Explains when the passkey setting takes effect."
+    },
+    "passkeys_reload_hint": {
+        "message": "Reload the page for the change to take effect.",
+        "description": "Shown right after the passkey setting changed."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys are unavailable: the SafariKeePassXC app is not running.",
+        "description": "Passkey diagnostics when the host app is stopped."
+    },
+    "passkeys_not_associated": {
+        "message": "Connect to KeePassXC to use passkeys.",
+        "description": "Passkey diagnostics when there is no KeePassXC association."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys need KeePassXC 2.7.7 or newer (found $VERSION$).",
+        "description": "Passkey diagnostics for an incompatible KeePassXC version.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "The passkeys bridge is not active on this page. Reload the page and make sure the extension has access to this website.",
+        "description": "Shown when the page-world passkey adapter did not install."
+    },
+    "passkeys_fallback_reason": {
+        "message": "The last passkey request was handled by Safari instead of KeePassXC ($REASON$).",
+        "description": "Shown when the page adapter deliberately fell back to Safari.",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
     }
 }

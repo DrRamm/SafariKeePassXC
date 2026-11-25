@@ -1,0 +1,28 @@
+{
+  "_comment": "Synthetic decrypted passkeys-get command. Matches KeePassXC 2.7.9 BrowserAction::handlePasskeysGet and keepassxc-browser passkeys-utils.js.",
+  "action": "passkeys-get",
+  "origin": "https://login.example.com",
+  "keys": [
+    {
+      "id": "<association>",
+      "key": "<public-key>"
+    }
+  ],
+  "publicKey": {
+    "challenge": "EBESExQVFhcYGRobHB0eHw",
+    "enterpriseAttestationPossible": false,
+    "extensions": {},
+    "rpId": "example.com",
+    "timeout": 30000,
+    "userVerification": "preferred",
+    "allowCredentials": [
+      {
+        "id": "AQIDBA",
+        "type": "public-key",
+        "transports": [
+          "internal"
+        ]
+      }
+    ]
+  }
+}

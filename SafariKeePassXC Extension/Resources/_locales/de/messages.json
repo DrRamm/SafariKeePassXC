@@ -47,6 +47,9 @@
     "fill_no_form": {
         "message": "Kein Login-Formular auf dieser Seite gefunden."
     },
+    "fill_no_access": {
+        "message": "Die Erweiterung hat keinen Zugriff auf diese Seite. Erlaube den Zugriff in den Safari-Einstellungen und lade die Seite neu."
+    },
     "status_associating": {
         "message": "Verbinde… (bitte Dialog in KeePassXC bestätigen)"
     },
@@ -103,5 +106,35 @@
     },
     "save_group_default": {
         "message": "Standardgruppe (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "KeePassXC für Passkeys verwenden"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Gilt nach dem Neuladen der Seite. Wenn ausgeschaltet, verarbeitet Safari Passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "Lade die Seite neu, damit die Änderung wirksam wird."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys sind nicht verfügbar: Die SafariKeePassXC-App läuft nicht."
+    },
+    "passkeys_not_associated": {
+        "message": "Verbinde dich mit KeePassXC, um Passkeys zu verwenden."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys benötigen KeePassXC 2.7.7 oder neuer (gefunden: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Die Passkey-Brücke ist auf dieser Seite nicht aktiv. Lade die Seite neu und erlaube der Erweiterung den Zugriff auf diese Website."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Die letzte Passkey-Anfrage wurde von Safari statt von KeePassXC bearbeitet ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
     }
 }

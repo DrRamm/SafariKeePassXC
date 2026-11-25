@@ -42,6 +42,31 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             return
         }
 
+        // Passkey requests come from a page-controlled channel. Validate the
+        // shape here as well; the background script and BridgeRouter apply the
+        // origin/RP ID rules.
+        if let action = request["action"] as? String,
+           action == "passkeys-register" || action == "passkeys-get" {
+            guard let origin = request["origin"] as? String,
+                  let url = URL(string: origin),
+                  url.scheme?.lowercased() == "https",
+                  url.host?.isEmpty == false,
+                  url.user == nil,
+                  url.password == nil,
+                  let publicKey = request["publicKey"] as? [String: Any],
+                  let challenge = publicKey["challenge"] as? String,
+                  !challenge.isEmpty
+            else {
+                var failure: [String: Any] = [
+                    "success": false,
+                    "error": "invalid_passkey_request",
+                ]
+                if let id = request["id"] as? Int { failure["id"] = id }
+                complete(context, with: failure)
+                return
+            }
+        }
+
         os_log(.default, "Forwarding action to host app: %{public}@", (request["action"] as? String) ?? "?")
 
         Task {

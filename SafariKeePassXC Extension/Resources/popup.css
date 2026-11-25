@@ -104,6 +104,30 @@ button.entry:hover {
     width: 100%;
 }
 
+.passkeys {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.passkeys .toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.passkeys .toggle input:disabled + span {
+    color: color-mix(in srgb, currentColor 50%, transparent);
+}
+
+.passkeys .hint {
+    margin: 4px 0 0 20px;
+    font-size: 11px;
+    line-height: 1.35;
+    color: color-mix(in srgb, currentColor 55%, transparent);
+}
+
 .actions {
     display: flex;
     flex-direction: column;
@@ -131,4 +155,10 @@ footer {
     font-size: 11px;
     text-align: center;
     color: color-mix(in srgb, currentColor 45%, transparent);
+}
+
+/* Author display rules (e.g. .group-choice { display: flex }) override the
+   UA [hidden] rule, so hidden sections would still be shown. */
+[hidden] {
+    display: none !important;
 }

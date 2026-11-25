@@ -14,6 +14,9 @@ const resultView = document.getElementById("result");
 const associateButton = document.getElementById("associate");
 const groupSection = document.getElementById("group-section");
 const groupSelect = document.getElementById("save-group");
+const passkeysSection = document.getElementById("passkeys-section");
+const passkeysToggle = document.getElementById("passkeys-toggle");
+const passkeysHint = document.getElementById("passkeys-hint");
 
 function api(message) {
     return browser.runtime.sendMessage({ id: ++requestId, ...message });
@@ -91,14 +94,20 @@ function renderEntries(entries) {
 async function fill(entry) {
     try {
         const tab = await activeTab();
-        await browser.tabs.sendMessage(tab.id, {
+        const response = await browser.tabs.sendMessage(tab.id, {
             action: "fill-credentials",
             login: entry.login,
             password: entry.password,
         });
+        if (response && response.success === false) {
+            showResult(t("fill_no_form"));
+            return;
+        }
         window.close();
     } catch {
-        showResult(t("fill_no_form"));
+        // No receiver: the content script is not injected, which in Safari
+        // means the extension has no access to this website.
+        showResult(t("fill_no_access"));
     }
 }
 
@@ -156,6 +165,78 @@ async function saveGroupChoice() {
     } else {
         await browser.storage.local.remove("saveGroup");
     }
+}
+
+// -- Passkeys --
+
+// Passkey support arrived in KeePassXC 2.7.7.
+const PASSKEYS_MIN_VERSION = [2, 7, 7];
+
+function versionAtLeast(version, minimum) {
+    const match = /^(\d+)\.(\d+)(?:\.(\d+))?/.exec(String(version ?? ""));
+    if (!match) return false;
+    const parts = [
+        Number(match[1]),
+        Number(match[2]),
+        Number(match[3] ?? 0),
+    ];
+    for (let index = 0; index < minimum.length; index += 1) {
+        if (parts[index] > minimum[index]) return true;
+        if (parts[index] < minimum[index]) return false;
+    }
+    return true;
+}
+
+async function passkeysPageState() {
+    try {
+        const tab = await activeTab();
+        if (tab?.id === undefined || !tab.url?.startsWith("https://")) return null;
+        return await browser.tabs.sendMessage(tab.id, { action: "passkeys-diagnostic" });
+    } catch {
+        return null;
+    }
+}
+
+async function loadPasskeys(statusResult) {
+    let stored = {};
+    try {
+        stored = await browser.storage.local.get("passkeysEnabled");
+    } catch {
+        // Treat an unreadable setting as off.
+    }
+    passkeysToggle.checked = stored.passkeysEnabled === true;
+
+    const connected = statusResult?.connected === true;
+    const associated = statusResult?.associated === true;
+    const version = statusResult?.keePassXCVersion;
+    const compatible = versionAtLeast(version, PASSKEYS_MIN_VERSION);
+
+    passkeysToggle.disabled = !connected || !associated || !compatible;
+
+    const pageState = passkeysToggle.checked ? await passkeysPageState() : null;
+    const pageInstalled = pageState?.page === "enabled" || pageState?.page === "installed";
+    const fallbackReason = pageState?.decision?.includes(":safari:")
+        ? pageState.decision.split(":safari:")[1]
+        : null;
+
+    if (!connected) {
+        passkeysHint.textContent = t("passkeys_bridge_stopped");
+    } else if (!associated) {
+        passkeysHint.textContent = t("passkeys_not_associated");
+    } else if (!compatible) {
+        passkeysHint.textContent = t("passkeys_unsupported_version", [version ?? "?"]);
+    } else if (passkeysToggle.checked && !pageInstalled) {
+        passkeysHint.textContent = t("passkeys_page_not_active");
+    } else if (fallbackReason) {
+        passkeysHint.textContent = t("passkeys_fallback_reason", [fallbackReason]);
+    } else {
+        passkeysHint.textContent = t("passkeys_toggle_hint");
+    }
+}
+
+async function savePasskeysChoice() {
+    await browser.storage.local.set({ passkeysEnabled: passkeysToggle.checked });
+    passkeysHint.textContent = t("passkeys_reload_hint");
 }
 
 // -- Actions --
@@ -236,30 +317,36 @@ async function init() {
         status = await api({ action: "status" });
     } catch (error) {
         statusView.textContent = t("error_generic", [String(error)]);
+        await loadPasskeys(null);
         return;
     }
 
     if (!status?.success) {
         statusView.textContent = friendlyError(status?.error);
+        await loadPasskeys(null);
         return;
     }
 
     const result = status.result ?? {};
     if (!result.connected) {
         statusView.textContent = friendlyError(result.error ?? "keepassxc_not_reachable");
+        await loadPasskeys(result);
         return;
     }
     if (result.error) {
         statusView.textContent = friendlyError(result.error);
+        await loadPasskeys(result);
         return;
     }
     if (!result.associated) {
         statusView.textContent = t("status_not_associated", [result.keePassXCVersion ?? ""]);
         associateButton.hidden = false;
+        await loadPasskeys(result);
         return;
     }
 
     statusView.textContent = t("status_connected", [result.keePassXCVersion ?? ""]);
+    await loadPasskeys(result);
     await loadEntries();
     await loadGroups();
 }
@@ -267,6 +354,7 @@ async function init() {
 localizeDocument();
 associateButton.addEventListener("click", associate);
 groupSelect.addEventListener("change", saveGroupChoice);
+passkeysToggle.addEventListener("change", savePasskeysChoice);
 document.getElementById("generate").addEventListener("click", generatePassword);
 document.getElementById("totp").addEventListener("click", copyTotp);
 

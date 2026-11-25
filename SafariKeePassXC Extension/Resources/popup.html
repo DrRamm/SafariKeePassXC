@@ -23,6 +23,16 @@
         <select id="save-group"></select>
     </section>
 
+    <section id="passkeys-section" class="passkeys">
+        <label class="toggle" for="passkeys-toggle">
+            <input type="checkbox" id="passkeys-toggle" disabled>
+            <span data-i18n="passkeys_toggle_label">Use KeePassXC for passkeys</span>
+        </label>
+        <p id="passkeys-hint" class="hint" data-i18n="passkeys_toggle_hint">
+            Applies after reloading the page. When off, Safari handles passkeys.
+        </p>
+    </section>
+
     <div class="actions">
         <button id="associate" data-i18n="button_associate" hidden>Connect to KeePassXC</button>
         <button id="generate" data-i18n="button_generate">Generate password</button>

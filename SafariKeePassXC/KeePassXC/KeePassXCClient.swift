@@ -81,6 +81,10 @@ actor KeePassXCClient {
     private var crypto: KeePassXCCrypto?
     private var hostPublicKey: Bytes?
     private var clientID: String?
+    // A fresh transport has not proven the stored association yet. Passkeys
+    // verify it explicitly, so the first operation works without opening the
+    // popup first.
+    private var needsAssociationCheck = false
 
     // MARK: Public API
 
@@ -126,6 +130,9 @@ actor KeePassXCClient {
                 )
 
                 associated = (testResponse?["success"] as? String) == "true"
+                if associated {
+                    needsAssociationCheck = false
+                }
             }
         } catch {
             reportedError = (error as? LocalizedError)?.errorDescription
@@ -335,6 +342,84 @@ actor KeePassXCClient {
         throw KeePassXCError.invalidResponse
     }
 
+    // MARK: Passkeys
+
+    func passkeysRegister(
+        origin: String,
+        publicKey: [String: Any]
+    ) async throws -> [String: Any] {
+        try await passkeysRequest(
+            action: "passkeys-register",
+            origin: origin,
+            publicKey: publicKey
+        )
+    }
+
+    func passkeysGet(
+        origin: String,
+        publicKey: [String: Any]
+    ) async throws -> [String: Any] {
+        try await passkeysRequest(
+            action: "passkeys-get",
+            origin: origin,
+            publicKey: publicKey
+        )
+    }
+
+    private func passkeysRequest(
+        action: String,
+        origin: String,
+        publicKey: [String: Any]
+    ) async throws -> [String: Any] {
+        let association = try await verifiedAssociation()
+
+        let response = try await sendEncrypted(
+            action: action,
+            payload: [
+                "origin": origin,
+                "publicKey": publicKey,
+                "keys": [
+                    [
+                        "id": association.id,
+                        "key": association.publicKey,
+                    ]
+                ],
+            ]
+        )
+
+        // The inner response is either a PublicKeyCredential-shaped object or
+        // {"errorCode": N}. Pass it through unchanged: the page adapter maps
+        // the error codes to DOMException types.
+        guard let passkeyResponse = response["response"] as? [String: Any] else {
+            throw KeePassXCError.invalidResponse
+        }
+        return passkeyResponse
+    }
+
+    private func verifiedAssociation() async throws -> Association {
+        guard let association = store.load() else {
+            throw KeePassXCError.notAssociated
+        }
+
+        try await ensureSession()
+
+        if needsAssociationCheck {
+            let testResponse = try await sendEncrypted(
+                action: "test-associate",
+                payload: [
+                    "id": association.id,
+                    "key": association.publicKey,
+                ]
+            )
+            guard (testResponse["success"] as? String) == "true" else {
+                throw KeePassXCError.notAssociated
+            }
+            needsAssociationCheck = false
+        }
+
+        return association
+    }
+
     // MARK: Session / handshake
 
     private func ensureSession() async throws {
@@ -351,6 +436,7 @@ actor KeePassXCClient {
         crypto = nil
         hostPublicKey = nil
         clientID = nil
+        needsAssociationCheck = false
 
         do {
             try await socket.connect(to: Self.socketPath())
@@ -391,6 +477,7 @@ actor KeePassXCClient {
         crypto = newCrypto
         hostPublicKey = Bytes(hostKey)
         clientID = newClientID
+        needsAssociationCheck = true
     }
 
     private func sendEncrypted(
@@ -443,12 +530,14 @@ actor KeePassXCClient {
             self.crypto = nil
             self.hostPublicKey = nil
             self.clientID = nil
+            self.needsAssociationCheck = false
             await socket.disconnect()
             throw error
         } catch {
             self.crypto = nil
             self.hostPublicKey = nil
             self.clientID = nil
+            self.needsAssociationCheck = false
             await socket.disconnect()
             throw error
         }

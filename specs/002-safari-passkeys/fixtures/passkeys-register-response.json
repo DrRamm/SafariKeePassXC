@@ -1,0 +1,19 @@
+{
+  "_comment": "Synthetic decrypted passkeys-register response. Matches BrowserPasskeys::buildRegisterPublicKeyCredential (KeePassXC 2.7.9).",
+  "response": {
+    "id": "AQIDBA",
+    "type": "public-key",
+    "authenticatorAttachment": "platform",
+    "response": {
+      "attestationObject": "o2NmbXRkbm9uZQ",
+      "clientDataJSON": "eyJ0eXBlIjoid2ViYXV0aG4uY3JlYXRlIn0",
+      "authenticatorData": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "publicKeyAlgorithm": -7,
+      "clientExtensionResults": {
+        "credProps": {
+          "rk": true
+        }
+      }
+    }
+  }
+}

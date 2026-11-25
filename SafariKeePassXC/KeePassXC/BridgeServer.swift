@@ -15,7 +15,7 @@ import Network
 import os.log
 
 nonisolated enum BridgeSocket {
-    static let extensionBundleID = "at.griesslehner.SafariKeePassXC.Extension"
+    static let extensionBundleID = "dev.kotsareu.SafariKeePassXC.Extension"
     static let socketName = "kpxc-bridge.sock"
 
     static func directoryFromHostApp() -> String {
@@ -240,6 +240,30 @@ enum BridgeRouter {
             case "generate-password":
                 let password = try await client.generatePassword()
                 return success(id: id, result: ["password": password])
+
+            case "passkeys-register", "passkeys-get":
+                guard let origin = request["origin"] as? String,
+                      let publicKey = request["publicKey"] as? [String: Any] else {
+                    return failure(id: id, error: "missing_fields")
+                }
+                try PasskeyRequest.validate(
+                    action: action,
+                    origin: origin,
+                    publicKey: publicKey
+                )
+                let passkeyResponse: [String: Any]
+                if action == "passkeys-register" {
+                    passkeyResponse = try await client.passkeysRegister(
+                        origin: origin,
+                        publicKey: publicKey
+                    )
+                } else {
+                    passkeyResponse = try await client.passkeysGet(
+                        origin: origin,
+                        publicKey: publicKey
+                    )
+                }
+                return success(id: id, result: ["response": passkeyResponse])
 
             default:
                 return failure(id: id, error: "unknown_action: \(action)")
