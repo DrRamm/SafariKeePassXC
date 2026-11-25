@@ -59,8 +59,8 @@ class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHan
             }
 
             DispatchQueue.main.async {
-                if let window = self.view.window {
-                    (NSApp.delegate as? AppDelegate)?.moveToMenuBar(window)
+                if let window = self.view.window ?? NSApp.mainWindow {
+                    (NSApp.delegate as? AppDelegate)?.moveToBackground(window)
                 }
             }
         }
