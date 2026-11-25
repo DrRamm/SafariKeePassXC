@@ -1,0 +1,12 @@
+{
+    "response": {
+        "id": "AQIDBA",
+        "type": "public-key",
+        "response": {
+            "clientDataJSON": "e30",
+            "authenticatorData": "AQID",
+            "signature": "AQID",
+            "userHandle": "AQI"
+        }
+    }
+}

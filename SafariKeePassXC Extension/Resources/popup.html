@@ -6,41 +6,161 @@
     <script type="module" src="popup.js"></script>
 </head>
 <body>
-    <header>
-        <img class="app-icon" src="images/icon-48.png" width="24" height="24" alt="SafariKeePassXC Icon">
-        <h1>SafariKeePassXC</h1>
-    </header>
+    <div class="panel">
+        <header class="header" id="header">
+            <div class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="7.5" cy="15.5" r="5.5"></circle>
+                    <path d="m21 2-9.6 9.6"></path>
+                    <path d="m15.5 7.5 3 3L22 7l-3-3"></path>
+                </svg>
+            </div>
+            <div class="titles">
+                <div class="app-title">SafariKeePassXC</div>
+                <div class="status">
+                    <span class="dot" id="status-dot"></span>
+                    <span id="status-text">…</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button type="button" class="icon-btn" id="nav-search" data-i18n-aria="nav_search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                </button>
+                <button type="button" class="icon-btn" id="nav-generator" data-i18n-aria="nav_generator">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"></path><path d="m14 7 3 3"></path><path d="M5 6v4"></path><path d="M19 14v4"></path><path d="M10 2v2"></path><path d="M7 8H3"></path><path d="M21 16h-4"></path><path d="M11 3H9"></path></svg>
+                </button>
+                <button type="button" class="icon-btn" id="nav-settings" data-i18n-aria="nav_settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+            </div>
+        </header>
 
-    <p id="status" class="status">…</p>
+        <div class="subheader" id="subheader" hidden>
+            <button type="button" class="back" id="nav-back">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+                <span data-i18n="nav_back">Back</span>
+            </button>
+            <div class="subtitle" id="screen-title"></div>
+        </div>
 
-    <section id="entries-section" hidden>
-        <h2 data-i18n="entries_heading">Logins for this page</h2>
-        <ul id="entries"></ul>
-    </section>
+        <main class="content">
+            <section class="screen" id="screen-home">
+                <div id="home-body"></div>
+            </section>
 
-    <section id="group-section" class="group-choice" hidden>
-        <label for="save-group" data-i18n="save_group_label">Save new logins to</label>
-        <select id="save-group"></select>
-    </section>
+            <section class="screen" id="screen-settings" hidden>
+                <div class="section-label"><span data-i18n="section_saving">Saving</span></div>
+                <div class="group">
+                    <div class="group-block">
+                        <div class="row-title" data-i18n="save_group_label">Save new logins to</div>
+                        <select id="save-group" class="select" data-i18n-aria="save_group_label"></select>
+                    </div>
+                    <div class="row">
+                        <div class="row-text">
+                            <div class="row-title" data-i18n="settings_save_prompt">Offer to save passwords</div>
+                        </div>
+                        <input type="checkbox" class="switch" id="save-prompt" data-i18n-aria="settings_save_prompt">
+                    </div>
+                </div>
 
-    <section id="passkeys-section" class="passkeys">
-        <label class="toggle" for="passkeys-toggle">
-            <input type="checkbox" id="passkeys-toggle" disabled>
-            <span data-i18n="passkeys_toggle_label">Use KeePassXC for passkeys</span>
-        </label>
-        <p id="passkeys-hint" class="hint" data-i18n="passkeys_toggle_hint">
-            Applies after reloading the page. When off, Safari handles passkeys.
-        </p>
-    </section>
+                <div class="section-label"><span data-i18n="section_autofill">Autofill</span></div>
+                <div class="group">
+                    <div class="row">
+                        <div class="row-text">
+                            <div class="row-title" data-i18n="passkeys_toggle_label">Passkeys via KeePassXC</div>
+                            <div class="row-hint" id="passkeys-hint" data-i18n="passkeys_toggle_hint">Takes effect after the page reloads. When off, Safari handles passkeys.</div>
+                        </div>
+                        <input type="checkbox" class="switch" id="passkeys" data-i18n-aria="passkeys_toggle_label">
+                    </div>
+                    <div class="row">
+                        <div class="row-text">
+                            <div class="row-title" data-i18n="settings_autofill">Autofill on page load</div>
+                            <div class="row-hint" data-i18n="settings_autofill_hint">When a single login is found for the site.</div>
+                        </div>
+                        <input type="checkbox" class="switch" id="autofill" data-i18n-aria="settings_autofill">
+                    </div>
+                </div>
 
-    <div class="actions">
-        <button id="associate" data-i18n="button_associate" hidden>Connect to KeePassXC</button>
-        <button id="generate" data-i18n="button_generate">Generate password</button>
-        <button id="totp" data-i18n="button_totp">Copy TOTP</button>
+                <div class="section-label"><span data-i18n="section_connection">Connection</span></div>
+                <div class="group">
+                    <div class="row">
+                        <div class="row-text">
+                            <div class="row-title" id="connection-title">…</div>
+                        </div>
+                        <span class="dot" id="connection-dot"></span>
+                    </div>
+                    <button type="button" class="link-row" id="reconnect">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+                        <span data-i18n="settings_reconnect">Reconnect</span>
+                    </button>
+                </div>
+
+                <div class="footer" id="footer"></div>
+            </section>
+
+            <section class="screen" id="screen-generator" hidden>
+                <div class="generator-display">
+                    <div class="password" id="generated-password"></div>
+                    <div class="strength">
+                        <div class="strength-bars" id="strength-bars">
+                            <span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                        </div>
+                        <span class="strength-label" id="strength-label"></span>
+                    </div>
+                </div>
+
+                <div class="generator-actions">
+                    <button type="button" class="pill" id="regenerate" data-i18n-aria="generator_regenerate">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg>
+                    </button>
+                    <button type="button" class="pill" id="copy-password" data-i18n-aria="generator_copy">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+                    </button>
+                </div>
+
+                <div class="group generator-options">
+                    <div class="group-block">
+                        <div class="slider-head">
+                            <span class="row-title" id="length-label" data-i18n="generator_length">Length</span>
+                            <span class="slider-value" id="length-value">20</span>
+                        </div>
+                        <input type="range" class="slider" id="length" min="8" max="64" step="1" value="20" data-i18n-aria="generator_length">
+                    </div>
+                    <div class="charset-grid" id="charset-grid">
+                        <button type="button" class="charset" data-option="upper">A–Z</button>
+                        <button type="button" class="charset" data-option="lower">a–z</button>
+                        <button type="button" class="charset" data-option="digits">0–9</button>
+                        <button type="button" class="charset" data-option="symbols">!@#</button>
+                    </div>
+                    <div class="row">
+                        <div class="row-text">
+                            <div class="row-title" data-i18n="generator_phrase">Passphrase</div>
+                            <div class="row-hint" data-i18n="generator_phrase_hint">Hyphen-separated words are easier to remember.</div>
+                        </div>
+                        <input type="checkbox" class="switch" id="phrase" data-i18n-aria="generator_phrase">
+                    </div>
+                </div>
+            </section>
+
+            <section class="screen" id="screen-search" hidden>
+                <div class="search-field">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                    <input type="text" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Title, username or site">
+                    <button type="button" class="clear-search" id="clear-search" data-i18n-aria="search_clear" hidden>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="search-hint" data-i18n="search_hint">Searches logins for this site.</div>
+                <button type="button" class="pill search-keepassxc" id="search-keepassxc" data-i18n="search_in_keepassxc">Search in KeePassXC</button>
+                <div class="section-label"><span id="search-label"></span></div>
+                <div class="group results" id="search-results"></div>
+            </section>
+        </main>
     </div>
 
-    <pre id="result" hidden></pre>
-
-    <footer><span id="version"></span>by Markus Griesslehner</footer>
+    <div class="toast" id="toast" role="status">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
+        <span id="toast-text"></span>
+    </div>
 </body>
 </html>

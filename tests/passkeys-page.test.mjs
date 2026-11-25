@@ -20,7 +20,7 @@ const source = fs.readFileSync(
 function fixture(name) {
     return JSON.parse(
         fs.readFileSync(
-            new URL(`specs/002-safari-passkeys/fixtures/${name}`, root),
+            new URL(`tests/fixtures/${name}`, root),
             "utf8"
         )
     );

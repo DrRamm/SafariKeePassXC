@@ -280,14 +280,25 @@ browser.runtime.onMessage.addListener((request, sender) => {
             if (tabId === undefined) {
                 return Promise.resolve({ success: false, error: "no_tab" });
             }
-            pendingSaves.set(tabId, {
-                url: sender.url ?? message.url,
-                login: message.login,
-                password: message.password,
-                uuid: message.uuid,
-                queuedAt: Date.now(),
-            });
-            return Promise.resolve({ success: true, result: {} });
+            const queue = () => {
+                pendingSaves.set(tabId, {
+                    url: sender.url ?? message.url,
+                    login: message.login,
+                    password: message.password,
+                    uuid: message.uuid,
+                    queuedAt: Date.now(),
+                });
+                return { success: true, result: {} };
+            };
+            return browser.storage.local.get("savePromptEnabled")
+                .then(({ savePromptEnabled }) => {
+                    // The user turned the save prompt off in the popup.
+                    if (savePromptEnabled === false) {
+                        return { success: true, result: { skipped: true } };
+                    }
+                    return queue();
+                })
+                .catch(queue);
         }
 
         // The banner only ever learns the login name, never the password.

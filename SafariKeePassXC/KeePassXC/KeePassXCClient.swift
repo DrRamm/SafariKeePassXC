@@ -342,6 +342,22 @@ actor KeePassXCClient {
         throw KeePassXCError.invalidResponse
     }
 
+    // Opens KeePassXC's global auto-type search for the given query. This is
+    // the only way to search the whole database: the browser protocol has no
+    // "list all entries" action, only URL matching.
+    func requestAutotype(search: String) async throws {
+        try await ensureSession()
+
+        let response = try await sendEncrypted(
+            action: "request-autotype",
+            payload: ["search": search]
+        )
+
+        guard (response["success"] as? String) == "true" else {
+            throw KeePassXCError.invalidResponse
+        }
+    }
+
     // MARK: Passkeys
 
     func passkeysRegister(

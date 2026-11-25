@@ -241,6 +241,14 @@ enum BridgeRouter {
                 let password = try await client.generatePassword()
                 return success(id: id, result: ["password": password])
 
+            case "request-autotype":
+                guard let search = request["search"] as? String, !search.isEmpty else {
+                    return failure(id: id, error: "missing_search")
+                }
+                // KeePassXC rejects overly long search strings; cap defensively.
+                try await client.requestAutotype(search: String(search.prefix(2048)))
+                return success(id: id, result: [:])
+
             case "passkeys-register", "passkeys-get":
                 guard let origin = request["origin"] as? String,
                       let publicKey = request["publicKey"] as? [String: Any] else {

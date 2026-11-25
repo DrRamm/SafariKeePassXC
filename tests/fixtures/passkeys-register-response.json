@@ -1,0 +1,19 @@
+{
+    "response": {
+        "id": "AQIDBA",
+        "type": "public-key",
+        "authenticatorAttachment": "platform",
+        "response": {
+            "clientDataJSON": "e30",
+            "attestationObject": "o2NmbXRkbm9uZQ",
+            "authenticatorData": "AQID",
+            "publicKey": null,
+            "publicKeyAlgorithm": -7,
+            "clientExtensionResults": {
+                "credProps": {
+                    "rk": true
+                }
+            }
+        }
+    }
+}

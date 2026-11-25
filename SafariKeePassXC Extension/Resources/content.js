@@ -69,6 +69,28 @@
         }
     }
 
+    // The "Autofill on page load" setting. A failed read must not disable
+    // autofill, so anything other than an explicit `false` counts as on.
+    // Cached and refreshed on storage changes to avoid a read per mutation.
+    let autofillSetting = null;
+
+    async function autofillEnabled() {
+        if (autofillSetting !== null) return autofillSetting;
+        try {
+            const { autofillOnLoad } = await browser.storage.local.get("autofillOnLoad");
+            autofillSetting = autofillOnLoad !== false;
+        } catch {
+            autofillSetting = true;
+        }
+        return autofillSetting;
+    }
+
+    browser.storage?.onChanged?.addListener((changes, area) => {
+        if ((area === "local" || area === undefined) && changes.autofillOnLoad) {
+            autofillSetting = changes.autofillOnLoad.newValue !== false;
+        }
+    });
+
     // -- Credential autofill --
 
     function findUsernameOnlyField() {
@@ -99,6 +121,7 @@
     }
 
     async function attemptAutofill() {
+        if (!(await autofillEnabled())) return;
         const fields = findLoginFields();
         if (!fields || !fields.passwordField) return;
         if (filledFields.has(fields.passwordField)) return;
@@ -130,6 +153,7 @@
     }
 
     async function attemptTotpFill() {
+        if (!(await autofillEnabled())) return;
         const field = findTotpField();
         if (!field || filledFields.has(field) || field.value) return;
 
@@ -144,7 +168,7 @@
 
     // -- Save / update on submit --
 
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         const form = event.target;
         if (!(form instanceof HTMLFormElement)) return;
 
@@ -155,7 +179,10 @@
         const login = usernameField?.value ?? "";
         const password = passwordField.value;
 
-        const entries = knownEntries ?? [];
+        // Autofill may be disabled, in which case nothing has fetched the
+        // entries yet. Load them here so an unchanged saved password is not
+        // offered as a brand-new login.
+        const entries = knownEntries ?? (await fetchLogins()) ?? [];
         if (entries.some((entry) => entry.login === login && entry.password === password)) return;
 
         const existing = entries.find((entry) => entry.login === login);
@@ -168,7 +195,9 @@
             password,
             uuid: existing?.uuid,
         }).then((response) => {
-            if (response?.success) showSaveBanner(login, Boolean(existing));
+            if (response?.success && !response.result?.skipped) {
+                showSaveBanner(login, Boolean(existing));
+            }
         }).catch(() => {
             // Page is navigating away; the request already left the page.
         });
@@ -195,7 +224,10 @@
         removeBanner();
 
         const host = document.createElement("div");
-        host.style.cssText = "all: initial; position: fixed; top: 16px; right: 16px; z-index: 2147483647;";
+        const uiLanguage = (browser.i18n.getUILanguage?.() || navigator.language || "en").toLowerCase();
+        const rtl = /^(ar|fa|he|ur)$/.test(uiLanguage.split(/[-_]/)[0]);
+        host.dir = rtl ? "rtl" : "ltr";
+        host.style.cssText = `all: initial; position: fixed; top: 16px; ${rtl ? "left" : "right"}: 16px; z-index: 2147483647;`;
         const shadow = host.attachShadow({ mode: "closed" });
 
         const style = document.createElement("style");
@@ -246,7 +278,7 @@
             if (response?.success) {
                 removeBanner();
             } else {
-                text.textContent = response?.error ?? "Error";
+                text.textContent = browser.i18n.getMessage("save_failed");
                 saveButton.disabled = true;
                 setTimeout(removeBanner, 5000);
             }
