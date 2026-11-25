@@ -7,7 +7,7 @@
 //  real extension process, not just something that found the socket path.
 //
 //  SETUP: both targets need "Keychain Sharing" in Xcode, group
-//  "at.griesslehner.SafariKeePassXC".
+//  "dev.kotsareu.SafariKeePassXC".
 //
 
 import Foundation
@@ -16,7 +16,7 @@ import os.log
 
 nonisolated enum BridgeToken {
 
-    private static let service = "at.griesslehner.SafariKeePassXC.bridge-token"
+    private static let service = "dev.kotsareu.SafariKeePassXC.bridge-token"
     private static let account = "token"
 
     // Generates a fresh 32-byte random token, writes it to the shared Keychain
@@ -105,7 +105,7 @@ nonisolated enum BridgeToken {
               let dict = info as? [String: Any],
               let teamID = dict[kSecCodeInfoTeamIdentifier as String] as? String,
               !teamID.isEmpty else { return nil }
-        return "\(teamID).at.griesslehner.SafariKeePassXC"
+        return "\(teamID).dev.kotsareu.SafariKeePassXC"
     }
 }
 

@@ -4,7 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)at.griesslehner.SafariKeePassXC</string>
+		<string>$(AppIdentifierPrefix)dev.kotsareu.SafariKeePassXC</string>
 	</array>
 </dict>
 </plist>

@@ -16,7 +16,7 @@ nonisolated struct Association: Codable, Sendable {
 
 nonisolated struct AssociationStore {
 
-    private static let service = "at.griesslehner.SafariKeePassXC"
+    private static let service = "dev.kotsareu.SafariKeePassXC"
     private static let account = "keepassxc-association"
 
     func load() -> Association? {
