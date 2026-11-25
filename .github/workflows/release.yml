@@ -20,7 +20,7 @@ jobs:
   release:
     name: Build, sign, notarize and publish
     needs: checks
-    runs-on: macos-26
+    runs-on: macos-26-intel
     timeout-minutes: 90
     env:
       APP_PATH: build/export/SafariKeePassXC.app
@@ -99,6 +99,8 @@ jobs:
             -archivePath build/SafariKeePassXC.xcarchive \
             DEVELOPMENT_TEAM="$TEAM_ID" \
             CODE_SIGN_STYLE=Automatic \
+            ARCHS="arm64 x86_64" \
+            ONLY_ACTIVE_ARCH=NO \
             -allowProvisioningUpdates \
             -authenticationKeyPath "$RUNNER_TEMP/AuthKey.p8" \
             -authenticationKeyID "$KEY_ID" \
