@@ -5,7 +5,8 @@
     </filter>
   </defs>
   <!-- Host window icon: the same brand mark as the app icon (badge 80% of the
-       canvas, 30% radius, key 50% of the badge, centred). -->
+       canvas, 30% radius, key box 50% of the badge / visible glyph ~46%,
+       centred). -->
   <rect x="102.4" y="102.4" width="819.2" height="819.2" rx="245.76" fill="#007DF3" filter="url(#shadow)"/>
   <g transform="translate(512 512) scale(17.0666666667) translate(-12 -12)"
      fill="none" stroke="#FFFFFF" stroke-width="2"

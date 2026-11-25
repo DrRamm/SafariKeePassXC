@@ -3,10 +3,10 @@
 #
 # The brand mark is the popup header tile: the thin key on a flat blue rounded
 # badge. On a canvas the badge is 80% wide (10% margin on every side), the
-# corner radius is 30% of the badge, and the key occupies 50% of the badge,
-# centred. toolbar-icon.svg is the master for the toolbar and extension icons;
-# app-icon.svg is the master for the macOS app icon (same geometry plus the
-# macOS drop shadow).
+# corner radius is 30% of the badge, and the key box is 50% of the badge (the
+# visible glyph is ~46%), centred. toolbar-icon.svg is the master for the
+# toolbar and extension icons; app-icon.svg is the master for the macOS app
+# icon (same geometry plus the macOS drop shadow).
 #
 # The 16-19 px slots use the *-small.svg optical variants: at the reference key
 # ratio the stroke is sub-pixel there and the glyph turns into a blob.

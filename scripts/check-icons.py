@@ -15,9 +15,11 @@ Run after scripts/render-icons.sh:
 from __future__ import annotations
 
 import glob
+import os
 import re
 import sys
 import xml.etree.ElementTree as ET
+from pathlib import Path
 
 from PIL import Image
 
@@ -28,18 +30,18 @@ RADIUS_RATIO = 0.30              # corner radius / badge width
 KEY_BOX_RATIO = 0.50             # key box / badge width
 SMALL_KEY_BOX_RATIO = 0.78       # optical variants for 16-19 px slots
 KEY_RATIO = (0.35, 0.60)         # visible key width / badge width
-SMALL_KEY_RATIO = (0.55, 0.95)   # optical variants enlarge the key
+SMALL_KEY_RATIO = (0.50, 0.95)   # optical variants enlarge the key
 CENTER_TOLERANCE = 0.02          # key centre offset / badge width
 MARGIN_TOLERANCE = 1             # px, asymmetry of the badge margins
 BRAND_BLUE = (0, 125, 243)       # popup --mac-blue: oklch(0.6 0.2 255)
 COLOUR_TOLERANCE = 15            # per channel
 
 SVG_MASTERS = {
-    "SafariKeePassXC Extension/Resources/images/toolbar-icon.svg": KEY_BOX_RATIO,
-    "SafariKeePassXC Extension/Resources/images/toolbar-icon-small.svg": SMALL_KEY_BOX_RATIO,
-    "scripts/app-icon.svg": KEY_BOX_RATIO,
-    "scripts/app-icon-small.svg": SMALL_KEY_BOX_RATIO,
-    "SafariKeePassXC/Resources/Icon.svg": KEY_BOX_RATIO,
+    "SafariKeePassXC Extension/Resources/images/toolbar-icon.svg": (KEY_BOX_RATIO, False),
+    "SafariKeePassXC Extension/Resources/images/toolbar-icon-small.svg": (SMALL_KEY_BOX_RATIO, False),
+    "scripts/app-icon.svg": (KEY_BOX_RATIO, True),
+    "scripts/app-icon-small.svg": (SMALL_KEY_BOX_RATIO, True),
+    "SafariKeePassXC/Resources/Icon.svg": (KEY_BOX_RATIO, True),
 }
 
 TRANSFORM = re.compile(
@@ -47,7 +49,7 @@ TRANSFORM = re.compile(
 )
 
 
-def check_svg(path: str, key_box_ratio: float) -> list[str]:
+def check_svg(path: str, key_box_ratio: float, shadow: bool) -> list[str]:
     root = ET.parse(path).getroot()
     view_box = [float(value) for value in root.get("viewBox", "").split()]
     if len(view_box) != 4:
@@ -64,6 +66,11 @@ def check_svg(path: str, key_box_ratio: float) -> list[str]:
     radius = float(rect.get("rx", 0))
 
     errors: list[str] = []
+    if (rect.get("fill") or "").lower() != "#007df3":
+        errors.append(f"badge fill is {rect.get('fill')!r}, expected #007DF3")
+    has_shadow = (rect.get("filter") or "").startswith("url(#shadow)")
+    if has_shadow != shadow:
+        errors.append("drop shadow is present" if has_shadow else "drop shadow is missing")
     if abs(width / canvas_w - BADGE_RATIO) > 0.005 or abs(height / canvas_h - BADGE_RATIO) > 0.005:
         errors.append(f"badge is {width / canvas_w:.1%} of the canvas, expected {BADGE_RATIO:.0%}")
     if abs(x / canvas_w - 0.1) > 0.005 or abs(y / canvas_h - 0.1) > 0.005:
@@ -119,7 +126,7 @@ def badge_colour(image: Image.Image, badge: tuple[int, int, int, int]) -> tuple[
     for y in range(by0 + inset, by1 - inset + 1):
         for x in range(bx0 + inset, bx1 - inset + 1):
             r, g, b, a = pixels[x, y]
-            if a < 200 or min(r, g, b) > 100:  # skip the white key and its edges
+            if a < 200 or r > 40:  # skip the white key and its blends
                 continue
             samples.append((r, g, b))
     if not samples:
@@ -182,9 +189,11 @@ def check_png(path: str) -> list[str]:
 
 
 def main() -> int:
+    os.chdir(Path(__file__).resolve().parent.parent)
+
     failures = 0
-    for path, key_box_ratio in SVG_MASTERS.items():
-        errors = check_svg(path, key_box_ratio)
+    for path, (key_box_ratio, shadow) in SVG_MASTERS.items():
+        errors = check_svg(path, key_box_ratio, shadow)
         failures += bool(errors)
         for error in errors:
             print(f"FAIL {path}: {error}")
