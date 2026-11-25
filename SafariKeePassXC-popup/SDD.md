@@ -158,10 +158,12 @@ The design's `--glass-bg` and `--glass-shadow` are intentionally not ported: the
 | Element | Design | Port notes |
 |---|---|---|
 | Panel | `glass-panel`, 360 px, radius 28 px, overflow hidden | Transparent page; Safari supplies the material and the rounded corners. `popup.css` keeps only `overflow: hidden` |
-| Header | 40 px blue tile with key icon, "SafariKeePassXC", status dot + text, 3 icon buttons (search, generator, settings) | Tile: bundled `images/icon-48.png` or inline key SVG. Icon buttons disabled while blocked (except settings) |
+| Header | 40 px blue tile with key icon, "SafariKeePassXC", status dot + text, 3 icon buttons (search, generator, settings) | Inline key SVG on a blue tile. Icon buttons disabled while blocked (except settings) |
 | Sub-header | "‹ Back" left, centered title | One screen at a time; `screen` state |
 | Toast | Bottom pill, 1.8 s, check icon | Replaces the `<pre id="result">` block |
 | Theme | System only | `prefers-color-scheme` |
+
+**Brand mark.** One mark everywhere: a blue rounded square with a white diagonal key (the header tile). It is used for the Safari toolbar icon (`images/toolbar-icon-{16,19,32,38}.png`), the extension icons (`images/icon-{48..512}.png`), the macOS app icon (`Assets.xcassets/AppIcon.appiconset`) and the host window icon (`Resources/Icon.png`). The toolbar sizes are rendered from the same vector with a 1 px transparent margin so the square does not touch the slot edge.
 
 Status text mapping (`AppState`):
 
