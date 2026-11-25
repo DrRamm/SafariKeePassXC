@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Συμπληρώνει συνδέσεις, κωδικούς πρόσβασης και κωδικούς TOTP από το KeePassXC στο Safari. Ανάπτυξη: Markus Griesslehner."
+        "message": "Συμπληρώνει συνδέσεις, κωδικούς πρόσβασης και κωδικούς TOTP από το KeePassXC στο Safari."
     },
     "entries_heading": {
         "message": "Συνδέσεις για αυτή τη σελίδα"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "Δεν βρέθηκε τίποτα"
-    },
-    "footer_author": {
-        "message": "από Markus Griesslehner"
     }
 }

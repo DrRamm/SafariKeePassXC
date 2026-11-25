@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC ಯಿಂದ ಲಾಗಿನ್‌ಗಳು, ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಮತ್ತು TOTP ಕೋಡ್‌ಗಳನ್ನು Safari ಗೆ ತುಂಬುತ್ತದೆ. Markus Griesslehner ರಚಿಸಿದ್ದಾರೆ."
+        "message": "KeePassXC ಯಿಂದ ಲಾಗಿನ್‌ಗಳು, ಪಾಸ್‌ವರ್ಡ್‌ಗಳು ಮತ್ತು TOTP ಕೋಡ್‌ಗಳನ್ನು Safari ಗೆ ತುಂಬುತ್ತದೆ."
     },
     "entries_heading": {
         "message": "ಈ ಪುಟಕ್ಕೆ ಲಾಗಿನ್‌ಗಳು"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "ಏನೂ ಸಿಗಲಿಲ್ಲ"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner ಅವರಿಂದ"
     }
 }

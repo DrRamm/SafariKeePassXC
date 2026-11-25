@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC’dan loginlar, parollar va TOTP kodlarini Safari’ga to‘ldiradi. Markus Griesslehner tomonidan ishlab chiqilgan."
+        "message": "KeePassXC’dan loginlar, parollar va TOTP kodlarini Safari’ga to‘ldiradi."
     },
     "entries_heading": {
         "message": "Bu sahifa uchun loginlar"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Hech narsa topilmadi"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner tomonidan"
     }
 }

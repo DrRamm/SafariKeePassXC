@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Compila credenziali, password e codici TOTP da KeePassXC in Safari. Sviluppato da Markus Griesslehner."
+        "message": "Compila credenziali, password e codici TOTP da KeePassXC in Safari."
     },
     "entries_heading": {
         "message": "Credenziali per questa pagina"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Nessun risultato"
-    },
-    "footer_author": {
-        "message": "di Markus Griesslehner"
     }
 }

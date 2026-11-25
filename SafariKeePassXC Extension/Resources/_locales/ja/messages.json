@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC のログイン情報、パスワード、TOTP コードを Safari に入力します。開発: Markus Griesslehner。"
+        "message": "KeePassXC のログイン情報、パスワード、TOTP コードを Safari に入力します。"
     },
     "entries_heading": {
         "message": "このページのログイン"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "見つかりません"
-    },
-    "footer_author": {
-        "message": "作者: Markus Griesslehner"
     }
 }

@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC இலிருந்து உள்நுழைவுகள், கடவுச்சொற்கள் மற்றும் TOTP குறியீடுகளை Safari இல் நிரப்புகிறது. Markus Griesslehner உருவாக்கியது."
+        "message": "KeePassXC இலிருந்து உள்நுழைவுகள், கடவுச்சொற்கள் மற்றும் TOTP குறியீடுகளை Safari இல் நிரப்புகிறது."
     },
     "entries_heading": {
         "message": "இந்தப் பக்கத்திற்கான உள்நுழைவுகள்"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "எதுவும் கிடைக்கவில்லை"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner வழங்கியது"
     }
 }

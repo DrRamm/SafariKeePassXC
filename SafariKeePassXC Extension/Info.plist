@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2026 Markus Griesslehner</string>
+	<string>© 2026 SafariKeePassXC</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>

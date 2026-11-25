@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Заповнює логіни, паролі та коди TOTP з KeePassXC у Safari. Розроблено Markus Griesslehner."
+        "message": "Заповнює логіни, паролі та коди TOTP з KeePassXC у Safari."
     },
     "entries_heading": {
         "message": "Логіни для цієї сторінки"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "Нічого не знайдено"
-    },
-    "footer_author": {
-        "message": "від Markus Griesslehner"
     }
 }

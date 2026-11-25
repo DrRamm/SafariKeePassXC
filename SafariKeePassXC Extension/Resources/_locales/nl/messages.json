@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Vult aanmeldgegevens, wachtwoorden en TOTP-codes uit KeePassXC in Safari in. Ontwikkeld door Markus Griesslehner."
+        "message": "Vult aanmeldgegevens, wachtwoorden en TOTP-codes uit KeePassXC in Safari in."
     },
     "entries_heading": {
         "message": "Aanmeldgegevens voor deze pagina"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Niets gevonden"
-    },
-    "footer_author": {
-        "message": "door Markus Griesslehner"
     }
 }

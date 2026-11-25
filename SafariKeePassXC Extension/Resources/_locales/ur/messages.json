@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC سے لاگ اِن، پاس ورڈز اور TOTP کوڈز Safari میں بھرتا ہے۔ Markus Griesslehner نے تیار کیا۔"
+        "message": "KeePassXC سے لاگ اِن، پاس ورڈز اور TOTP کوڈز Safari میں بھرتا ہے۔"
     },
     "entries_heading": {
         "message": "اس صفحے کے لاگ اِن"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "کچھ نہیں ملا"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner کی جانب سے"
     }
 }

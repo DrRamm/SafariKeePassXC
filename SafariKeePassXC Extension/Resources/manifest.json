@@ -4,7 +4,6 @@
 
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
-    "author": "Markus Griesslehner",
     "version": "1.2.4",
 
     "background": {

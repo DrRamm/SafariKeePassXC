@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Vyplňuje přihlašovací údaje, hesla a kódy TOTP z KeePassXC do Safari. Vyvinul Markus Griesslehner."
+        "message": "Vyplňuje přihlašovací údaje, hesla a kódy TOTP z KeePassXC do Safari."
     },
     "entries_heading": {
         "message": "Přihlašovací údaje pro tuto stránku"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Nic nenalezeno"
-    },
-    "footer_author": {
-        "message": "od Markus Griesslehner"
     }
 }

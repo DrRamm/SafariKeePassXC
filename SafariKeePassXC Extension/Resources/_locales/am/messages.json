@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "ከKeePassXC የመግቢያ መረጃዎችን፣ የይለፍ ቃላትን እና የTOTP ኮዶችን ወደ Safari ይሞላል። በMarkus Griesslehner የተገነባ።"
+        "message": "ከKeePassXC የመግቢያ መረጃዎችን፣ የይለፍ ቃላትን እና የTOTP ኮዶችን ወደ Safari ይሞላል።"
     },
     "entries_heading": {
         "message": "ለዚህ ገጽ የመግቢያ መረጃዎች"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "ምንም አልተገኘም"
-    },
-    "footer_author": {
-        "message": "በMarkus Griesslehner"
     }
 }

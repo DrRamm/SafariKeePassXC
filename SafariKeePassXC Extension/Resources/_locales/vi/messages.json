@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Điền thông tin đăng nhập, mật khẩu và mã TOTP từ KeePassXC vào Safari. Phát triển bởi Markus Griesslehner."
+        "message": "Điền thông tin đăng nhập, mật khẩu và mã TOTP từ KeePassXC vào Safari."
     },
     "entries_heading": {
         "message": "Thông tin đăng nhập cho trang này"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "Không tìm thấy gì"
-    },
-    "footer_author": {
-        "message": "bởi Markus Griesslehner"
     }
 }

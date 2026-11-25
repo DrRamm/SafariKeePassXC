@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Füllt Logins, Passwörter und TOTP-Codes aus KeePassXC in Safari aus. Entwickelt von Markus Griesslehner."
+        "message": "Füllt Logins, Passwörter und TOTP-Codes aus KeePassXC in Safari aus."
     },
     "entries_heading": {
         "message": "Logins für diese Seite"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Nichts gefunden"
-    },
-    "footer_author": {
-        "message": "von Markus Griesslehner"
     }
 }

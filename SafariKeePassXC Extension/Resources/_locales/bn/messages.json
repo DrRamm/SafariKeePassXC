@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC থেকে লগইন, পাসওয়ার্ড ও TOTP কোড Safari-তে পূরণ করে। Markus Griesslehner দ্বারা তৈরি।"
+        "message": "KeePassXC থেকে লগইন, পাসওয়ার্ড ও TOTP কোড Safari-তে পূরণ করে।"
     },
     "entries_heading": {
         "message": "এই পেজের লগইন"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "কিছু পাওয়া যায়নি"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner দ্বারা"
     }
 }

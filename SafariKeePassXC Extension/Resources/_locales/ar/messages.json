@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "يملأ عمليات تسجيل الدخول وكلمات المرور ورموز TOTP من KeePassXC في Safari. طوّره Markus Griesslehner."
+        "message": "يملأ عمليات تسجيل الدخول وكلمات المرور ورموز TOTP من KeePassXC في Safari."
     },
     "entries_heading": {
         "message": "عمليات تسجيل الدخول لهذه الصفحة"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "لم يُعثر على شيء"
-    },
-    "footer_author": {
-        "message": "بواسطة Markus Griesslehner"
     }
 }

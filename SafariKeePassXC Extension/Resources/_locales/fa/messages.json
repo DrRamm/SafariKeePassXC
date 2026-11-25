@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "ورودها، گذرواژه‌ها و کدهای TOTP را از KeePassXC در Safari پر می‌کند. ساختهٔ Markus Griesslehner."
+        "message": "ورودها، گذرواژه‌ها و کدهای TOTP را از KeePassXC در Safari پر می‌کند."
     },
     "entries_heading": {
         "message": "ورودها برای این صفحه"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "چیزی یافت نشد"
-    },
-    "footer_author": {
-        "message": "از Markus Griesslehner"
     }
 }

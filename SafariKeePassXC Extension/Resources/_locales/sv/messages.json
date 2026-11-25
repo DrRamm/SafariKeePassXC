@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Fyller i inloggningar, lösenord och TOTP-koder från KeePassXC i Safari. Utvecklad av Markus Griesslehner."
+        "message": "Fyller i inloggningar, lösenord och TOTP-koder från KeePassXC i Safari."
     },
     "entries_heading": {
         "message": "Inloggningar för den här sidan"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Inget hittat"
-    },
-    "footer_author": {
-        "message": "av Markus Griesslehner"
     }
 }

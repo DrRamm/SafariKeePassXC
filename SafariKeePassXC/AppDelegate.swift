@@ -2,8 +2,6 @@
 //  AppDelegate.swift
 //  SafariKeePassXC
 //
-//  Created by Markus Griesslehner on 29.07.26.
-//
 
 import Cocoa
 

@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Remplit les identifiants, mots de passe et codes TOTP de KeePassXC dans Safari. Développé par Markus Griesslehner."
+        "message": "Remplit les identifiants, mots de passe et codes TOTP de KeePassXC dans Safari."
     },
     "entries_heading": {
         "message": "Identifiants pour cette page"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Aucun résultat"
-    },
-    "footer_author": {
-        "message": "par Markus Griesslehner"
     }
 }

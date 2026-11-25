@@ -2,8 +2,6 @@
 //  SafariWebExtensionHandler.swift
 //  SafariKeePassXC Extension
 //
-//  Created by Markus Griesslehner on 29.07.26.
-//
 //  Validates incoming JSON from the JS side and forwards it to the host
 //  app's BridgeServer - the extension itself can't reach KeePassXC.
 //

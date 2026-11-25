@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Mengisi login, kata sandi, dan kode TOTP dari KeePassXC ke Safari. Dikembangkan oleh Markus Griesslehner."
+        "message": "Mengisi login, kata sandi, dan kode TOTP dari KeePassXC ke Safari."
     },
     "entries_heading": {
         "message": "Login untuk halaman ini"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "Tidak ada yang ditemukan"
-    },
-    "footer_author": {
-        "message": "oleh Markus Griesslehner"
     }
 }

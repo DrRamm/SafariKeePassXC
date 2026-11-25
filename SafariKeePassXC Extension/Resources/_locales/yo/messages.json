@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Ó ń kún àwọn ìwọlé, ọ̀rọ̀ ìpamọ́, àti àwọn kóòdù TOTP láti KeePassXC sínú Safari. Markus Griesslehner ni ó ṣe é."
+        "message": "Ó ń kún àwọn ìwọlé, ọ̀rọ̀ ìpamọ́, àti àwọn kóòdù TOTP láti KeePassXC sínú Safari."
     },
     "entries_heading": {
         "message": "Àwọn ìwọlé fún ojú-ìwé yìí"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "A kò rí nǹkan"
-    },
-    "footer_author": {
-        "message": "láti ọwọ́ Markus Griesslehner"
     }
 }

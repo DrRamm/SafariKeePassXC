@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC의 로그인, 비밀번호, TOTP 코드를 Safari에 채웁니다. 개발: Markus Griesslehner."
+        "message": "KeePassXC의 로그인, 비밀번호, TOTP 코드를 Safari에 채웁니다."
     },
     "entries_heading": {
         "message": "이 페이지의 로그인"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "찾은 항목 없음"
-    },
-    "footer_author": {
-        "message": "제작: Markus Griesslehner"
     }
 }

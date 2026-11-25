@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC बाट लगइन, पासवर्ड र TOTP कोडहरू Safari मा भर्छ। Markus Griesslehner द्वारा विकसित।"
+        "message": "KeePassXC बाट लगइन, पासवर्ड र TOTP कोडहरू Safari मा भर्छ।"
     },
     "entries_heading": {
         "message": "यो पृष्ठका लागि लगइनहरू"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "केही भेटिएन"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner द्वारा"
     }
 }

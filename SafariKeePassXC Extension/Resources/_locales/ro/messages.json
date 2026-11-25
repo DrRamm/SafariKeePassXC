@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Completează datele de autentificare, parolele și codurile TOTP din KeePassXC în Safari. Dezvoltat de Markus Griesslehner."
+        "message": "Completează datele de autentificare, parolele și codurile TOTP din KeePassXC în Safari."
     },
     "entries_heading": {
         "message": "Date de autentificare pentru această pagină"
@@ -352,8 +352,5 @@
     },
     "search_empty": {
         "message": "Nimic găsit"
-    },
-    "footer_author": {
-        "message": "de Markus Griesslehner"
     }
 }

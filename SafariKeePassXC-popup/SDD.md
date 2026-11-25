@@ -394,7 +394,6 @@ Keys that become unused with the new popup (keep only if another surface still u
 | `search_results` | Found: $COUNT$ |
 | `search_all` | Entries for this site |
 | `search_empty` | Nothing found |
-| `footer_author` | by Markus Griesslehner |
 
 German translations required for the same keys. Placeholders use the `$NAME$` convention already used in `messages.json`.
 

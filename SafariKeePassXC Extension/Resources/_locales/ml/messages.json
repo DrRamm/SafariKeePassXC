@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC-ൽ നിന്നുള്ള ലോഗിനുകൾ, പാസ്‌വേഡുകൾ, TOTP കോഡുകൾ എന്നിവ Safari-യിൽ പൂരിപ്പിക്കുന്നു. Markus Griesslehner വികസിപ്പിച്ചത്."
+        "message": "KeePassXC-ൽ നിന്നുള്ള ലോഗിനുകൾ, പാസ്‌വേഡുകൾ, TOTP കോഡുകൾ എന്നിവ Safari-യിൽ പൂരിപ്പിക്കുന്നു."
     },
     "entries_heading": {
         "message": "ഈ പേജിനുള്ള ലോഗിനുകൾ"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "ഒന്നും കണ്ടെത്തിയില്ല"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner നൽകുന്നത്"
     }
 }

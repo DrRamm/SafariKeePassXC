@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "Preenche inícios de sessão, palavras-passe e códigos TOTP do KeePassXC no Safari. Desenvolvido por Markus Griesslehner."
+        "message": "Preenche inícios de sessão, palavras-passe e códigos TOTP do KeePassXC no Safari."
     },
     "entries_heading": {
         "message": "Inícios de sessão para esta página"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "Nada encontrado"
-    },
-    "footer_author": {
-        "message": "por Markus Griesslehner"
     }
 }

@@ -302,7 +302,7 @@ function SettingsScreen({ state, notify }: { state: AppState; notify: (m: string
           <RefreshCw className="size-4" /> Reconnect
         </button>
       </Group>
-      <div className="text-center text-[11px] text-muted-foreground/70">SafariKeePassXC v1.2.4 (2611241) · Markus Griesslehner</div>
+      <div className="text-center text-[11px] text-muted-foreground/70">SafariKeePassXC v1.2.4 (2611241)</div>
     </>
   );
 }

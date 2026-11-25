@@ -582,8 +582,7 @@ async function loadVersion() {
         const response = await api({ action: "get-version" });
         const result = response?.result;
         if (!response?.success || !result?.version) return;
-        $("footer").textContent =
-            `SafariKeePassXC v${result.version} (${result.build}) · ${t("footer_author")}`;
+        $("footer").textContent = `SafariKeePassXC v${result.version} (${result.build})`;
     } catch {
         // The footer simply stays empty.
     }

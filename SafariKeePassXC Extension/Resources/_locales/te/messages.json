@@ -3,7 +3,7 @@
         "message": "SafariKeePassXC Extension"
     },
     "extension_description": {
-        "message": "KeePassXC నుండి లాగిన్లు, పాస్‌వర్డ్‌లు మరియు TOTP కోడ్‌లను Safari లో నింపుతుంది. Markus Griesslehner రూపొందించారు."
+        "message": "KeePassXC నుండి లాగిన్లు, పాస్‌వర్డ్‌లు మరియు TOTP కోడ్‌లను Safari లో నింపుతుంది."
     },
     "entries_heading": {
         "message": "ఈ పేజీ కోసం లాగిన్‌లు"
@@ -328,8 +328,5 @@
     },
     "search_empty": {
         "message": "ఏమీ కనుగొనబడలేదు"
-    },
-    "footer_author": {
-        "message": "Markus Griesslehner ద్వారా"
     }
 }

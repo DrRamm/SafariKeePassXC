@@ -4,7 +4,7 @@
         "description": "The display name for the extension."
     },
     "extension_description": {
-        "message": "Fills logins, passwords, and TOTP codes from KeePassXC into Safari. Developed by Markus Griesslehner.",
+        "message": "Fills logins, passwords, and TOTP codes from KeePassXC into Safari.",
         "description": "Description of what the extension does, shown in Safari's extension settings."
     },
     "entries_heading": {
@@ -426,9 +426,5 @@
     "search_empty": {
         "message": "Nothing found",
         "description": "Search empty result text."
-    },
-    "footer_author": {
-        "message": "by Markus Griesslehner",
-        "description": "Author in the settings footer."
     }
 }
