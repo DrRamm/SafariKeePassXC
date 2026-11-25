@@ -15,7 +15,7 @@ import Network
 import os.log
 
 nonisolated enum BridgeSocket {
-    static let extensionBundleID = "dev.kotsareu.SafariKeePassXC.Extension"
+    static let extensionBundleID = "yauheni.tech.SafariKeePassXC.Extension"
     static let socketName = "kpxc-bridge.sock"
 
     static func directoryFromHostApp() -> String {

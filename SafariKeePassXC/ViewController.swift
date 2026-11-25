@@ -9,7 +9,7 @@ import Cocoa
 import SafariServices
 import WebKit
 
-let extensionBundleIdentifier = "dev.kotsareu.SafariKeePassXC.Extension"
+let extensionBundleIdentifier = "yauheni.tech.SafariKeePassXC.Extension"
 
 class ViewController: NSViewController, WKNavigationDelegate, WKScriptMessageHandler {
 

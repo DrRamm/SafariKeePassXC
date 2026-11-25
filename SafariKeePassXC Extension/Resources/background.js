@@ -19,7 +19,7 @@ import {
     PUBLIC_SUFFIX_EXCEPTIONS,
 } from "./public-suffixes.js";
 
-const NATIVE_APP_ID = "dev.kotsareu.SafariKeePassXC";
+const NATIVE_APP_ID = "yauheni.tech.SafariKeePassXC";
 
 const PASSKEY_ACTIONS = new Set(["passkeys-register", "passkeys-get"]);
 

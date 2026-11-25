@@ -92,8 +92,8 @@ the page. All other extension resources (popup, background, locales, icons) are 
   A compromise of the host app therefore has the privileges of the user — this is a deliberate,
   documented trade-off (see [SECURITY.md](SECURITY.md)).
 - Both targets share a single Keychain access group,
-  `$(AppIdentifierPrefix)dev.kotsareu.SafariKeePassXC` (that is
-  `<TeamID>.dev.kotsareu.SafariKeePassXC` at runtime), for the bridge token and the KeePassXC
+  `$(AppIdentifierPrefix)yauheni.tech.SafariKeePassXC` (that is
+  `<TeamID>.yauheni.tech.SafariKeePassXC` at runtime), for the bridge token and the KeePassXC
   association. Items use the data-protection keychain with
   `kSecAttrAccessibleWhenUnlockedThisDeviceOnly` / `AfterFirstUnlockThisDeviceOnly`, so they are not
   synced to iCloud.
@@ -294,8 +294,8 @@ How to create them:
    manage signing certificates and profiles). Download the `.p8` (it can only be downloaded once) and
    copy the Key ID and Issuer ID.
 
-3. The App IDs `dev.kotsareu.SafariKeePassXC` and
-   `dev.kotsareu.SafariKeePassXC.Extension` must exist in that team, and the team must be allowed to
+3. The App IDs `yauheni.tech.SafariKeePassXC` and
+   `yauheni.tech.SafariKeePassXC.Extension` must exist in that team, and the team must be allowed to
    create Developer ID provisioning profiles.
 
 The certificates and the API key are only used inside the release workflow; the temporary keychain

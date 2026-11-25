@@ -11,7 +11,7 @@ import Security
 
 nonisolated enum BridgeToken {
 
-    private static let service = "dev.kotsareu.SafariKeePassXC.bridge-token"
+    private static let service = "yauheni.tech.SafariKeePassXC.bridge-token"
     private static let account = "token"
 
     static func load() -> Data? {
@@ -43,7 +43,7 @@ nonisolated enum BridgeToken {
               let dict = info as? [String: Any],
               let teamID = dict[kSecCodeInfoTeamIdentifier as String] as? String,
               !teamID.isEmpty else { return nil }
-        return "\(teamID).dev.kotsareu.SafariKeePassXC"
+        return "\(teamID).yauheni.tech.SafariKeePassXC"
     }
 }
 
