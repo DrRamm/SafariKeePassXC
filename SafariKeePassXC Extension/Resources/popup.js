@@ -27,6 +27,8 @@ const SCREEN_TITLES = {
     search: "screen_search_title",
 };
 
+const SCREENS = ["home", "settings", "generator", "search"];
+
 const ERROR_STATES = {
     offline: { icon: "power", title: "status_offline", text: "error_offline_hint", button: "button_retry", action: "retry" },
     locked: { icon: "lock", title: "status_locked", text: "error_locked_hint", button: "button_unlock_in_keepassxc", action: "retry" },
@@ -54,6 +56,7 @@ let totpTimer = null;
 let totpRefreshing = false;
 let lastTotpPeriod = null;
 let toastTimer = null;
+let screenTransition = 0;
 
 // -- Helpers --
 
@@ -184,22 +187,39 @@ function renderStatus() {
 
 function setScreen(name) {
     if (appState !== "ok" && name !== "settings") name = "home";
+    const previous = screen;
+    const animate = previous !== name;
     screen = name;
 
-    for (const id of ["home", "settings", "generator", "search"]) {
-        $("screen-" + id).hidden = id !== name;
+    const content = $("content");
+    const from = $("screen-" + previous);
+    const to = $("screen-" + name);
+
+    if (animate) {
+        // Freeze the current height before the screens leave the flow, so the
+        // panel can animate to the incoming screen's height.
+        content.style.height = `${content.offsetHeight}px`;
     }
+
+    for (const id of SCREENS) {
+        const element = $("screen-" + id);
+        const visible = id === name || (animate && id === previous);
+        element.hidden = !visible;
+        if (!visible) {
+            element.classList.remove(
+                "animating", "enter-forward", "enter-back", "exit-forward", "exit-back"
+            );
+            element.inert = false;
+            element.removeAttribute("aria-hidden");
+        }
+    }
+
     $("header").hidden = name !== "home";
     $("subheader").hidden = name === "home";
 
     if (name !== "home") {
         $("screen-title").textContent = t(SCREEN_TITLES[name]);
     }
-
-    const active = $("screen-" + name);
-    active.classList.remove("animate");
-    void active.offsetWidth;
-    active.classList.add("animate");
 
     if (name === "home") {
         renderHome();
@@ -210,6 +230,60 @@ function setScreen(name) {
         renderSearch();
         $("search-input").focus();
     }
+
+    if (!animate) {
+        screenTransition += 1;
+        content.style.height = "";
+        return;
+    }
+
+    // Slide the screens past each other: the outgoing one leaves on one side
+    // while the incoming one arrives from the other. Going back to home
+    // reverses the direction.
+    const forward = name !== "home";
+    to.inert = false;
+    to.removeAttribute("aria-hidden");
+    from.inert = true;
+    from.setAttribute("aria-hidden", "true");
+
+    for (const element of [from, to]) {
+        element.classList.remove(
+            "enter-forward", "enter-back", "exit-forward", "exit-back"
+        );
+        element.classList.add("animating");
+    }
+    from.classList.add(forward ? "exit-forward" : "exit-back");
+    to.classList.add(forward ? "enter-forward" : "enter-back");
+
+    // Flush the frozen height, then let the panel resize to the new screen
+    // while both screens slide.
+    void content.offsetHeight;
+    content.style.height = `${to.offsetHeight}px`;
+
+    const transition = ++screenTransition;
+    let finished = false;
+    const finish = () => {
+        if (finished || transition !== screenTransition) return;
+        finished = true;
+        to.removeEventListener("animationend", onAnimationEnd);
+        from.hidden = true;
+        from.inert = false;
+        from.removeAttribute("aria-hidden");
+        from.classList.remove(
+            "animating", "enter-forward", "enter-back", "exit-forward", "exit-back"
+        );
+        to.classList.remove(
+            "animating", "enter-forward", "enter-back", "exit-forward", "exit-back"
+        );
+        content.style.height = "";
+    };
+    const onAnimationEnd = (event) => {
+        if (event.target === to && event.animationName.startsWith("screen-enter")) {
+            finish();
+        }
+    };
+    to.addEventListener("animationend", onAnimationEnd);
+    setTimeout(finish, 320);
 }
 
 // -- Home --

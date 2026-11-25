@@ -214,5 +214,7 @@
     radial-gradient(50% 50% at 55% 85%, var(--scene-c), transparent 70%),
     var(--scene-base);
 }
-@keyframes screen-in { from { opacity: 0; transform: translateX(16px); } to { opacity: 1; transform: none; } }
-@utility animate-screen { animation: screen-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@keyframes screen-in-forward { from { opacity: 0; transform: translateX(48px); } to { opacity: 1; transform: none; } }
+@keyframes screen-in-back { from { opacity: 0; transform: translateX(-48px); } to { opacity: 1; transform: none; } }
+@utility animate-screen-forward { animation: screen-in-forward 0.28s cubic-bezier(0.2, 0.8, 0.2, 1); }
+@utility animate-screen-back { animation: screen-in-back 0.28s cubic-bezier(0.2, 0.8, 0.2, 1); }

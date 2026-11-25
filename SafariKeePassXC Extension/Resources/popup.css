@@ -223,22 +223,117 @@ body {
 /* Content */
 
 .content {
+    position: relative;
+    transition: height 0.26s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.screen {
     padding: 0 16px 16px;
 }
 
-.screen.animate {
-    animation: screen-in 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+/* Screens slide past each other: the outgoing screen leaves on one side while
+   the incoming one arrives from the other. Going back to home reverses the
+   direction. */
+
+.screen.animating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    will-change: transform, opacity;
 }
 
-@keyframes screen-in {
+.screen.enter-forward {
+    animation: screen-enter-forward 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.screen.enter-back {
+    animation: screen-enter-back 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.screen.exit-forward {
+    animation: screen-exit-forward 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    pointer-events: none;
+}
+
+.screen.exit-back {
+    animation: screen-exit-back 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    pointer-events: none;
+}
+
+@keyframes screen-enter-forward {
     from {
         opacity: 0;
-        transform: translateX(16px);
+        transform: translateX(56px);
     }
     to {
         opacity: 1;
-        transform: none;
+        transform: translateX(0);
     }
+}
+
+@keyframes screen-enter-back {
+    from {
+        opacity: 0;
+        transform: translateX(-56px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes screen-exit-forward {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-56px);
+    }
+}
+
+@keyframes screen-exit-back {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(56px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .content {
+        transition: none;
+    }
+
+    .screen.enter-forward,
+    .screen.enter-back,
+    .screen.exit-forward,
+    .screen.exit-back {
+        animation-duration: 0.01ms;
+    }
+}
+
+/* Right-to-left languages: forward navigation enters from the left. */
+
+[dir="rtl"] .screen.enter-forward {
+    animation-name: screen-enter-back;
+}
+
+[dir="rtl"] .screen.enter-back {
+    animation-name: screen-enter-forward;
+}
+
+[dir="rtl"] .screen.exit-forward {
+    animation-name: screen-exit-back;
+}
+
+[dir="rtl"] .screen.exit-back {
+    animation-name: screen-exit-forward;
 }
 
 .section-label {

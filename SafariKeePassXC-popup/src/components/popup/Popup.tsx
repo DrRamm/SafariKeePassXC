@@ -13,6 +13,11 @@ type Screen = "home" | "settings" | "generator" | "search";
 
 export function Popup({ state, onStateChange }: { state: AppState; onStateChange: (s: AppState) => void }) {
   const [screen, setScreen] = useState<Screen>("home");
+  const [direction, setDirection] = useState<"forward" | "back">("forward");
+  const navigate = (next: Screen) => {
+    setDirection(next === "home" ? "back" : "forward");
+    setScreen(next);
+  };
   const [toast, setToast] = useState<string | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const notify = (m: string) => {
@@ -28,17 +33,17 @@ export function Popup({ state, onStateChange }: { state: AppState; onStateChange
     <div className="relative w-[360px] font-sans text-foreground">
       <div className="glass-panel overflow-hidden rounded-[28px]">
         {current === "home" ? (
-          <Header state={state} onNav={setScreen} disabled={blocked} />
+          <Header state={state} onNav={navigate} disabled={blocked} />
         ) : (
           <SubHeader
             title={{ settings: "Settings", generator: "Password generator", search: "Search vault", home: "" }[current]}
-            onBack={() => setScreen("home")}
+            onBack={() => navigate("home")}
           />
         )}
-        <div key={current + state} className="animate-screen px-4 pb-4">
+        <div key={current} className={cn("px-4 pb-4", direction === "forward" ? "animate-screen-forward" : "animate-screen-back")}>
           {current === "home" && (
             blocked ? <ErrorState state={state} onFix={() => { onStateChange("ok"); notify("Connected"); }} />
-              : <Home state={state} notify={notify} onNav={setScreen} />
+              : <Home state={state} notify={notify} onNav={navigate} />
           )}
           {current === "settings" && <SettingsScreen state={state} notify={notify} />}
           {current === "generator" && <Generator notify={notify} />}
