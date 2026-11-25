@@ -163,7 +163,7 @@ The design's `--glass-bg` and `--glass-shadow` are intentionally not ported: the
 | Toast | Bottom pill, 1.8 s, check icon | Replaces the `<pre id="result">` block |
 | Theme | System only | `prefers-color-scheme` |
 
-**Brand mark.** One key mark everywhere: the popup's thin key inside a blue rounded badge. It is used for the Safari toolbar icon (`images/toolbar-icon-{16,19,32,38}.png`, vector source `toolbar-icon.svg`), the extension icons (`images/icon-{48..512}.png`), the macOS app icon (`Assets.xcassets/AppIcon.appiconset`, vector master `scripts/app-icon.svg`) and the host window icon (`Resources/Icon.png`, full-bleed). The popup header keeps the design's flat blue tile with the same key glyph.
+**Brand mark.** One key mark everywhere: the popup's thin key inside a flat blue rounded badge (`#007DF3`). On a canvas the badge is 80% wide (10% margin on every side), the corner radius is 30% of the badge, and the key box is 50% of the badge (the visible glyph is ~46%), centred. It is used for the Safari toolbar icon (`images/toolbar-icon-{16,19,32,38}.png`, vector source `toolbar-icon.svg`), the extension icons (`images/icon-{48..512}.png`), the macOS app icon (`Assets.xcassets/AppIcon.appiconset`, vector master `scripts/app-icon.svg`) and the host window icon (`Resources/Icon.svg`). The 16–19 px slots use the optical variants (`toolbar-icon-small.svg`, `app-icon-small.svg`) with a 78% key box so the thin stroke survives antialiasing. All rasters are rebuilt from the vector masters with `scripts/render-icons.sh` and verified with `scripts/check-icons.py` (geometry, centring, badge colour). The popup header keeps the design's flat blue tile with the same key glyph.
 
 Status text mapping (`AppState`):
 

@@ -24,3 +24,15 @@ Please don't open a public issue for security vulnerabilities — see [SECURITY.
 - Keep pull requests focused on a single change; unrelated formatting or refactoring changes make
   review harder.
 - For anything beyond a small fix, consider opening an issue first to discuss the approach.
+
+## Icons
+
+The brand mark (the popup's thin key on a flat blue rounded badge) is defined by
+`SafariKeePassXC Extension/Resources/images/toolbar-icon.svg` and `scripts/app-icon.svg`. Don't edit
+the PNGs by hand: change the master and rebuild the rasters.
+
+```sh
+./scripts/render-icons.sh   # needs rsvg-convert (brew install librsvg)
+python3 scripts/check-icons.py   # needs Pillow (pip install pillow)
+```
+

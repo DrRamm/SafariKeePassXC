@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512">
-  <defs>
-    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4FA6F8"/>
-      <stop offset="1" stop-color="#0A6FD8"/>
-    </linearGradient>
-  </defs>
-  <rect x="1.25" y="1.25" width="21.5" height="21.5" rx="5.2" fill="url(#badge)"/>
-  <g transform="translate(12 12) scale(0.82) translate(-12 -12)"
-     fill="none" stroke="#ffffff" stroke-width="2.2"
+  <!-- Brand mark, identical to the popup header tile: the thin key on a flat
+       blue rounded badge. The badge is 80% of the canvas (10% margin on every
+       side) with a 30% corner radius; the key box is 50% of the badge (the
+       visible glyph is ~46%) and is centred. Stroke 2 on the 24 grid keeps the
+       glyph thin at every size. -->
+  <rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5.76" fill="#007DF3"/>
+  <g transform="translate(12 12) scale(0.4) translate(-12 -12)"
+     fill="none" stroke="#FFFFFF" stroke-width="2"
      stroke-linecap="round" stroke-linejoin="round">
     <circle cx="7.5" cy="15.5" r="5.5"/>
     <path d="m21 2-9.6 9.6"/>
