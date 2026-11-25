@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "从 KeePassXC 向 Safari 填充登录信息、密码和 TOTP 验证码。由 Markus Griesslehner 开发。"
+    },
+    "entries_heading": {
+        "message": "此页面的登录信息"
+    },
+    "button_associate": {
+        "message": "连接到 KeePassXC"
+    },
+    "button_generate": {
+        "message": "生成密码"
+    },
+    "button_totp": {
+        "message": "复制 TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "SafariKeePassXC 应用未运行。请启动并保持其打开。"
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "无法连接 KeePassXC。KeePassXC 是否正在运行并已启用浏览器集成？"
+    },
+    "error_database_locked": {
+        "message": "KeePassXC 数据库已锁定。请解锁。"
+    },
+    "error_not_associated": {
+        "message": "尚未连接到 KeePassXC。"
+    },
+    "error_generic": {
+        "message": "错误：$DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "未知"
+    },
+    "save_failed": {
+        "message": "无法保存登录信息。"
+    },
+    "entries_empty": {
+        "message": "此页面没有条目。"
+    },
+    "entry_fill_tooltip": {
+        "message": "填充"
+    },
+    "fill_no_form": {
+        "message": "在此页面上未找到登录表单。"
+    },
+    "fill_no_access": {
+        "message": "扩展无权访问此页面。请在 Safari 设置中允许访问此网站，然后重新加载页面。"
+    },
+    "status_associating": {
+        "message": "正在连接…（请在 KeePassXC 中确认对话框）"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – 尚未连接。",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "已连接到 KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "（已复制到剪贴板）"
+    },
+    "password_copied": {
+        "message": "密码已生成并复制到剪贴板。"
+    },
+    "clipboard_failed": {
+        "message": "剪贴板不可用。密码未显示。"
+    },
+    "totp_no_website": {
+        "message": "当前标签页中没有网站。"
+    },
+    "totp_no_entry": {
+        "message": "此页面没有 TOTP 条目。"
+    },
+    "save_banner_new": {
+        "message": "是否将此网站的登录信息“$LOGIN$”保存到 KeePassXC？",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "是否更新 KeePassXC 中“$LOGIN$”的已保存密码？",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "保存"
+    },
+    "save_banner_button_update": {
+        "message": "更新"
+    },
+    "save_banner_dismiss": {
+        "message": "暂不"
+    },
+    "save_group_label": {
+        "message": "将新登录信息保存到"
+    },
+    "save_group_default": {
+        "message": "默认组 (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "通过 KeePassXC 使用通行密钥"
+    },
+    "passkeys_toggle_hint": {
+        "message": "页面重新加载后生效。关闭时，由 Safari 处理通行密钥。"
+    },
+    "passkeys_reload_hint": {
+        "message": "重新加载页面以使更改生效。"
+    },
+    "passkeys_bridge_stopped": {
+        "message": "通行密钥不可用：SafariKeePassXC 应用未运行。"
+    },
+    "passkeys_not_associated": {
+        "message": "连接到 KeePassXC 以使用通行密钥。"
+    },
+    "passkeys_unsupported_version": {
+        "message": "通行密钥需要 KeePassXC 2.7.7 或更高版本（当前为 $VERSION$）。",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "通行密钥桥接在此页面上未启用。请重新加载页面，并确保扩展有权访问此网站。"
+    },
+    "passkeys_fallback_reason": {
+        "message": "上一次通行密钥请求由 Safari 而非 KeePassXC 处理（$REASON$）。",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "搜索"
+    },
+    "nav_generator": {
+        "message": "生成器"
+    },
+    "nav_settings": {
+        "message": "设置"
+    },
+    "nav_back": {
+        "message": "返回"
+    },
+    "screen_search_title": {
+        "message": "搜索保险库"
+    },
+    "screen_generator_title": {
+        "message": "密码生成器"
+    },
+    "screen_settings_title": {
+        "message": "设置"
+    },
+    "status_connected_short": {
+        "message": "已连接 · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "保险库已锁定"
+    },
+    "status_offline": {
+        "message": "KeePassXC 未运行"
+    },
+    "status_unpaired": {
+        "message": "扩展未配对"
+    },
+    "section_for_site": {
+        "message": "此网站"
+    },
+    "home_empty_title": {
+        "message": "没有 $DOMAIN$ 的登录信息",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "在保险库中查找条目或搜索你的登录信息。"
+    },
+    "button_search": {
+        "message": "搜索"
+    },
+    "button_create": {
+        "message": "创建"
+    },
+    "toast_filled": {
+        "message": "已填充：$TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP 验证码已复制"
+    },
+    "toast_connected": {
+        "message": "已连接"
+    },
+    "toast_reconnected": {
+        "message": "已重新连接"
+    },
+    "toast_login_created": {
+        "message": "已创建新登录信息"
+    },
+    "toast_password_copied": {
+        "message": "密码已复制"
+    },
+    "toast_password_pasted": {
+        "message": "密码已粘贴"
+    },
+    "error_offline_hint": {
+        "message": "打开 KeePassXC 并启用浏览器集成。"
+    },
+    "error_locked_hint": {
+        "message": "解锁保险库以查看你的登录信息。"
+    },
+    "error_pairing_required": {
+        "message": "需要配对"
+    },
+    "error_unpaired_hint": {
+        "message": "在 KeePassXC 窗口中确认扩展连接。"
+    },
+    "button_retry": {
+        "message": "重试"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "在 KeePassXC 中解锁"
+    },
+    "button_pair": {
+        "message": "配对"
+    },
+    "section_saving": {
+        "message": "保存"
+    },
+    "section_autofill": {
+        "message": "自动填充"
+    },
+    "settings_save_prompt": {
+        "message": "提示保存密码"
+    },
+    "settings_autofill": {
+        "message": "页面加载时自动填充"
+    },
+    "settings_autofill_hint": {
+        "message": "当为该网站找到单个登录信息时。"
+    },
+    "section_connection": {
+        "message": "连接"
+    },
+    "settings_connected_to": {
+        "message": "已连接到 KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "未连接"
+    },
+    "settings_reconnect": {
+        "message": "重新连接"
+    },
+    "totp_copy_label": {
+        "message": "复制 TOTP 验证码"
+    },
+    "generator_length": {
+        "message": "长度"
+    },
+    "generator_phrase_length": {
+        "message": "短语长度"
+    },
+    "generator_phrase": {
+        "message": "密码短语"
+    },
+    "generator_phrase_hint": {
+        "message": "用连字符分隔的单词更容易记住。"
+    },
+    "generator_strength_weak": {
+        "message": "弱"
+    },
+    "generator_strength_medium": {
+        "message": "中"
+    },
+    "generator_strength_strong": {
+        "message": "强"
+    },
+    "generator_strength_very_strong": {
+        "message": "非常强"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC 密码"
+    },
+    "generator_regenerate": {
+        "message": "重新生成"
+    },
+    "generator_copy": {
+        "message": "复制密码"
+    },
+    "search_clear": {
+        "message": "清除搜索"
+    },
+    "search_placeholder": {
+        "message": "标题、用户名或网站"
+    },
+    "search_hint": {
+        "message": "搜索此网站的登录信息。"
+    },
+    "search_in_keepassxc": {
+        "message": "在 KeePassXC 中搜索"
+    },
+    "search_results": {
+        "message": "找到：$COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "此网站的条目"
+    },
+    "search_empty": {
+        "message": "未找到任何内容"
+    },
+    "footer_author": {
+        "message": "作者 Markus Griesslehner"
+    }
+}

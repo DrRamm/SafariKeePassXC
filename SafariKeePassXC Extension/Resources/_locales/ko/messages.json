@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "KeePassXC의 로그인, 비밀번호, TOTP 코드를 Safari에 채웁니다. 개발: Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "이 페이지의 로그인"
+    },
+    "button_associate": {
+        "message": "KeePassXC에 연결"
+    },
+    "button_generate": {
+        "message": "비밀번호 생성"
+    },
+    "button_totp": {
+        "message": "TOTP 복사"
+    },
+    "error_host_app_not_running": {
+        "message": "SafariKeePassXC 앱이 실행 중이 아닙니다. 앱을 실행하고 열어 두세요."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC에 연결할 수 없습니다. KeePassXC가 실행 중이고 브라우저 통합이 켜져 있나요?"
+    },
+    "error_database_locked": {
+        "message": "KeePassXC 데이터베이스가 잠겨 있습니다. 잠금을 해제하세요."
+    },
+    "error_not_associated": {
+        "message": "아직 KeePassXC에 연결되지 않았습니다."
+    },
+    "error_generic": {
+        "message": "오류: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "알 수 없음"
+    },
+    "save_failed": {
+        "message": "로그인을 저장하지 못했습니다."
+    },
+    "entries_empty": {
+        "message": "이 페이지에 항목이 없습니다."
+    },
+    "entry_fill_tooltip": {
+        "message": "채우기"
+    },
+    "fill_no_form": {
+        "message": "이 페이지에서 로그인 양식을 찾을 수 없습니다."
+    },
+    "fill_no_access": {
+        "message": "확장 프로그램이 이 페이지에 접근할 수 없습니다. Safari 설정에서 이 웹 사이트 접근을 허용하고 페이지를 다시 로드하세요."
+    },
+    "status_associating": {
+        "message": "연결 중… (KeePassXC 대화상자에서 확인하세요)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – 아직 연결되지 않음.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "KeePassXC $VERSION$에 연결됨",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(클립보드에 복사됨)"
+    },
+    "password_copied": {
+        "message": "비밀번호를 생성하여 클립보드에 복사했습니다."
+    },
+    "clipboard_failed": {
+        "message": "클립보드를 사용할 수 없습니다. 비밀번호가 표시되지 않았습니다."
+    },
+    "totp_no_website": {
+        "message": "활성 탭에 웹 사이트가 없습니다."
+    },
+    "totp_no_entry": {
+        "message": "이 페이지에 TOTP 항목이 없습니다."
+    },
+    "save_banner_new": {
+        "message": "이 사이트의 로그인 “$LOGIN$”을(를) KeePassXC에 저장할까요?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "KeePassXC에 저장된 “$LOGIN$”의 비밀번호를 업데이트할까요?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "저장"
+    },
+    "save_banner_button_update": {
+        "message": "업데이트"
+    },
+    "save_banner_dismiss": {
+        "message": "나중에"
+    },
+    "save_group_label": {
+        "message": "새 로그인 저장 위치"
+    },
+    "save_group_default": {
+        "message": "기본 그룹 (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "KeePassXC를 통한 패스키"
+    },
+    "passkeys_toggle_hint": {
+        "message": "페이지를 다시 로드한 후 적용됩니다. 끄면 Safari가 패스키를 처리합니다."
+    },
+    "passkeys_reload_hint": {
+        "message": "변경 사항을 적용하려면 페이지를 다시 로드하세요."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "패스키를 사용할 수 없습니다: SafariKeePassXC 앱이 실행 중이 아닙니다."
+    },
+    "passkeys_not_associated": {
+        "message": "패스키를 사용하려면 KeePassXC에 연결하세요."
+    },
+    "passkeys_unsupported_version": {
+        "message": "패스키에는 KeePassXC 2.7.7 이상이 필요합니다(현재 $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "이 페이지에서 패스키 브리지가 활성화되지 않았습니다. 페이지를 다시 로드하고 확장 프로그램이 이 웹 사이트에 접근할 수 있는지 확인하세요."
+    },
+    "passkeys_fallback_reason": {
+        "message": "마지막 패스키 요청이 KeePassXC 대신 Safari에서 처리되었습니다($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "검색"
+    },
+    "nav_generator": {
+        "message": "생성기"
+    },
+    "nav_settings": {
+        "message": "설정"
+    },
+    "nav_back": {
+        "message": "뒤로"
+    },
+    "screen_search_title": {
+        "message": "보관함 검색"
+    },
+    "screen_generator_title": {
+        "message": "비밀번호 생성기"
+    },
+    "screen_settings_title": {
+        "message": "설정"
+    },
+    "status_connected_short": {
+        "message": "연결됨 · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "보관함이 잠겨 있음"
+    },
+    "status_offline": {
+        "message": "KeePassXC가 실행 중이 아님"
+    },
+    "status_unpaired": {
+        "message": "확장 프로그램이 페어링되지 않음"
+    },
+    "section_for_site": {
+        "message": "이 사이트"
+    },
+    "home_empty_title": {
+        "message": "$DOMAIN$에 대한 로그인 없음",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "보관함에서 항목을 찾거나 로그인을 검색하세요."
+    },
+    "button_search": {
+        "message": "검색"
+    },
+    "button_create": {
+        "message": "만들기"
+    },
+    "toast_filled": {
+        "message": "채움: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP 코드가 복사됨"
+    },
+    "toast_connected": {
+        "message": "연결됨"
+    },
+    "toast_reconnected": {
+        "message": "다시 연결됨"
+    },
+    "toast_login_created": {
+        "message": "새 로그인이 생성됨"
+    },
+    "toast_password_copied": {
+        "message": "비밀번호가 복사됨"
+    },
+    "toast_password_pasted": {
+        "message": "비밀번호가 붙여넣어짐"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC를 열고 브라우저 통합을 켜세요."
+    },
+    "error_locked_hint": {
+        "message": "보관함 잠금을 해제하여 로그인을 확인하세요."
+    },
+    "error_pairing_required": {
+        "message": "페어링 필요"
+    },
+    "error_unpaired_hint": {
+        "message": "KeePassXC 창에서 확장 프로그램 연결을 확인하세요."
+    },
+    "button_retry": {
+        "message": "다시 시도"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "KeePassXC에서 잠금 해제"
+    },
+    "button_pair": {
+        "message": "페어링"
+    },
+    "section_saving": {
+        "message": "저장"
+    },
+    "section_autofill": {
+        "message": "자동 채우기"
+    },
+    "settings_save_prompt": {
+        "message": "비밀번호 저장 제안"
+    },
+    "settings_autofill": {
+        "message": "페이지 로드 시 자동 채우기"
+    },
+    "settings_autofill_hint": {
+        "message": "사이트에 로그인이 하나만 발견된 경우."
+    },
+    "section_connection": {
+        "message": "연결"
+    },
+    "settings_connected_to": {
+        "message": "KeePassXC $VERSION$에 연결됨",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "연결되지 않음"
+    },
+    "settings_reconnect": {
+        "message": "다시 연결"
+    },
+    "totp_copy_label": {
+        "message": "TOTP 코드 복사"
+    },
+    "generator_length": {
+        "message": "길이"
+    },
+    "generator_phrase_length": {
+        "message": "구문 길이"
+    },
+    "generator_phrase": {
+        "message": "패스프레이즈"
+    },
+    "generator_phrase_hint": {
+        "message": "하이픈으로 구분된 단어는 기억하기 쉽습니다."
+    },
+    "generator_strength_weak": {
+        "message": "약함"
+    },
+    "generator_strength_medium": {
+        "message": "보통"
+    },
+    "generator_strength_strong": {
+        "message": "강함"
+    },
+    "generator_strength_very_strong": {
+        "message": "매우 강함"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC 비밀번호"
+    },
+    "generator_regenerate": {
+        "message": "다시 생성"
+    },
+    "generator_copy": {
+        "message": "비밀번호 복사"
+    },
+    "search_clear": {
+        "message": "검색 지우기"
+    },
+    "search_placeholder": {
+        "message": "제목, 사용자 이름 또는 사이트"
+    },
+    "search_hint": {
+        "message": "이 사이트의 로그인을 검색합니다."
+    },
+    "search_in_keepassxc": {
+        "message": "KeePassXC에서 검색"
+    },
+    "search_results": {
+        "message": "찾음: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "이 사이트의 항목"
+    },
+    "search_empty": {
+        "message": "찾은 항목 없음"
+    },
+    "footer_author": {
+        "message": "제작: Markus Griesslehner"
+    }
+}

@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "KeePassXC இலிருந்து உள்நுழைவுகள், கடவுச்சொற்கள் மற்றும் TOTP குறியீடுகளை Safari இல் நிரப்புகிறது. Markus Griesslehner உருவாக்கியது."
+    },
+    "entries_heading": {
+        "message": "இந்தப் பக்கத்திற்கான உள்நுழைவுகள்"
+    },
+    "button_associate": {
+        "message": "KeePassXC உடன் இணைக்க"
+    },
+    "button_generate": {
+        "message": "கடவுச்சொல் உருவாக்கு"
+    },
+    "button_totp": {
+        "message": "TOTP நகலெடு"
+    },
+    "error_host_app_not_running": {
+        "message": "SafariKeePassXC செயலி இயங்கவில்லை. அதைத் தொடங்கி திறந்தே வைக்கவும்."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC அணுக முடியவில்லை. KeePassXC இயங்குகிறதா, உலாவி ஒருங்கிணைப்பு இயக்கப்பட்டுள்ளதா?"
+    },
+    "error_database_locked": {
+        "message": "KeePassXC தரவுத்தளம் பூட்டப்பட்டுள்ளது. அதைத் திறக்கவும்."
+    },
+    "error_not_associated": {
+        "message": "இன்னும் KeePassXC உடன் இணைக்கப்படவில்லை."
+    },
+    "error_generic": {
+        "message": "பிழை: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "தெரியாதது"
+    },
+    "save_failed": {
+        "message": "உள்நுழைவைச் சேமிக்க முடியவில்லை."
+    },
+    "entries_empty": {
+        "message": "இந்தப் பக்கத்திற்கு பதிவுகள் இல்லை."
+    },
+    "entry_fill_tooltip": {
+        "message": "நிரப்பு"
+    },
+    "fill_no_form": {
+        "message": "இந்தப் பக்கத்தில் உள்நுழைவு படிவம் கிடைக்கவில்லை."
+    },
+    "fill_no_access": {
+        "message": "இந்தப் பக்கத்திற்கு நீட்டிப்புக்கு அணுகல் இல்லை. Safari அமைப்புகளில் இந்த இணையதளத்திற்கு அணுகலை அனுமதித்து பக்கத்தை மீண்டும் ஏற்றவும்."
+    },
+    "status_associating": {
+        "message": "இணைக்கிறது… (KeePassXC இல் உள்ள உரையாடலை உறுதிப்படுத்தவும்)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – இன்னும் இணைக்கப்படவில்லை.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "KeePassXC $VERSION$ உடன் இணைக்கப்பட்டது",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது)"
+    },
+    "password_copied": {
+        "message": "கடவுச்சொல் உருவாக்கப்பட்டு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது."
+    },
+    "clipboard_failed": {
+        "message": "கிளிப்போர்டு கிடைக்கவில்லை. கடவுச்சொல் காட்டப்படவில்லை."
+    },
+    "totp_no_website": {
+        "message": "செயலில் உள்ள தாவலில் இணையதளம் இல்லை."
+    },
+    "totp_no_entry": {
+        "message": "இந்தப் பக்கத்திற்கு TOTP பதிவு இல்லை."
+    },
+    "save_banner_new": {
+        "message": "“$LOGIN$” உள்நுழைவை இந்தத் தளத்திற்காக KeePassXC இல் சேமிக்கவா?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "KeePassXC இல் “$LOGIN$” க்கான சேமிக்கப்பட்ட கடவுச்சொல்லைப் புதுப்பிக்கவா?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "சேமி"
+    },
+    "save_banner_button_update": {
+        "message": "புதுப்பி"
+    },
+    "save_banner_dismiss": {
+        "message": "இப்போது வேண்டாம்"
+    },
+    "save_group_label": {
+        "message": "புதிய உள்நுழைவுகளை இதில் சேமி"
+    },
+    "save_group_default": {
+        "message": "இயல்புநிலை குழு (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "KeePassXC வழியாக Passkeys"
+    },
+    "passkeys_toggle_hint": {
+        "message": "பக்கம் மீண்டும் ஏற்றப்பட்ட பிறகு செயல்படும். அணைக்கப்பட்டால் Safari Passkeys ஐ கையாளும்."
+    },
+    "passkeys_reload_hint": {
+        "message": "மாற்றம் செயல்பட பக்கத்தை மீண்டும் ஏற்றவும்."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys கிடைக்கவில்லை: SafariKeePassXC செயலி இயங்கவில்லை."
+    },
+    "passkeys_not_associated": {
+        "message": "Passkeys பயன்படுத்த KeePassXC உடன் இணைக்கவும்."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys க்கு KeePassXC 2.7.7 அல்லது புதியது தேவை (கிடைத்தது: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "இந்தப் பக்கத்தில் Passkeys பாலம் செயலில் இல்லை. பக்கத்தை மீண்டும் ஏற்றி, இந்த இணையதளத்திற்கு நீட்டிப்புக்கு அணுகல் உள்ளதை உறுதிசெய்யவும்."
+    },
+    "passkeys_fallback_reason": {
+        "message": "கடைசி Passkeys கோரிக்கையை KeePassXC க்கு பதிலாக Safari கையாண்டது ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "தேடு"
+    },
+    "nav_generator": {
+        "message": "உருவாக்கி"
+    },
+    "nav_settings": {
+        "message": "அமைப்புகள்"
+    },
+    "nav_back": {
+        "message": "பின்செல்"
+    },
+    "screen_search_title": {
+        "message": "பெட்டகத்தைத் தேடு"
+    },
+    "screen_generator_title": {
+        "message": "கடவுச்சொல் உருவாக்கி"
+    },
+    "screen_settings_title": {
+        "message": "அமைப்புகள்"
+    },
+    "status_connected_short": {
+        "message": "இணைக்கப்பட்டது · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "பெட்டகம் பூட்டப்பட்டுள்ளது"
+    },
+    "status_offline": {
+        "message": "KeePassXC இயங்கவில்லை"
+    },
+    "status_unpaired": {
+        "message": "நீட்டிப்பு இணைக்கப்படவில்லை"
+    },
+    "section_for_site": {
+        "message": "இந்தத் தளத்திற்கு"
+    },
+    "home_empty_title": {
+        "message": "$DOMAIN$ க்கு உள்நுழைவுகள் இல்லை",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "பெட்டகத்தில் பதிவைக் கண்டறியவும் அல்லது உங்கள் உள்நுழைவுகளைத் தேடவும்."
+    },
+    "button_search": {
+        "message": "தேடு"
+    },
+    "button_create": {
+        "message": "உருவாக்கு"
+    },
+    "toast_filled": {
+        "message": "நிரப்பப்பட்டது: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP குறியீடு நகலெடுக்கப்பட்டது"
+    },
+    "toast_connected": {
+        "message": "இணைக்கப்பட்டது"
+    },
+    "toast_reconnected": {
+        "message": "மீண்டும் இணைக்கப்பட்டது"
+    },
+    "toast_login_created": {
+        "message": "புதிய உள்நுழைவு உருவாக்கப்பட்டது"
+    },
+    "toast_password_copied": {
+        "message": "கடவுச்சொல் நகலெடுக்கப்பட்டது"
+    },
+    "toast_password_pasted": {
+        "message": "கடவுச்சொல் ஒட்டப்பட்டது"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC ஐத் திறந்து உலாவி ஒருங்கிணைப்பை இயக்கவும்."
+    },
+    "error_locked_hint": {
+        "message": "உங்கள் உள்நுழைவுகளைக் காண பெட்டகத்தைத் திறக்கவும்."
+    },
+    "error_pairing_required": {
+        "message": "இணைப்பு தேவை"
+    },
+    "error_unpaired_hint": {
+        "message": "KeePassXC சாளரத்தில் நீட்டிப்பு இணைப்பை உறுதிப்படுத்தவும்."
+    },
+    "button_retry": {
+        "message": "மீண்டும் முயற்சி"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "KeePassXC இல் திற"
+    },
+    "button_pair": {
+        "message": "இணை"
+    },
+    "section_saving": {
+        "message": "சேமித்தல்"
+    },
+    "section_autofill": {
+        "message": "தானியங்கி நிரப்பல்"
+    },
+    "settings_save_prompt": {
+        "message": "கடவுச்சொற்களைச் சேமிக்க வழங்கு"
+    },
+    "settings_autofill": {
+        "message": "பக்கம் ஏற்றப்படும்போது தானியங்கி நிரப்பல்"
+    },
+    "settings_autofill_hint": {
+        "message": "தளத்திற்கு ஒரே உள்நுழைவு கிடைக்கும்போது."
+    },
+    "section_connection": {
+        "message": "இணைப்பு"
+    },
+    "settings_connected_to": {
+        "message": "KeePassXC $VERSION$ உடன் இணைக்கப்பட்டது",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "இணைக்கப்படவில்லை"
+    },
+    "settings_reconnect": {
+        "message": "மீண்டும் இணை"
+    },
+    "totp_copy_label": {
+        "message": "TOTP குறியீட்டை நகலெடு"
+    },
+    "generator_length": {
+        "message": "நீளம்"
+    },
+    "generator_phrase_length": {
+        "message": "சொற்றொடர் நீளம்"
+    },
+    "generator_phrase": {
+        "message": "சொற்றொடர்"
+    },
+    "generator_phrase_hint": {
+        "message": "இணைப்புக்கோடு இட்ட சொற்கள் நினைவில் வைக்க எளிது."
+    },
+    "generator_strength_weak": {
+        "message": "பலவீனம்"
+    },
+    "generator_strength_medium": {
+        "message": "நடுத்தரம்"
+    },
+    "generator_strength_strong": {
+        "message": "வலிமை"
+    },
+    "generator_strength_very_strong": {
+        "message": "மிக வலிமை"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC கடவுச்சொல்"
+    },
+    "generator_regenerate": {
+        "message": "மீண்டும் உருவாக்கு"
+    },
+    "generator_copy": {
+        "message": "கடவுச்சொல்லை நகலெடு"
+    },
+    "search_clear": {
+        "message": "தேடலை அழி"
+    },
+    "search_placeholder": {
+        "message": "தலைப்பு, பயனர்பெயர் அல்லது தளம்"
+    },
+    "search_hint": {
+        "message": "இந்தத் தளத்தின் உள்நுழைவுகளில் தேடுகிறது."
+    },
+    "search_in_keepassxc": {
+        "message": "KeePassXC இல் தேடு"
+    },
+    "search_results": {
+        "message": "கிடைத்தவை: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "இந்தத் தளத்திற்கான பதிவுகள்"
+    },
+    "search_empty": {
+        "message": "எதுவும் கிடைக்கவில்லை"
+    },
+    "footer_author": {
+        "message": "Markus Griesslehner வழங்கியது"
+    }
+}

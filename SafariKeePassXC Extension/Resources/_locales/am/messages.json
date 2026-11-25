@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "ከKeePassXC የመግቢያ መረጃዎችን፣ የይለፍ ቃላትን እና የTOTP ኮዶችን ወደ Safari ይሞላል። በMarkus Griesslehner የተገነባ።"
+    },
+    "entries_heading": {
+        "message": "ለዚህ ገጽ የመግቢያ መረጃዎች"
+    },
+    "button_associate": {
+        "message": "ከKeePassXC ጋር አገናኝ"
+    },
+    "button_generate": {
+        "message": "የይለፍ ቃል ፍጠር"
+    },
+    "button_totp": {
+        "message": "TOTP ቅዳ"
+    },
+    "error_host_app_not_running": {
+        "message": "የSafariKeePassXC መተግበሪያ እየሰራ አይደለም። እባክዎ ይጀምሩት እና ክፍት ያድርጉት።"
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC ሊደረስበት አልተቻለም። KeePassXC የአሳሽ ውህደት ነቅቶ እየሰራ ነው?"
+    },
+    "error_database_locked": {
+        "message": "የKeePassXC ዳታቤዝ ተቆልፏል። እባክዎ ይክፈቱት።"
+    },
+    "error_not_associated": {
+        "message": "እስካሁን ከKeePassXC ጋር አልተገናኘም።"
+    },
+    "error_generic": {
+        "message": "ስህተት፦ $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "ያልታወቀ"
+    },
+    "save_failed": {
+        "message": "መግቢያውን ማስቀመጥ አልተቻለም።"
+    },
+    "entries_empty": {
+        "message": "ለዚህ ገጽ ምንም መዝገቦች የሉም።"
+    },
+    "entry_fill_tooltip": {
+        "message": "ሙላ"
+    },
+    "fill_no_form": {
+        "message": "በዚህ ገጽ ላይ የመግቢያ ቅጽ አልተገኘም።"
+    },
+    "fill_no_access": {
+        "message": "ቅጥያው ወደዚህ ገጽ መዳረሻ የለውም። በSafari ቅንብሮች ውስጥ ወደዚህ ድህረ ገጽ መዳረሻን ይፍቀዱ እና ገጹን እንደገና ይጫኑ።"
+    },
+    "status_associating": {
+        "message": "በመገናኘት ላይ… (እባክዎ በKeePassXC ውስጥ ያለውን መገናኛ ያረጋግጡ)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – እስካሁን አልተገናኘም።",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "ከKeePassXC $VERSION$ ጋር ተገናኝቷል",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(ወደ ቅንጥብ ሰሌዳ ተቀድቷል)"
+    },
+    "password_copied": {
+        "message": "የይለፍ ቃል ተፈጥሮ ወደ ቅንጥብ ሰሌዳ ተቀድቷል።"
+    },
+    "clipboard_failed": {
+        "message": "ቅንጥብ ሰሌዳ አይገኝም። የይለፍ ቃሉ አልታየም።"
+    },
+    "totp_no_website": {
+        "message": "በንቁ ትር ውስጥ ድህረ ገጽ የለም።"
+    },
+    "totp_no_entry": {
+        "message": "ለዚህ ገጽ የTOTP መዝገብ የለም።"
+    },
+    "save_banner_new": {
+        "message": "የመግቢያ መረጃውን “$LOGIN$” ለዚህ ጣቢያ በKeePassXC ውስጥ ያስቀምጡ?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "ለ“$LOGIN$” የተቀመጠውን የይለፍ ቃል በKeePassXC ውስጥ ያዘምኑ?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "አስቀምጥ"
+    },
+    "save_banner_button_update": {
+        "message": "አዘምን"
+    },
+    "save_banner_dismiss": {
+        "message": "አሁን አይደለም"
+    },
+    "save_group_label": {
+        "message": "አዲስ የመግቢያ መረጃዎችን ያስቀምጡ በ"
+    },
+    "save_group_default": {
+        "message": "ነባሪ ቡድን (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys በKeePassXC በኩል"
+    },
+    "passkeys_toggle_hint": {
+        "message": "ገጹ እንደገና ከተጫነ በኋላ ይሰራል። ሲጠፋ Safari የPasskeys ጥያቄዎችን ይይዛል።"
+    },
+    "passkeys_reload_hint": {
+        "message": "ለውጡ እንዲሰራ ገጹን እንደገና ይጫኑ።"
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys አይገኙም፦ የSafariKeePassXC መተግበሪያ እየሰራ አይደለም።"
+    },
+    "passkeys_not_associated": {
+        "message": "Passkeys ለመጠቀም ከKeePassXC ጋር ይገናኙ።"
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys KeePassXC 2.7.7 ወይም አዲስ ያስፈልጋቸዋል (የተገኘው $VERSION$)።",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "የPasskeys ድልድይ በዚህ ገጽ ላይ ንቁ አይደለም። ገጹን እንደገና ይጫኑ እና ቅጥያው ወደዚህ ድህረ ገጽ መዳረሻ እንዳለው ያረጋግጡ።"
+    },
+    "passkeys_fallback_reason": {
+        "message": "የመጨረሻው የPasskeys ጥያቄ በKeePassXC ሳይሆን በSafari ተይዟል ($REASON$)።",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "ፈልግ"
+    },
+    "nav_generator": {
+        "message": "ፈጣሪ"
+    },
+    "nav_settings": {
+        "message": "ቅንብሮች"
+    },
+    "nav_back": {
+        "message": "ተመለስ"
+    },
+    "screen_search_title": {
+        "message": "ቮልት ፈልግ"
+    },
+    "screen_generator_title": {
+        "message": "የይለፍ ቃል ፈጣሪ"
+    },
+    "screen_settings_title": {
+        "message": "ቅንብሮች"
+    },
+    "status_connected_short": {
+        "message": "ተገናኝቷል · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "ቮልት ተቆልፏል"
+    },
+    "status_offline": {
+        "message": "KeePassXC እየሰራ አይደለም"
+    },
+    "status_unpaired": {
+        "message": "ቅጥያው አልተጣመረም"
+    },
+    "section_for_site": {
+        "message": "ለዚህ ጣቢያ"
+    },
+    "home_empty_title": {
+        "message": "ለ$DOMAIN$ የመግቢያ መረጃ የለም",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "በቮልት ውስጥ መዝገብ ይፈልጉ ወይም የመግቢያ መረጃዎችዎን ይፈልጉ።"
+    },
+    "button_search": {
+        "message": "ፈልግ"
+    },
+    "button_create": {
+        "message": "ፍጠር"
+    },
+    "toast_filled": {
+        "message": "ተሞልቷል፦ $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "የTOTP ኮድ ተቀድቷል"
+    },
+    "toast_connected": {
+        "message": "ተገናኝቷል"
+    },
+    "toast_reconnected": {
+        "message": "እንደገና ተገናኝቷል"
+    },
+    "toast_login_created": {
+        "message": "አዲስ የመግቢያ መረጃ ተፈጥሯል"
+    },
+    "toast_password_copied": {
+        "message": "የይለፍ ቃል ተቀድቷል"
+    },
+    "toast_password_pasted": {
+        "message": "የይለፍ ቃል ተለጥፏል"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC ይክፈቱ እና የአሳሽ ውህደትን ያንቁ።"
+    },
+    "error_locked_hint": {
+        "message": "የመግቢያ መረጃዎችዎን ለማየት ቮልቱን ይክፈቱ።"
+    },
+    "error_pairing_required": {
+        "message": "ማጣመር ያስፈልጋል"
+    },
+    "error_unpaired_hint": {
+        "message": "በKeePassXC መስኮት ውስጥ የቅጥያውን ግንኙነት ያረጋግጡ።"
+    },
+    "button_retry": {
+        "message": "እንደገና ሞክር"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "በKeePassXC ውስጥ ክፈት"
+    },
+    "button_pair": {
+        "message": "አጣምር"
+    },
+    "section_saving": {
+        "message": "ማስቀመጥ"
+    },
+    "section_autofill": {
+        "message": "ራስ-ሙላ"
+    },
+    "settings_save_prompt": {
+        "message": "የይለፍ ቃላትን ለማስቀመጥ ያቅርቡ"
+    },
+    "settings_autofill": {
+        "message": "ገጽ ሲጫን በራስ-ሰር ሙላ"
+    },
+    "settings_autofill_hint": {
+        "message": "ለጣቢያው አንድ የመግቢያ መረጃ ሲገኝ።"
+    },
+    "section_connection": {
+        "message": "ግንኙነት"
+    },
+    "settings_connected_to": {
+        "message": "ከKeePassXC $VERSION$ ጋር ተገናኝቷል",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "አልተገናኘም"
+    },
+    "settings_reconnect": {
+        "message": "እንደገና አገናኝ"
+    },
+    "totp_copy_label": {
+        "message": "የTOTP ኮድ ቅዳ"
+    },
+    "generator_length": {
+        "message": "ርዝመት"
+    },
+    "generator_phrase_length": {
+        "message": "የሐረግ ርዝመት"
+    },
+    "generator_phrase": {
+        "message": "የይለፍ ሐረግ"
+    },
+    "generator_phrase_hint": {
+        "message": "በሰረዝ የተለዩ ቃላት ለማስታወስ ቀላል ናቸው።"
+    },
+    "generator_strength_weak": {
+        "message": "ደካማ"
+    },
+    "generator_strength_medium": {
+        "message": "መካከለኛ"
+    },
+    "generator_strength_strong": {
+        "message": "ጠንካራ"
+    },
+    "generator_strength_very_strong": {
+        "message": "በጣም ጠንካራ"
+    },
+    "generator_keepassxc": {
+        "message": "የKeePassXC የይለፍ ቃል"
+    },
+    "generator_regenerate": {
+        "message": "እንደገና ፍጠር"
+    },
+    "generator_copy": {
+        "message": "የይለፍ ቃል ቅዳ"
+    },
+    "search_clear": {
+        "message": "ፍለጋን አጽዳ"
+    },
+    "search_placeholder": {
+        "message": "ርዕስ፣ የተጠቃሚ ስም ወይም ጣቢያ"
+    },
+    "search_hint": {
+        "message": "ለዚህ ጣቢያ የመግቢያ መረጃዎችን ይፈልጋል።"
+    },
+    "search_in_keepassxc": {
+        "message": "በKeePassXC ውስጥ ፈልግ"
+    },
+    "search_results": {
+        "message": "ተገኝቷል፦ $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "ለዚህ ጣቢያ የሚሆኑ መዝገቦች"
+    },
+    "search_empty": {
+        "message": "ምንም አልተገኘም"
+    },
+    "footer_author": {
+        "message": "በMarkus Griesslehner"
+    }
+}

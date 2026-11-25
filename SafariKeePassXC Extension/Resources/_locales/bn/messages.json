@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "KeePassXC থেকে লগইন, পাসওয়ার্ড ও TOTP কোড Safari-তে পূরণ করে। Markus Griesslehner দ্বারা তৈরি।"
+    },
+    "entries_heading": {
+        "message": "এই পেজের লগইন"
+    },
+    "button_associate": {
+        "message": "KeePassXC-এ সংযোগ করুন"
+    },
+    "button_generate": {
+        "message": "পাসওয়ার্ড তৈরি করুন"
+    },
+    "button_totp": {
+        "message": "TOTP কপি করুন"
+    },
+    "error_host_app_not_running": {
+        "message": "SafariKeePassXC অ্যাপ চলছে না। অনুগ্রহ করে এটি চালু করুন এবং খোলা রাখুন।"
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC-এ পৌঁছানো যাচ্ছে না। KeePassXC কি ব্রাউজার ইন্টিগ্রেশন চালু করে চলছে?"
+    },
+    "error_database_locked": {
+        "message": "KeePassXC ডেটাবেস লক করা আছে। অনুগ্রহ করে আনলক করুন।"
+    },
+    "error_not_associated": {
+        "message": "এখনও KeePassXC-এ সংযুক্ত নয়।"
+    },
+    "error_generic": {
+        "message": "ত্রুটি: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "অজানা"
+    },
+    "save_failed": {
+        "message": "লগইন সংরক্ষণ করা যায়নি।"
+    },
+    "entries_empty": {
+        "message": "এই পেজের জন্য কোনো এন্ট্রি নেই।"
+    },
+    "entry_fill_tooltip": {
+        "message": "পূরণ করুন"
+    },
+    "fill_no_form": {
+        "message": "এই পেজে কোনো লগইন ফর্ম পাওয়া যায়নি।"
+    },
+    "fill_no_access": {
+        "message": "এক্সটেনশনের এই পেজে প্রবেশাধিকার নেই। Safari সেটিংসে এই ওয়েবসাইটে প্রবেশাধিকার দিন এবং পেজটি আবার লোড করুন।"
+    },
+    "status_associating": {
+        "message": "সংযোগ হচ্ছে… (অনুগ্রহ করে KeePassXC-তে ডায়ালগ নিশ্চিত করুন)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – এখনও সংযুক্ত নয়।",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "KeePassXC $VERSION$-এ সংযুক্ত",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(ক্লিপবোর্ডে কপি করা হয়েছে)"
+    },
+    "password_copied": {
+        "message": "পাসওয়ার্ড তৈরি করে ক্লিপবোর্ডে কপি করা হয়েছে।"
+    },
+    "clipboard_failed": {
+        "message": "ক্লিপবোর্ড পাওয়া যাচ্ছে না। পাসওয়ার্ড দেখানো হয়নি।"
+    },
+    "totp_no_website": {
+        "message": "সক্রিয় ট্যাবে কোনো ওয়েবসাইট নেই।"
+    },
+    "totp_no_entry": {
+        "message": "এই পেজের জন্য কোনো TOTP এন্ট্রি নেই।"
+    },
+    "save_banner_new": {
+        "message": "এই সাইটের লগইন “$LOGIN$” KeePassXC-তে সংরক্ষণ করবেন?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "KeePassXC-তে “$LOGIN$”-এর সংরক্ষিত পাসওয়ার্ড আপডেট করবেন?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "সংরক্ষণ"
+    },
+    "save_banner_button_update": {
+        "message": "আপডেট"
+    },
+    "save_banner_dismiss": {
+        "message": "এখন নয়"
+    },
+    "save_group_label": {
+        "message": "নতুন লগইন এখানে সংরক্ষণ করুন"
+    },
+    "save_group_default": {
+        "message": "ডিফল্ট গ্রুপ (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "KeePassXC-এর মাধ্যমে পাসকি"
+    },
+    "passkeys_toggle_hint": {
+        "message": "পেজ পুনরায় লোড হলে কার্যকর হবে। বন্ধ থাকলে Safari পাসকি পরিচালনা করে।"
+    },
+    "passkeys_reload_hint": {
+        "message": "পরিবর্তন কার্যকর করতে পেজটি পুনরায় লোড করুন।"
+    },
+    "passkeys_bridge_stopped": {
+        "message": "পাসকি উপলব্ধ নয়: SafariKeePassXC অ্যাপ চলছে না।"
+    },
+    "passkeys_not_associated": {
+        "message": "পাসকি ব্যবহার করতে KeePassXC-এ সংযোগ করুন।"
+    },
+    "passkeys_unsupported_version": {
+        "message": "পাসকির জন্য KeePassXC 2.7.7 বা নতুন প্রয়োজন (পাওয়া গেছে: $VERSION$)।",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "এই পেজে পাসকি ব্রিজ সক্রিয় নয়। পেজটি পুনরায় লোড করুন এবং নিশ্চিত করুন যে এক্সটেনশনের এই ওয়েবসাইটে প্রবেশাধিকার আছে।"
+    },
+    "passkeys_fallback_reason": {
+        "message": "সর্বশেষ পাসকি অনুরোধ KeePassXC-এর বদলে Safari পরিচালনা করেছে ($REASON$)।",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "খুঁজুন"
+    },
+    "nav_generator": {
+        "message": "জেনারেটর"
+    },
+    "nav_settings": {
+        "message": "সেটিংস"
+    },
+    "nav_back": {
+        "message": "ফিরে যান"
+    },
+    "screen_search_title": {
+        "message": "ভল্ট খুঁজুন"
+    },
+    "screen_generator_title": {
+        "message": "পাসওয়ার্ড জেনারেটর"
+    },
+    "screen_settings_title": {
+        "message": "সেটিংস"
+    },
+    "status_connected_short": {
+        "message": "সংযুক্ত · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "ভল্ট লক করা আছে"
+    },
+    "status_offline": {
+        "message": "KeePassXC চলছে না"
+    },
+    "status_unpaired": {
+        "message": "এক্সটেনশন পেয়ার করা নেই"
+    },
+    "section_for_site": {
+        "message": "এই সাইটের জন্য"
+    },
+    "home_empty_title": {
+        "message": "$DOMAIN$-এর জন্য কোনো লগইন নেই",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "ভল্টে একটি এন্ট্রি খুঁজুন বা আপনার লগইন খুঁজুন।"
+    },
+    "button_search": {
+        "message": "খুঁজুন"
+    },
+    "button_create": {
+        "message": "তৈরি করুন"
+    },
+    "toast_filled": {
+        "message": "পূরণ হয়েছে: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP কোড কপি হয়েছে"
+    },
+    "toast_connected": {
+        "message": "সংযুক্ত"
+    },
+    "toast_reconnected": {
+        "message": "পুনরায় সংযুক্ত"
+    },
+    "toast_login_created": {
+        "message": "নতুন লগইন তৈরি হয়েছে"
+    },
+    "toast_password_copied": {
+        "message": "পাসওয়ার্ড কপি হয়েছে"
+    },
+    "toast_password_pasted": {
+        "message": "পাসওয়ার্ড পেস্ট হয়েছে"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC খুলুন এবং ব্রাউজার ইন্টিগ্রেশন চালু করুন।"
+    },
+    "error_locked_hint": {
+        "message": "আপনার লগইন দেখতে ভল্ট আনলক করুন।"
+    },
+    "error_pairing_required": {
+        "message": "পেয়ারিং প্রয়োজন"
+    },
+    "error_unpaired_hint": {
+        "message": "KeePassXC উইন্ডোতে এক্সটেনশন সংযোগ নিশ্চিত করুন।"
+    },
+    "button_retry": {
+        "message": "আবার চেষ্টা করুন"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "KeePassXC-তে আনলক করুন"
+    },
+    "button_pair": {
+        "message": "পেয়ার করুন"
+    },
+    "section_saving": {
+        "message": "সংরক্ষণ"
+    },
+    "section_autofill": {
+        "message": "অটোফিল"
+    },
+    "settings_save_prompt": {
+        "message": "পাসওয়ার্ড সংরক্ষণের প্রস্তাব দিন"
+    },
+    "settings_autofill": {
+        "message": "পেজ লোডে অটোফিল"
+    },
+    "settings_autofill_hint": {
+        "message": "যখন সাইটের জন্য একটি লগইন পাওয়া যায়।"
+    },
+    "section_connection": {
+        "message": "সংযোগ"
+    },
+    "settings_connected_to": {
+        "message": "KeePassXC $VERSION$-এ সংযুক্ত",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "সংযুক্ত নয়"
+    },
+    "settings_reconnect": {
+        "message": "পুনরায় সংযোগ করুন"
+    },
+    "totp_copy_label": {
+        "message": "TOTP কোড কপি করুন"
+    },
+    "generator_length": {
+        "message": "দৈর্ঘ্য"
+    },
+    "generator_phrase_length": {
+        "message": "বাক্যাংশের দৈর্ঘ্য"
+    },
+    "generator_phrase": {
+        "message": "পাসফ্রেজ"
+    },
+    "generator_phrase_hint": {
+        "message": "হাইফেন দিয়ে আলাদা করা শব্দ মনে রাখা সহজ।"
+    },
+    "generator_strength_weak": {
+        "message": "দুর্বল"
+    },
+    "generator_strength_medium": {
+        "message": "মাঝারি"
+    },
+    "generator_strength_strong": {
+        "message": "শক্তিশালী"
+    },
+    "generator_strength_very_strong": {
+        "message": "খুব শক্তিশালী"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC পাসওয়ার্ড"
+    },
+    "generator_regenerate": {
+        "message": "পুনরায় তৈরি করুন"
+    },
+    "generator_copy": {
+        "message": "পাসওয়ার্ড কপি করুন"
+    },
+    "search_clear": {
+        "message": "অনুসন্ধান মুছুন"
+    },
+    "search_placeholder": {
+        "message": "শিরোনাম, ব্যবহারকারীর নাম বা সাইট"
+    },
+    "search_hint": {
+        "message": "এই সাইটের লগইন খোঁজে।"
+    },
+    "search_in_keepassxc": {
+        "message": "KeePassXC-তে খুঁজুন"
+    },
+    "search_results": {
+        "message": "পাওয়া গেছে: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "এই সাইটের এন্ট্রি"
+    },
+    "search_empty": {
+        "message": "কিছু পাওয়া যায়নি"
+    },
+    "footer_author": {
+        "message": "Markus Griesslehner দ্বারা"
+    }
+}

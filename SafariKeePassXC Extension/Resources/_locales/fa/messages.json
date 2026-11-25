@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "ورودها، گذرواژه‌ها و کدهای TOTP را از KeePassXC در Safari پر می‌کند. ساختهٔ Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "ورودها برای این صفحه"
+    },
+    "button_associate": {
+        "message": "اتصال به KeePassXC"
+    },
+    "button_generate": {
+        "message": "تولید گذرواژه"
+    },
+    "button_totp": {
+        "message": "کپی TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "برنامهٔ SafariKeePassXC در حال اجرا نیست. لطفاً آن را اجرا کنید و باز نگه دارید."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC در دسترس نیست. آیا KeePassXC با یکپارچه‌سازی مرورگر فعال در حال اجراست؟"
+    },
+    "error_database_locked": {
+        "message": "پایگاه‌دادهٔ KeePassXC قفل است. لطفاً آن را باز کنید."
+    },
+    "error_not_associated": {
+        "message": "هنوز به KeePassXC متصل نشده‌اید."
+    },
+    "error_generic": {
+        "message": "خطا: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "نامشخص"
+    },
+    "save_failed": {
+        "message": "ورود ذخیره نشد."
+    },
+    "entries_empty": {
+        "message": "هیچ ورودی‌ای برای این صفحه نیست."
+    },
+    "entry_fill_tooltip": {
+        "message": "پر کردن"
+    },
+    "fill_no_form": {
+        "message": "هیچ فرم ورودی در این صفحه پیدا نشد."
+    },
+    "fill_no_access": {
+        "message": "افزونه به این صفحه دسترسی ندارد. در تنظیمات Safari به این وب‌سایت دسترسی بدهید و صفحه را دوباره بارگذاری کنید."
+    },
+    "status_associating": {
+        "message": "در حال اتصال… (لطفاً گفت‌وگو را در KeePassXC تأیید کنید)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – هنوز متصل نیست.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "متصل به KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(در کلیپ‌بورد کپی شد)"
+    },
+    "password_copied": {
+        "message": "گذرواژه تولید و در کلیپ‌بورد کپی شد."
+    },
+    "clipboard_failed": {
+        "message": "کلیپ‌بورد در دسترس نیست. گذرواژه نمایش داده نشد."
+    },
+    "totp_no_website": {
+        "message": "هیچ وب‌سایتی در زبانهٔ فعال نیست."
+    },
+    "totp_no_entry": {
+        "message": "هیچ ورودی TOTP برای این صفحه نیست."
+    },
+    "save_banner_new": {
+        "message": "ورود «$LOGIN$» برای این سایت در KeePassXC ذخیره شود؟",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "گذرواژهٔ ذخیره‌شده برای «$LOGIN$» در KeePassXC به‌روزرسانی شود؟",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "ذخیره"
+    },
+    "save_banner_button_update": {
+        "message": "به‌روزرسانی"
+    },
+    "save_banner_dismiss": {
+        "message": "اکنون نه"
+    },
+    "save_group_label": {
+        "message": "ذخیرهٔ ورودهای جدید در"
+    },
+    "save_group_default": {
+        "message": "گروه پیش‌فرض (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "کلیدهای عبور از طریق KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "پس از بارگذاری مجدد صفحه اعمال می‌شود. وقتی خاموش باشد، Safari کلیدهای عبور را مدیریت می‌کند."
+    },
+    "passkeys_reload_hint": {
+        "message": "برای اعمال تغییر، صفحه را دوباره بارگذاری کنید."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "کلیدهای عبور در دسترس نیستند: برنامهٔ SafariKeePassXC در حال اجرا نیست."
+    },
+    "passkeys_not_associated": {
+        "message": "برای استفاده از کلیدهای عبور به KeePassXC متصل شوید."
+    },
+    "passkeys_unsupported_version": {
+        "message": "کلیدهای عبور به KeePassXC 2.7.7 یا جدیدتر نیاز دارند (نسخهٔ یافت‌شده: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "پل کلیدهای عبور در این صفحه فعال نیست. صفحه را دوباره بارگذاری کنید و مطمئن شوید افزونه به این وب‌سایت دسترسی دارد."
+    },
+    "passkeys_fallback_reason": {
+        "message": "آخرین درخواست کلید عبور به‌جای KeePassXC توسط Safari پردازش شد ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "جستجو"
+    },
+    "nav_generator": {
+        "message": "تولیدکننده"
+    },
+    "nav_settings": {
+        "message": "تنظیمات"
+    },
+    "nav_back": {
+        "message": "بازگشت"
+    },
+    "screen_search_title": {
+        "message": "جستجوی گاوصندوق"
+    },
+    "screen_generator_title": {
+        "message": "تولیدکنندهٔ گذرواژه"
+    },
+    "screen_settings_title": {
+        "message": "تنظیمات"
+    },
+    "status_connected_short": {
+        "message": "متصل · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "گاوصندوق قفل است"
+    },
+    "status_offline": {
+        "message": "KeePassXC در حال اجرا نیست"
+    },
+    "status_unpaired": {
+        "message": "افزونه جفت نشده است"
+    },
+    "section_for_site": {
+        "message": "برای این سایت"
+    },
+    "home_empty_title": {
+        "message": "هیچ ورودی‌ای برای $DOMAIN$ نیست",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "ورودی‌ای در گاوصندوق بیابید یا ورودهای خود را جستجو کنید."
+    },
+    "button_search": {
+        "message": "جستجو"
+    },
+    "button_create": {
+        "message": "ایجاد"
+    },
+    "toast_filled": {
+        "message": "پر شد: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "کد TOTP کپی شد"
+    },
+    "toast_connected": {
+        "message": "متصل شد"
+    },
+    "toast_reconnected": {
+        "message": "دوباره متصل شد"
+    },
+    "toast_login_created": {
+        "message": "ورود جدید ایجاد شد"
+    },
+    "toast_password_copied": {
+        "message": "گذرواژه کپی شد"
+    },
+    "toast_password_pasted": {
+        "message": "گذرواژه جای‌گذاری شد"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC را باز کنید و یکپارچه‌سازی مرورگر را فعال کنید."
+    },
+    "error_locked_hint": {
+        "message": "برای دیدن ورودها، گاوصندوق را باز کنید."
+    },
+    "error_pairing_required": {
+        "message": "جفت‌سازی لازم است"
+    },
+    "error_unpaired_hint": {
+        "message": "اتصال افزونه را در پنجرهٔ KeePassXC تأیید کنید."
+    },
+    "button_retry": {
+        "message": "تلاش دوباره"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "باز کردن در KeePassXC"
+    },
+    "button_pair": {
+        "message": "جفت‌سازی"
+    },
+    "section_saving": {
+        "message": "ذخیره‌سازی"
+    },
+    "section_autofill": {
+        "message": "پر کردن خودکار"
+    },
+    "settings_save_prompt": {
+        "message": "پیشنهاد ذخیرهٔ گذرواژه‌ها"
+    },
+    "settings_autofill": {
+        "message": "پر کردن خودکار هنگام بارگذاری صفحه"
+    },
+    "settings_autofill_hint": {
+        "message": "وقتی یک ورود برای سایت پیدا شود."
+    },
+    "section_connection": {
+        "message": "اتصال"
+    },
+    "settings_connected_to": {
+        "message": "متصل به KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "متصل نیست"
+    },
+    "settings_reconnect": {
+        "message": "اتصال دوباره"
+    },
+    "totp_copy_label": {
+        "message": "کپی کد TOTP"
+    },
+    "generator_length": {
+        "message": "طول"
+    },
+    "generator_phrase_length": {
+        "message": "طول عبارت"
+    },
+    "generator_phrase": {
+        "message": "عبارت عبور"
+    },
+    "generator_phrase_hint": {
+        "message": "واژه‌های جدا‌شده با خط تیره آسان‌تر به یاد می‌مانند."
+    },
+    "generator_strength_weak": {
+        "message": "ضعیف"
+    },
+    "generator_strength_medium": {
+        "message": "متوسط"
+    },
+    "generator_strength_strong": {
+        "message": "قوی"
+    },
+    "generator_strength_very_strong": {
+        "message": "بسیار قوی"
+    },
+    "generator_keepassxc": {
+        "message": "گذرواژهٔ KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "تولید دوباره"
+    },
+    "generator_copy": {
+        "message": "کپی گذرواژه"
+    },
+    "search_clear": {
+        "message": "پاک کردن جستجو"
+    },
+    "search_placeholder": {
+        "message": "عنوان، نام کاربری یا سایت"
+    },
+    "search_hint": {
+        "message": "ورودهای این سایت را جستجو می‌کند."
+    },
+    "search_in_keepassxc": {
+        "message": "جستجو در KeePassXC"
+    },
+    "search_results": {
+        "message": "یافته‌شده: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "ورودی‌های این سایت"
+    },
+    "search_empty": {
+        "message": "چیزی یافت نشد"
+    },
+    "footer_author": {
+        "message": "از Markus Griesslehner"
+    }
+}

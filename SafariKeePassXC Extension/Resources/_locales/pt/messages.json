@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Preenche inícios de sessão, palavras-passe e códigos TOTP do KeePassXC no Safari. Desenvolvido por Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Inícios de sessão para esta página"
+    },
+    "button_associate": {
+        "message": "Ligar ao KeePassXC"
+    },
+    "button_generate": {
+        "message": "Gerar palavra-passe"
+    },
+    "button_totp": {
+        "message": "Copiar TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "A aplicação SafariKeePassXC não está em execução. Inicie-a e mantenha-a aberta."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "Não é possível contactar o KeePassXC. O KeePassXC está em execução com a integração com o navegador ativada?"
+    },
+    "error_database_locked": {
+        "message": "A base de dados do KeePassXC está bloqueada. Desbloqueie-a."
+    },
+    "error_not_associated": {
+        "message": "Ainda não ligado ao KeePassXC."
+    },
+    "error_generic": {
+        "message": "Erro: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "desconhecido"
+    },
+    "save_failed": {
+        "message": "Não foi possível guardar o início de sessão."
+    },
+    "entries_empty": {
+        "message": "Sem entradas para esta página."
+    },
+    "entry_fill_tooltip": {
+        "message": "Preencher"
+    },
+    "fill_no_form": {
+        "message": "Não foi encontrado nenhum formulário de início de sessão nesta página."
+    },
+    "fill_no_access": {
+        "message": "A extensão não tem acesso a esta página. Permita o acesso a este site nas definições do Safari e recarregue a página."
+    },
+    "status_associating": {
+        "message": "A ligar… (confirme a caixa de diálogo no KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – ainda não ligado.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "Ligado ao KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(copiado para a área de transferência)"
+    },
+    "password_copied": {
+        "message": "Palavra-passe gerada e copiada para a área de transferência."
+    },
+    "clipboard_failed": {
+        "message": "Área de transferência indisponível. A palavra-passe não foi apresentada."
+    },
+    "totp_no_website": {
+        "message": "Nenhum site no separador ativo."
+    },
+    "totp_no_entry": {
+        "message": "Nenhuma entrada TOTP para esta página."
+    },
+    "save_banner_new": {
+        "message": "Guardar o início de sessão «$LOGIN$» para este site no KeePassXC?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "Atualizar a palavra-passe guardada de «$LOGIN$» no KeePassXC?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Guardar"
+    },
+    "save_banner_button_update": {
+        "message": "Atualizar"
+    },
+    "save_banner_dismiss": {
+        "message": "Agora não"
+    },
+    "save_group_label": {
+        "message": "Guardar novos inícios de sessão em"
+    },
+    "save_group_default": {
+        "message": "Grupo predefinido (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys via KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Tem efeito após recarregar a página. Se estiver desativado, o Safari gere as passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "Recarregue a página para aplicar a alteração."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "As passkeys não estão disponíveis: a aplicação SafariKeePassXC não está em execução."
+    },
+    "passkeys_not_associated": {
+        "message": "Ligue-se ao KeePassXC para usar passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "As passkeys requerem o KeePassXC 2.7.7 ou mais recente (encontrado: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "A ponte de passkeys não está ativa nesta página. Recarregue a página e certifique-se de que a extensão tem acesso a este site."
+    },
+    "passkeys_fallback_reason": {
+        "message": "O último pedido de passkey foi tratado pelo Safari em vez do KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "Pesquisar"
+    },
+    "nav_generator": {
+        "message": "Gerador"
+    },
+    "nav_settings": {
+        "message": "Definições"
+    },
+    "nav_back": {
+        "message": "Voltar"
+    },
+    "screen_search_title": {
+        "message": "Pesquisar no cofre"
+    },
+    "screen_generator_title": {
+        "message": "Gerador de palavras-passe"
+    },
+    "screen_settings_title": {
+        "message": "Definições"
+    },
+    "status_connected_short": {
+        "message": "Ligado · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "O cofre está bloqueado"
+    },
+    "status_offline": {
+        "message": "O KeePassXC não está em execução"
+    },
+    "status_unpaired": {
+        "message": "A extensão não está emparelhada"
+    },
+    "section_for_site": {
+        "message": "Para este site"
+    },
+    "home_empty_title": {
+        "message": "Sem inícios de sessão para $DOMAIN$",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Encontre uma entrada no cofre ou pesquise os seus inícios de sessão."
+    },
+    "button_search": {
+        "message": "Pesquisar"
+    },
+    "button_create": {
+        "message": "Criar"
+    },
+    "toast_filled": {
+        "message": "Preenchido: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Código TOTP copiado"
+    },
+    "toast_connected": {
+        "message": "Ligado"
+    },
+    "toast_reconnected": {
+        "message": "Voltou a ligar"
+    },
+    "toast_login_created": {
+        "message": "Novo início de sessão criado"
+    },
+    "toast_password_copied": {
+        "message": "Palavra-passe copiada"
+    },
+    "toast_password_pasted": {
+        "message": "Palavra-passe colada"
+    },
+    "error_offline_hint": {
+        "message": "Abra o KeePassXC e ative a integração com o navegador."
+    },
+    "error_locked_hint": {
+        "message": "Desbloqueie o cofre para ver os seus inícios de sessão."
+    },
+    "error_pairing_required": {
+        "message": "Emparelhamento necessário"
+    },
+    "error_unpaired_hint": {
+        "message": "Confirme a ligação da extensão na janela do KeePassXC."
+    },
+    "button_retry": {
+        "message": "Tentar novamente"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Desbloquear no KeePassXC"
+    },
+    "button_pair": {
+        "message": "Emparelhar"
+    },
+    "section_saving": {
+        "message": "Guardar"
+    },
+    "section_autofill": {
+        "message": "Preenchimento automático"
+    },
+    "settings_save_prompt": {
+        "message": "Sugerir guardar palavras-passe"
+    },
+    "settings_autofill": {
+        "message": "Preencher automaticamente ao carregar"
+    },
+    "settings_autofill_hint": {
+        "message": "Quando é encontrado um único início de sessão para o site."
+    },
+    "section_connection": {
+        "message": "Ligação"
+    },
+    "settings_connected_to": {
+        "message": "Ligado ao KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Não ligado"
+    },
+    "settings_reconnect": {
+        "message": "Voltar a ligar"
+    },
+    "totp_copy_label": {
+        "message": "Copiar código TOTP"
+    },
+    "generator_length": {
+        "message": "Comprimento"
+    },
+    "generator_phrase_length": {
+        "message": "Comprimento da frase"
+    },
+    "generator_phrase": {
+        "message": "Frase-passe"
+    },
+    "generator_phrase_hint": {
+        "message": "Palavras separadas por hífenes são mais fáceis de memorizar."
+    },
+    "generator_strength_weak": {
+        "message": "Fraca"
+    },
+    "generator_strength_medium": {
+        "message": "Média"
+    },
+    "generator_strength_strong": {
+        "message": "Forte"
+    },
+    "generator_strength_very_strong": {
+        "message": "Muito forte"
+    },
+    "generator_keepassxc": {
+        "message": "Palavra-passe do KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Gerar novamente"
+    },
+    "generator_copy": {
+        "message": "Copiar palavra-passe"
+    },
+    "search_clear": {
+        "message": "Limpar pesquisa"
+    },
+    "search_placeholder": {
+        "message": "Título, utilizador ou site"
+    },
+    "search_hint": {
+        "message": "Pesquisa os inícios de sessão deste site."
+    },
+    "search_in_keepassxc": {
+        "message": "Pesquisar no KeePassXC"
+    },
+    "search_results": {
+        "message": "Encontrados: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "Entradas para este site"
+    },
+    "search_empty": {
+        "message": "Nada encontrado"
+    },
+    "footer_author": {
+        "message": "por Markus Griesslehner"
+    }
+}

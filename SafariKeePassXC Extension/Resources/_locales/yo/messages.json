@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Ó ń kún àwọn ìwọlé, ọ̀rọ̀ ìpamọ́, àti àwọn kóòdù TOTP láti KeePassXC sínú Safari. Markus Griesslehner ni ó ṣe é."
+    },
+    "entries_heading": {
+        "message": "Àwọn ìwọlé fún ojú-ìwé yìí"
+    },
+    "button_associate": {
+        "message": "So mọ́ KeePassXC"
+    },
+    "button_generate": {
+        "message": "Ṣẹ̀dá ọ̀rọ̀ ìpamọ́"
+    },
+    "button_totp": {
+        "message": "Dà TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Áàpù SafariKeePassXC kò ń ṣiṣẹ́. Jọ̀wọ́ bẹ̀rẹ̀ rẹ̀ kí o sì jẹ́ kí ó wà ní ṣíṣí."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "A kò lè dé ọ̀dọ̀ KeePassXC. Ṣé KeePassXC ń ṣiṣẹ́ pẹ̀lú ìsopọ̀ aṣàwákiri tí ó ṣí?"
+    },
+    "error_database_locked": {
+        "message": "A ti sé ibi-ìpamọ́ KeePassXC. Jọ̀wọ́ ṣí i."
+    },
+    "error_not_associated": {
+        "message": "A kò tíì so mọ́ KeePassXC."
+    },
+    "error_generic": {
+        "message": "Àṣìṣe: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "àìmọ̀"
+    },
+    "save_failed": {
+        "message": "A kò le fi ìwọlé pamọ́."
+    },
+    "entries_empty": {
+        "message": "Kò sí àkọsílẹ̀ fún ojú-ìwé yìí."
+    },
+    "entry_fill_tooltip": {
+        "message": "Kún"
+    },
+    "fill_no_form": {
+        "message": "A kò rí fọ́ọ̀mù ìwọlé kankan ní ojú-ìwé yìí."
+    },
+    "fill_no_access": {
+        "message": "Àfikún náà kò ní àǹfààní sí ojú-ìwé yìí. Gba àǹfààní sí ojú-ìwé yìí nínú ètò Safari kí o sì tún ojú-ìwé náà ṣí."
+    },
+    "status_associating": {
+        "message": "Ń sopọ̀… (jọ̀wọ́ jẹ́rìí àpótí ìfọ̀rọ̀wérọ̀ nínú KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – a kò tíì sopọ̀.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "A ti sopọ̀ mọ́ KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(a ti dà sí pátákó ìdákọ́)"
+    },
+    "password_copied": {
+        "message": "A ti ṣẹ̀dá ọ̀rọ̀ ìpamọ́, a sì ti dà á sí pátákó ìdákọ́."
+    },
+    "clipboard_failed": {
+        "message": "Pátákó ìdákọ́ kò sí. A kò fi ọ̀rọ̀ ìpamọ́ náà hàn."
+    },
+    "totp_no_website": {
+        "message": "Kò sí ojú-ìwé wẹ́ẹ̀bù nínú táàbù tí ó ṣí."
+    },
+    "totp_no_entry": {
+        "message": "Kò sí àkọsílẹ̀ TOTP fún ojú-ìwé yìí."
+    },
+    "save_banner_new": {
+        "message": "Ṣe kí a fi ìwọlé “$LOGIN$” fún ojú-ìwé yìí pamọ́ sínú KeePassXC?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "Ṣe kí a ṣe àtúnṣe ọ̀rọ̀ ìpamọ́ tí a ti pamọ́ fún “$LOGIN$” nínú KeePassXC?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Pamọ́"
+    },
+    "save_banner_button_update": {
+        "message": "Ṣe àtúnṣe"
+    },
+    "save_banner_dismiss": {
+        "message": "Kì í ṣe báyìí"
+    },
+    "save_group_label": {
+        "message": "Fi àwọn ìwọlé tuntun pamọ́ sínú"
+    },
+    "save_group_default": {
+        "message": "Ẹgbẹ́ àkọ́kọ́ (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys nípasẹ̀ KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Yóò wúlò lẹ́yìn tí ojú-ìwé bá tún ṣí. Tí a bá pa á, Safari ni yóò máa bo passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "Tún ojú-ìwé ṣí kí ìyípadà náà lè wúlò."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys kò sí: áàpù SafariKeePassXC kò ń ṣiṣẹ́."
+    },
+    "passkeys_not_associated": {
+        "message": "So mọ́ KeePassXC láti lo passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys nílò KeePassXC 2.7.7 tàbí tuntun jù (a rí $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Afárá passkeys kò ṣiṣẹ́ ní ojú-ìwé yìí. Tún ojú-ìwé ṣí kí o sì rí i pé àfikún náà ní àǹfààní sí ojú-ìwé yìí."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Safari ni ó ṣàkóso ìbéèrè passkeys tí ó kẹ́yìn dípò KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "Wá"
+    },
+    "nav_generator": {
+        "message": "Olùṣẹ̀dá"
+    },
+    "nav_settings": {
+        "message": "Ètò"
+    },
+    "nav_back": {
+        "message": "Padà"
+    },
+    "screen_search_title": {
+        "message": "Wá nínú ibi-ìpamọ́"
+    },
+    "screen_generator_title": {
+        "message": "Olùṣẹ̀dá ọ̀rọ̀ ìpamọ́"
+    },
+    "screen_settings_title": {
+        "message": "Ètò"
+    },
+    "status_connected_short": {
+        "message": "A ti sopọ̀ · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "Ibi-ìpamọ́ ti sé"
+    },
+    "status_offline": {
+        "message": "KeePassXC kò ń ṣiṣẹ́"
+    },
+    "status_unpaired": {
+        "message": "A kò tíì so àfikún mọ́"
+    },
+    "section_for_site": {
+        "message": "Fún ojú-ìwé yìí"
+    },
+    "home_empty_title": {
+        "message": "Kò sí ìwọlé fún $DOMAIN$",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Wá àkọsílẹ̀ nínú ibi-ìpamọ́ tàbí wá àwọn ìwọlé rẹ."
+    },
+    "button_search": {
+        "message": "Wá"
+    },
+    "button_create": {
+        "message": "Ṣẹ̀dá"
+    },
+    "toast_filled": {
+        "message": "A ti kún: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "A ti dà kóòdù TOTP"
+    },
+    "toast_connected": {
+        "message": "A ti sopọ̀"
+    },
+    "toast_reconnected": {
+        "message": "A tún sopọ̀"
+    },
+    "toast_login_created": {
+        "message": "A ti ṣẹ̀dá ìwọlé tuntun"
+    },
+    "toast_password_copied": {
+        "message": "A ti dà ọ̀rọ̀ ìpamọ́"
+    },
+    "toast_password_pasted": {
+        "message": "A ti lẹ̀ ọ̀rọ̀ ìpamọ́"
+    },
+    "error_offline_hint": {
+        "message": "Ṣí KeePassXC kí o sì tan ìsopọ̀ aṣàwákiri ṣí."
+    },
+    "error_locked_hint": {
+        "message": "Ṣí ibi-ìpamọ́ kí o lè rí àwọn ìwọlé rẹ."
+    },
+    "error_pairing_required": {
+        "message": "A nílò ìsopọ̀"
+    },
+    "error_unpaired_hint": {
+        "message": "Jẹ́rìí ìsopọ̀ àfikún náà nínú fèrèsé KeePassXC."
+    },
+    "button_retry": {
+        "message": "Tún gbìyànjú"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Ṣí i nínú KeePassXC"
+    },
+    "button_pair": {
+        "message": "So mọ́"
+    },
+    "section_saving": {
+        "message": "Pípamọ́"
+    },
+    "section_autofill": {
+        "message": "Ìkún fúnra rẹ̀"
+    },
+    "settings_save_prompt": {
+        "message": "Ṣe àbá láti pamọ́ àwọn ọ̀rọ̀ ìpamọ́"
+    },
+    "settings_autofill": {
+        "message": "Kún fúnra rẹ̀ nígbà tí ojú-ìwé bá ṣí"
+    },
+    "settings_autofill_hint": {
+        "message": "Tí a bá rí ìwọlé kan ṣoṣo fún ojú-ìwé náà."
+    },
+    "section_connection": {
+        "message": "Ìsopọ̀"
+    },
+    "settings_connected_to": {
+        "message": "A ti sopọ̀ mọ́ KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "A kò sopọ̀"
+    },
+    "settings_reconnect": {
+        "message": "Tún sopọ̀"
+    },
+    "totp_copy_label": {
+        "message": "Dà kóòdù TOTP"
+    },
+    "generator_length": {
+        "message": "Gígùn"
+    },
+    "generator_phrase_length": {
+        "message": "Gígùn gbólóhùn"
+    },
+    "generator_phrase": {
+        "message": "Gbólóhùn ìpamọ́"
+    },
+    "generator_phrase_hint": {
+        "message": "Àwọn ọ̀rọ̀ tí a fi ìlà-ìsopọ̀ ya ni ó rọrùn láti rántí."
+    },
+    "generator_strength_weak": {
+        "message": "Aláìlágbára"
+    },
+    "generator_strength_medium": {
+        "message": "Àárín"
+    },
+    "generator_strength_strong": {
+        "message": "Alágbára"
+    },
+    "generator_strength_very_strong": {
+        "message": "Alágbára púpọ̀"
+    },
+    "generator_keepassxc": {
+        "message": "Ọ̀rọ̀ ìpamọ́ KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Tún ṣẹ̀dá"
+    },
+    "generator_copy": {
+        "message": "Dà ọ̀rọ̀ ìpamọ́"
+    },
+    "search_clear": {
+        "message": "Nu ìwádìí"
+    },
+    "search_placeholder": {
+        "message": "Àkọlé, orúkọ aṣàmúlò tàbí ojú-ìwé"
+    },
+    "search_hint": {
+        "message": "Ń wá àwọn ìwọlé fún ojú-ìwé yìí."
+    },
+    "search_in_keepassxc": {
+        "message": "Wá nínú KeePassXC"
+    },
+    "search_results": {
+        "message": "A rí: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "Àwọn àkọsílẹ̀ fún ojú-ìwé yìí"
+    },
+    "search_empty": {
+        "message": "A kò rí nǹkan"
+    },
+    "footer_author": {
+        "message": "láti ọwọ́ Markus Griesslehner"
+    }
+}

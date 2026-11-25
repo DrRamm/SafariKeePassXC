@@ -38,6 +38,9 @@
     "error_unknown": {
         "message": "unbekannt"
     },
+    "save_failed": {
+        "message": "Der Login konnte nicht gespeichert werden."
+    },
     "entries_empty": {
         "message": "Keine Einträge für diese Seite."
     },
@@ -108,10 +111,10 @@
         "message": "Standardgruppe (KeePassXC-Browser Passwords)"
     },
     "passkeys_toggle_label": {
-        "message": "KeePassXC für Passkeys verwenden"
+        "message": "Passkeys über KeePassXC"
     },
     "passkeys_toggle_hint": {
-        "message": "Gilt nach dem Neuladen der Seite. Wenn ausgeschaltet, verarbeitet Safari Passkeys."
+        "message": "Wird nach dem Neuladen der Seite wirksam. Wenn deaktiviert, übernimmt Safari die Passkeys."
     },
     "passkeys_reload_hint": {
         "message": "Lade die Seite neu, damit die Änderung wirksam wird."
@@ -136,5 +139,197 @@
         "placeholders": {
             "reason": { "content": "$1" }
         }
+    },
+    "nav_search": {
+        "message": "Suche"
+    },
+    "nav_generator": {
+        "message": "Generator"
+    },
+    "nav_settings": {
+        "message": "Einstellungen"
+    },
+    "nav_back": {
+        "message": "Zurück"
+    },
+    "screen_search_title": {
+        "message": "Tresor durchsuchen"
+    },
+    "screen_generator_title": {
+        "message": "Passwortgenerator"
+    },
+    "screen_settings_title": {
+        "message": "Einstellungen"
+    },
+    "status_connected_short": {
+        "message": "Verbunden · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "Tresor ist gesperrt"
+    },
+    "status_offline": {
+        "message": "KeePassXC läuft nicht"
+    },
+    "status_unpaired": {
+        "message": "Erweiterung ist nicht gekoppelt"
+    },
+    "section_for_site": {
+        "message": "Für diese Website"
+    },
+    "home_empty_title": {
+        "message": "Keine Logins für $DOMAIN$",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Suchen Sie einen Eintrag im Tresor oder in Ihren Logins."
+    },
+    "button_search": {
+        "message": "Suchen"
+    },
+    "button_create": {
+        "message": "Erstellen"
+    },
+    "toast_filled": {
+        "message": "Ausgefüllt: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP-Code kopiert"
+    },
+    "toast_connected": {
+        "message": "Verbunden"
+    },
+    "toast_reconnected": {
+        "message": "Neu verbunden"
+    },
+    "toast_login_created": {
+        "message": "Neuer Login erstellt"
+    },
+    "toast_password_copied": {
+        "message": "Passwort kopiert"
+    },
+    "toast_password_pasted": {
+        "message": "Passwort eingefügt"
+    },
+    "error_offline_hint": {
+        "message": "Öffnen Sie KeePassXC und aktivieren Sie die Browser-Integration."
+    },
+    "error_locked_hint": {
+        "message": "Entsperren Sie den Tresor, um Ihre Logins zu sehen."
+    },
+    "error_pairing_required": {
+        "message": "Kopplung erforderlich"
+    },
+    "error_unpaired_hint": {
+        "message": "Bestätigen Sie die Verbindung der Erweiterung im KeePassXC-Fenster."
+    },
+    "button_retry": {
+        "message": "Erneut versuchen"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "In KeePassXC entsperren"
+    },
+    "button_pair": {
+        "message": "Koppeln"
+    },
+    "section_saving": {
+        "message": "Speichern"
+    },
+    "section_autofill": {
+        "message": "Autofill"
+    },
+    "settings_save_prompt": {
+        "message": "Passwörter zum Speichern anbieten"
+    },
+    "settings_autofill": {
+        "message": "Automatisch beim Laden ausfüllen"
+    },
+    "settings_autofill_hint": {
+        "message": "Wenn ein einzelner Login für die Website gefunden wird."
+    },
+    "section_connection": {
+        "message": "Verbindung"
+    },
+    "settings_connected_to": {
+        "message": "Verbunden mit KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Nicht verbunden"
+    },
+    "settings_reconnect": {
+        "message": "Neu verbinden"
+    },
+    "totp_copy_label": {
+        "message": "TOTP-Code kopieren"
+    },
+    "generator_length": {
+        "message": "Länge"
+    },
+    "generator_phrase_length": {
+        "message": "Passphrasenlänge"
+    },
+    "generator_phrase": {
+        "message": "Passphrase"
+    },
+    "generator_phrase_hint": {
+        "message": "Wörter mit Bindestrich sind leichter zu merken."
+    },
+    "generator_strength_weak": {
+        "message": "Schwach"
+    },
+    "generator_strength_medium": {
+        "message": "Mittel"
+    },
+    "generator_strength_strong": {
+        "message": "Stark"
+    },
+    "generator_strength_very_strong": {
+        "message": "Sehr stark"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC-Passwort"
+    },
+    "generator_regenerate": {
+        "message": "Neu generieren"
+    },
+    "generator_copy": {
+        "message": "Passwort kopieren"
+    },
+    "search_clear": {
+        "message": "Suche löschen"
+    },
+    "search_placeholder": {
+        "message": "Titel, Benutzername oder Website"
+    },
+    "search_hint": {
+        "message": "Durchsucht die Logins dieser Website."
+    },
+    "search_in_keepassxc": {
+        "message": "In KeePassXC suchen"
+    },
+    "search_results": {
+        "message": "Gefunden: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "Einträge für diese Website"
+    },
+    "search_empty": {
+        "message": "Nichts gefunden"
+    },
+    "footer_author": {
+        "message": "von Markus Griesslehner"
     }
 }

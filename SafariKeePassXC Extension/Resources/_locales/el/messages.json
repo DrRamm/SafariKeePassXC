@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Συμπληρώνει συνδέσεις, κωδικούς πρόσβασης και κωδικούς TOTP από το KeePassXC στο Safari. Ανάπτυξη: Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Συνδέσεις για αυτή τη σελίδα"
+    },
+    "button_associate": {
+        "message": "Σύνδεση με το KeePassXC"
+    },
+    "button_generate": {
+        "message": "Δημιουργία κωδικού"
+    },
+    "button_totp": {
+        "message": "Αντιγραφή TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Η εφαρμογή SafariKeePassXC δεν εκτελείται. Εκκινήστε την και αφήστε την ανοιχτή."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "Το KeePassXC δεν είναι προσβάσιμο. Εκτελείται το KeePassXC με ενεργοποιημένη την ενσωμάτωση προγράμματος περιήγησης;"
+    },
+    "error_database_locked": {
+        "message": "Η βάση δεδομένων KeePassXC είναι κλειδωμένη. Ξεκλειδώστε την."
+    },
+    "error_not_associated": {
+        "message": "Δεν υπάρχει ακόμη σύνδεση με το KeePassXC."
+    },
+    "error_generic": {
+        "message": "Σφάλμα: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "άγνωστο"
+    },
+    "save_failed": {
+        "message": "Δεν ήταν δυνατή η αποθήκευση της σύνδεσης."
+    },
+    "entries_empty": {
+        "message": "Δεν υπάρχουν καταχωρίσεις για αυτή τη σελίδα."
+    },
+    "entry_fill_tooltip": {
+        "message": "Συμπλήρωση"
+    },
+    "fill_no_form": {
+        "message": "Δεν βρέθηκε φόρμα σύνδεσης σε αυτή τη σελίδα."
+    },
+    "fill_no_access": {
+        "message": "Η επέκταση δεν έχει πρόσβαση σε αυτή τη σελίδα. Επιτρέψτε την πρόσβαση σε αυτόν τον ιστότοπο στις ρυθμίσεις του Safari και επαναφορτώστε τη σελίδα."
+    },
+    "status_associating": {
+        "message": "Σύνδεση… (επιβεβαιώστε το παράθυρο διαλόγου στο KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – δεν έχει συνδεθεί ακόμη.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "Συνδεδεμένο με το KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(αντιγράφηκε στο πρόχειρο)"
+    },
+    "password_copied": {
+        "message": "Ο κωδικός δημιουργήθηκε και αντιγράφηκε στο πρόχειρο."
+    },
+    "clipboard_failed": {
+        "message": "Το πρόχειρο δεν είναι διαθέσιμο. Ο κωδικός δεν εμφανίστηκε."
+    },
+    "totp_no_website": {
+        "message": "Δεν υπάρχει ιστότοπος στην ενεργή καρτέλα."
+    },
+    "totp_no_entry": {
+        "message": "Δεν υπάρχει καταχώριση TOTP για αυτή τη σελίδα."
+    },
+    "save_banner_new": {
+        "message": "Αποθήκευση της σύνδεσης «$LOGIN$» για αυτόν τον ιστότοπο στο KeePassXC;",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "Ενημέρωση του αποθηκευμένου κωδικού για «$LOGIN$» στο KeePassXC;",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Αποθήκευση"
+    },
+    "save_banner_button_update": {
+        "message": "Ενημέρωση"
+    },
+    "save_banner_dismiss": {
+        "message": "Όχι τώρα"
+    },
+    "save_group_label": {
+        "message": "Αποθήκευση νέων συνδέσεων σε"
+    },
+    "save_group_default": {
+        "message": "Προεπιλεγμένη ομάδα (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys μέσω KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Ενεργοποιείται μετά την επαναφόρτωση της σελίδας. Όταν είναι ανενεργό, το Safari διαχειρίζεται τα passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "Επαναφορτώστε τη σελίδα για να εφαρμοστεί η αλλαγή."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Τα passkeys δεν είναι διαθέσιμα: η εφαρμογή SafariKeePassXC δεν εκτελείται."
+    },
+    "passkeys_not_associated": {
+        "message": "Συνδεθείτε με το KeePassXC για να χρησιμοποιήσετε passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Τα passkeys απαιτούν KeePassXC 2.7.7 ή νεότερο (βρέθηκε $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Η γέφυρα passkeys δεν είναι ενεργή σε αυτή τη σελίδα. Επαναφορτώστε τη σελίδα και βεβαιωθείτε ότι η επέκταση έχει πρόσβαση σε αυτόν τον ιστότοπο."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Το τελευταίο αίτημα passkey το χειρίστηκε το Safari αντί για το KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "Αναζήτηση"
+    },
+    "nav_generator": {
+        "message": "Γεννήτρια"
+    },
+    "nav_settings": {
+        "message": "Ρυθμίσεις"
+    },
+    "nav_back": {
+        "message": "Πίσω"
+    },
+    "screen_search_title": {
+        "message": "Αναζήτηση στο θησαυροφυλάκιο"
+    },
+    "screen_generator_title": {
+        "message": "Γεννήτρια κωδικών"
+    },
+    "screen_settings_title": {
+        "message": "Ρυθμίσεις"
+    },
+    "status_connected_short": {
+        "message": "Συνδεδεμένο · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "Το θησαυροφυλάκιο είναι κλειδωμένο"
+    },
+    "status_offline": {
+        "message": "Το KeePassXC δεν εκτελείται"
+    },
+    "status_unpaired": {
+        "message": "Η επέκταση δεν είναι συζευγμένη"
+    },
+    "section_for_site": {
+        "message": "Για αυτόν τον ιστότοπο"
+    },
+    "home_empty_title": {
+        "message": "Δεν υπάρχουν συνδέσεις για $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Βρείτε μια καταχώριση στο θησαυροφυλάκιο ή αναζητήστε τις συνδέσεις σας."
+    },
+    "button_search": {
+        "message": "Αναζήτηση"
+    },
+    "button_create": {
+        "message": "Δημιουργία"
+    },
+    "toast_filled": {
+        "message": "Συμπληρώθηκε: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Ο κωδικός TOTP αντιγράφηκε"
+    },
+    "toast_connected": {
+        "message": "Συνδέθηκε"
+    },
+    "toast_reconnected": {
+        "message": "Επανασυνδέθηκε"
+    },
+    "toast_login_created": {
+        "message": "Δημιουργήθηκε νέα σύνδεση"
+    },
+    "toast_password_copied": {
+        "message": "Ο κωδικός αντιγράφηκε"
+    },
+    "toast_password_pasted": {
+        "message": "Ο κωδικός επικολλήθηκε"
+    },
+    "error_offline_hint": {
+        "message": "Ανοίξτε το KeePassXC και ενεργοποιήστε την ενσωμάτωση προγράμματος περιήγησης."
+    },
+    "error_locked_hint": {
+        "message": "Ξεκλειδώστε το θησαυροφυλάκιο για να δείτε τις συνδέσεις σας."
+    },
+    "error_pairing_required": {
+        "message": "Απαιτείται σύζευξη"
+    },
+    "error_unpaired_hint": {
+        "message": "Επιβεβαιώστε τη σύνδεση της επέκτασης στο παράθυρο του KeePassXC."
+    },
+    "button_retry": {
+        "message": "Επανάληψη"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Ξεκλείδωμα στο KeePassXC"
+    },
+    "button_pair": {
+        "message": "Σύζευξη"
+    },
+    "section_saving": {
+        "message": "Αποθήκευση"
+    },
+    "section_autofill": {
+        "message": "Αυτόματη συμπλήρωση"
+    },
+    "settings_save_prompt": {
+        "message": "Προσφορά αποθήκευσης κωδικών"
+    },
+    "settings_autofill": {
+        "message": "Αυτόματη συμπλήρωση κατά τη φόρτωση"
+    },
+    "settings_autofill_hint": {
+        "message": "Όταν βρεθεί μία μόνο σύνδεση για τον ιστότοπο."
+    },
+    "section_connection": {
+        "message": "Σύνδεση"
+    },
+    "settings_connected_to": {
+        "message": "Συνδεδεμένο με το KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Μη συνδεδεμένο"
+    },
+    "settings_reconnect": {
+        "message": "Επανασύνδεση"
+    },
+    "totp_copy_label": {
+        "message": "Αντιγραφή κωδικού TOTP"
+    },
+    "generator_length": {
+        "message": "Μήκος"
+    },
+    "generator_phrase_length": {
+        "message": "Μήκος φράσης"
+    },
+    "generator_phrase": {
+        "message": "Φράση πρόσβασης"
+    },
+    "generator_phrase_hint": {
+        "message": "Οι λέξεις με παύλες είναι πιο εύκολο να θυμηθούν."
+    },
+    "generator_strength_weak": {
+        "message": "Αδύναμος"
+    },
+    "generator_strength_medium": {
+        "message": "Μέτριος"
+    },
+    "generator_strength_strong": {
+        "message": "Ισχυρός"
+    },
+    "generator_strength_very_strong": {
+        "message": "Πολύ ισχυρός"
+    },
+    "generator_keepassxc": {
+        "message": "Κωδικός KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Επαναδημιουργία"
+    },
+    "generator_copy": {
+        "message": "Αντιγραφή κωδικού"
+    },
+    "search_clear": {
+        "message": "Εκκαθάριση αναζήτησης"
+    },
+    "search_placeholder": {
+        "message": "Τίτλος, όνομα χρήστη ή ιστότοπος"
+    },
+    "search_hint": {
+        "message": "Αναζητά συνδέσεις για αυτόν τον ιστότοπο."
+    },
+    "search_in_keepassxc": {
+        "message": "Αναζήτηση στο KeePassXC"
+    },
+    "search_results": {
+        "message": "Βρέθηκαν: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "Καταχωρίσεις για αυτόν τον ιστότοπο"
+    },
+    "search_empty": {
+        "message": "Δεν βρέθηκε τίποτα"
+    },
+    "footer_author": {
+        "message": "από Markus Griesslehner"
+    }
+}

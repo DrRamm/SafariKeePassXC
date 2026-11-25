@@ -50,6 +50,10 @@
         "message": "unknown",
         "description": "Placeholder when no error details are available."
     },
+    "save_failed": {
+        "message": "The login could not be saved.",
+        "description": "Shown when saving a login from the save banner failed."
+    },
     "entries_empty": {
         "message": "No entries for this page.",
         "description": "Shown when no entries match the current page."
@@ -139,11 +143,11 @@
         "description": "Dropdown option for KeePassXC's default browser group."
     },
     "passkeys_toggle_label": {
-        "message": "Use KeePassXC for passkeys",
+        "message": "Passkeys via KeePassXC",
         "description": "Checkbox that routes WebAuthn passkey requests to KeePassXC."
     },
     "passkeys_toggle_hint": {
-        "message": "Applies after reloading the page. When off, Safari handles passkeys.",
+        "message": "Takes effect after the page reloads. When off, Safari handles passkeys.",
         "description": "Explains when the passkey setting takes effect."
     },
     "passkeys_reload_hint": {
@@ -175,5 +179,256 @@
         "placeholders": {
             "reason": { "content": "$1" }
         }
+    },
+    "nav_search": {
+        "message": "Search",
+        "description": "Toolbar button that opens the vault search screen."
+    },
+    "nav_generator": {
+        "message": "Generator",
+        "description": "Toolbar button that opens the password generator."
+    },
+    "nav_settings": {
+        "message": "Settings",
+        "description": "Toolbar button that opens the settings screen."
+    },
+    "nav_back": {
+        "message": "Back",
+        "description": "Back button in the popup sub-header."
+    },
+    "screen_search_title": {
+        "message": "Search vault",
+        "description": "Title of the search screen."
+    },
+    "screen_generator_title": {
+        "message": "Password generator",
+        "description": "Title of the password generator screen."
+    },
+    "screen_settings_title": {
+        "message": "Settings",
+        "description": "Title of the settings screen."
+    },
+    "status_connected_short": {
+        "message": "Connected · $VERSION$",
+        "description": "Header status when connected to KeePassXC.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "Vault is locked",
+        "description": "Header status when the database is locked."
+    },
+    "status_offline": {
+        "message": "KeePassXC is not running",
+        "description": "Header status when KeePassXC is not reachable."
+    },
+    "status_unpaired": {
+        "message": "Extension is not paired",
+        "description": "Header status when the extension is not associated."
+    },
+    "section_for_site": {
+        "message": "For this site",
+        "description": "Section label above the logins matching the current page."
+    },
+    "home_empty_title": {
+        "message": "No logins for $DOMAIN$",
+        "description": "Empty state title when no entry matches the page.",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Find an entry in the vault or search your logins.",
+        "description": "Empty state hint."
+    },
+    "button_search": {
+        "message": "Search",
+        "description": "Empty state button that opens the search screen."
+    },
+    "button_create": {
+        "message": "Create",
+        "description": "Empty state button that would create a new login."
+    },
+    "toast_filled": {
+        "message": "Filled: $TITLE$",
+        "description": "Toast after filling a login form.",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP code copied",
+        "description": "Toast after copying a TOTP code."
+    },
+    "toast_connected": {
+        "message": "Connected",
+        "description": "Toast after a successful connection."
+    },
+    "toast_reconnected": {
+        "message": "Reconnected",
+        "description": "Toast after reconnecting to KeePassXC."
+    },
+    "toast_login_created": {
+        "message": "New login created",
+        "description": "Toast after creating a login."
+    },
+    "toast_password_copied": {
+        "message": "Password copied",
+        "description": "Toast after copying a generated password."
+    },
+    "toast_password_pasted": {
+        "message": "Password pasted",
+        "description": "Toast after pasting a generated password."
+    },
+    "error_offline_hint": {
+        "message": "Open KeePassXC and enable browser integration.",
+        "description": "Error screen hint when KeePassXC is not running."
+    },
+    "error_locked_hint": {
+        "message": "Unlock the vault to see your logins.",
+        "description": "Error screen hint when the database is locked."
+    },
+    "error_pairing_required": {
+        "message": "Pairing required",
+        "description": "Error screen title when the extension is not associated."
+    },
+    "error_unpaired_hint": {
+        "message": "Confirm the extension connection in the KeePassXC window.",
+        "description": "Error screen hint when the extension is not associated."
+    },
+    "button_retry": {
+        "message": "Retry",
+        "description": "Error screen button that retries the connection."
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Unlock in KeePassXC",
+        "description": "Error screen button shown when the database is locked."
+    },
+    "button_pair": {
+        "message": "Pair",
+        "description": "Error screen button that starts the association."
+    },
+    "section_saving": {
+        "message": "Saving",
+        "description": "Settings section label."
+    },
+    "section_autofill": {
+        "message": "Autofill",
+        "description": "Settings section label."
+    },
+    "settings_save_prompt": {
+        "message": "Offer to save passwords",
+        "description": "Settings toggle that shows the save banner."
+    },
+    "settings_autofill": {
+        "message": "Autofill on page load",
+        "description": "Settings toggle for automatic filling."
+    },
+    "settings_autofill_hint": {
+        "message": "When a single login is found for the site.",
+        "description": "Hint for the autofill toggle."
+    },
+    "section_connection": {
+        "message": "Connection",
+        "description": "Settings section label."
+    },
+    "settings_connected_to": {
+        "message": "Connected to KeePassXC $VERSION$",
+        "description": "Settings connection row when connected.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Not connected",
+        "description": "Settings connection row when not connected."
+    },
+    "settings_reconnect": {
+        "message": "Reconnect",
+        "description": "Settings button that reconnects to KeePassXC."
+    },
+    "totp_copy_label": {
+        "message": "Copy TOTP code",
+        "description": "Tooltip on a TOTP chip."
+    },
+    "generator_length": {
+        "message": "Length",
+        "description": "Password length label."
+    },
+    "generator_phrase_length": {
+        "message": "Phrase length",
+        "description": "Passphrase length label."
+    },
+    "generator_phrase": {
+        "message": "Passphrase",
+        "description": "Passphrase toggle label."
+    },
+    "generator_phrase_hint": {
+        "message": "Hyphen-separated words are easier to remember.",
+        "description": "Passphrase toggle hint."
+    },
+    "generator_strength_weak": {
+        "message": "Weak",
+        "description": "Password strength label."
+    },
+    "generator_strength_medium": {
+        "message": "Medium",
+        "description": "Password strength label."
+    },
+    "generator_strength_strong": {
+        "message": "Strong",
+        "description": "Password strength label."
+    },
+    "generator_strength_very_strong": {
+        "message": "Very strong",
+        "description": "Password strength label."
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC password",
+        "description": "Button that generates a password with KeePassXC settings."
+    },
+    "generator_regenerate": {
+        "message": "Regenerate",
+        "description": "Tooltip on the regenerate button."
+    },
+    "generator_copy": {
+        "message": "Copy password",
+        "description": "Tooltip on the copy password button."
+    },
+    "search_clear": {
+        "message": "Clear search",
+        "description": "Tooltip on the clear search button."
+    },
+    "search_placeholder": {
+        "message": "Title, username or site",
+        "description": "Placeholder of the search field."
+    },
+    "search_hint": {
+        "message": "Searches logins for this site.",
+        "description": "Explains that the search is scoped to the current site."
+    },
+    "search_in_keepassxc": {
+        "message": "Search in KeePassXC",
+        "description": "Opens KeePassXC's global search for the whole database."
+    },
+    "search_results": {
+        "message": "Found: $COUNT$",
+        "description": "Search results label.",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "Entries for this site",
+        "description": "Search label when the query is empty."
+    },
+    "search_empty": {
+        "message": "Nothing found",
+        "description": "Search empty result text."
+    },
+    "footer_author": {
+        "message": "by Markus Griesslehner",
+        "description": "Author in the settings footer."
     }
 }

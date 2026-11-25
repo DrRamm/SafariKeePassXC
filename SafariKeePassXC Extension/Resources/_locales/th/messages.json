@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "เติมข้อมูลเข้าสู่ระบบ รหัสผ่าน และรหัส TOTP จาก KeePassXC ลงใน Safari พัฒนาโดย Markus Griesslehner"
+    },
+    "entries_heading": {
+        "message": "ข้อมูลเข้าสู่ระบบสำหรับหน้านี้"
+    },
+    "button_associate": {
+        "message": "เชื่อมต่อกับ KeePassXC"
+    },
+    "button_generate": {
+        "message": "สร้างรหัสผ่าน"
+    },
+    "button_totp": {
+        "message": "คัดลอก TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "แอป SafariKeePassXC ไม่ได้ทำงานอยู่ โปรดเปิดแอปและเก็บไว้เปิดไว้"
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "ไม่สามารถเชื่อมต่อ KeePassXC ได้ KeePassXC เปิดอยู่และเปิดใช้การเชื่อมต่อกับเบราว์เซอร์แล้วหรือไม่"
+    },
+    "error_database_locked": {
+        "message": "ฐานข้อมูล KeePassXC ถูกล็อกอยู่ โปรดปลดล็อก"
+    },
+    "error_not_associated": {
+        "message": "ยังไม่ได้เชื่อมต่อกับ KeePassXC"
+    },
+    "error_generic": {
+        "message": "ข้อผิดพลาด: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "ไม่ทราบ"
+    },
+    "save_failed": {
+        "message": "ไม่สามารถบันทึกข้อมูลเข้าสู่ระบบได้"
+    },
+    "entries_empty": {
+        "message": "ไม่มีรายการสำหรับหน้านี้"
+    },
+    "entry_fill_tooltip": {
+        "message": "เติม"
+    },
+    "fill_no_form": {
+        "message": "ไม่พบแบบฟอร์มเข้าสู่ระบบในหน้านี้"
+    },
+    "fill_no_access": {
+        "message": "ส่วนขยายไม่มีสิทธิ์เข้าถึงหน้านี้ โปรดอนุญาตการเข้าถึงเว็บไซต์นี้ในการตั้งค่า Safari แล้วโหลดหน้าใหม่"
+    },
+    "status_associating": {
+        "message": "กำลังเชื่อมต่อ… (โปรดยืนยันในกล่องโต้ตอบของ KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – ยังไม่ได้เชื่อมต่อ",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "เชื่อมต่อกับ KeePassXC $VERSION$ แล้ว",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(คัดลอกไปยังคลิปบอร์ดแล้ว)"
+    },
+    "password_copied": {
+        "message": "สร้างรหัสผ่านและคัดลอกไปยังคลิปบอร์ดแล้ว"
+    },
+    "clipboard_failed": {
+        "message": "คลิปบอร์ดไม่พร้อมใช้งาน รหัสผ่านไม่ได้แสดง"
+    },
+    "totp_no_website": {
+        "message": "ไม่มีเว็บไซต์ในแท็บที่ใช้งานอยู่"
+    },
+    "totp_no_entry": {
+        "message": "ไม่มีรายการ TOTP สำหรับหน้านี้"
+    },
+    "save_banner_new": {
+        "message": "บันทึกข้อมูลเข้าสู่ระบบ “$LOGIN$” สำหรับไซต์นี้ใน KeePassXC หรือไม่",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "อัปเดตรหัสผ่านที่บันทึกไว้สำหรับ “$LOGIN$” ใน KeePassXC หรือไม่",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "บันทึก"
+    },
+    "save_banner_button_update": {
+        "message": "อัปเดต"
+    },
+    "save_banner_dismiss": {
+        "message": "ไว้ภายหลัง"
+    },
+    "save_group_label": {
+        "message": "บันทึกข้อมูลเข้าสู่ระบบใหม่ไปยัง"
+    },
+    "save_group_default": {
+        "message": "กลุ่มเริ่มต้น (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "พาสคีย์ผ่าน KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "จะมีผลหลังจากโหลดหน้าใหม่ เมื่อปิด Safari จะจัดการพาสคีย์"
+    },
+    "passkeys_reload_hint": {
+        "message": "โหลดหน้าใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
+    },
+    "passkeys_bridge_stopped": {
+        "message": "พาสคีย์ไม่พร้อมใช้งาน: แอป SafariKeePassXC ไม่ได้ทำงานอยู่"
+    },
+    "passkeys_not_associated": {
+        "message": "เชื่อมต่อกับ KeePassXC เพื่อใช้พาสคีย์"
+    },
+    "passkeys_unsupported_version": {
+        "message": "พาสคีย์ต้องใช้ KeePassXC 2.7.7 ขึ้นไป (พบ $VERSION$)",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "สะพานพาสคีย์ไม่ได้ทำงานในหน้านี้ โหลดหน้าใหม่และตรวจสอบว่าส่วนขยายมีสิทธิ์เข้าถึงเว็บไซต์นี้"
+    },
+    "passkeys_fallback_reason": {
+        "message": "คำขอพาสคีย์ครั้งล่าสุดถูกจัดการโดย Safari แทน KeePassXC ($REASON$)",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "ค้นหา"
+    },
+    "nav_generator": {
+        "message": "ตัวสร้าง"
+    },
+    "nav_settings": {
+        "message": "การตั้งค่า"
+    },
+    "nav_back": {
+        "message": "ย้อนกลับ"
+    },
+    "screen_search_title": {
+        "message": "ค้นหาตู้เก็บ"
+    },
+    "screen_generator_title": {
+        "message": "ตัวสร้างรหัสผ่าน"
+    },
+    "screen_settings_title": {
+        "message": "การตั้งค่า"
+    },
+    "status_connected_short": {
+        "message": "เชื่อมต่อแล้ว · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "ตู้เก็บถูกล็อก"
+    },
+    "status_offline": {
+        "message": "KeePassXC ไม่ได้ทำงานอยู่"
+    },
+    "status_unpaired": {
+        "message": "ส่วนขยายยังไม่ได้จับคู่"
+    },
+    "section_for_site": {
+        "message": "สำหรับไซต์นี้"
+    },
+    "home_empty_title": {
+        "message": "ไม่มีข้อมูลเข้าสู่ระบบสำหรับ $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "ค้นหารายการในตู้เก็บหรือค้นหาข้อมูลเข้าสู่ระบบของคุณ"
+    },
+    "button_search": {
+        "message": "ค้นหา"
+    },
+    "button_create": {
+        "message": "สร้าง"
+    },
+    "toast_filled": {
+        "message": "เติมแล้ว: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "คัดลอกรหัส TOTP แล้ว"
+    },
+    "toast_connected": {
+        "message": "เชื่อมต่อแล้ว"
+    },
+    "toast_reconnected": {
+        "message": "เชื่อมต่อใหม่แล้ว"
+    },
+    "toast_login_created": {
+        "message": "สร้างข้อมูลเข้าสู่ระบบใหม่แล้ว"
+    },
+    "toast_password_copied": {
+        "message": "คัดลอกรหัสผ่านแล้ว"
+    },
+    "toast_password_pasted": {
+        "message": "วางรหัสผ่านแล้ว"
+    },
+    "error_offline_hint": {
+        "message": "เปิด KeePassXC และเปิดใช้การเชื่อมต่อกับเบราว์เซอร์"
+    },
+    "error_locked_hint": {
+        "message": "ปลดล็อกตู้เก็บเพื่อดูข้อมูลเข้าสู่ระบบของคุณ"
+    },
+    "error_pairing_required": {
+        "message": "ต้องจับคู่"
+    },
+    "error_unpaired_hint": {
+        "message": "ยืนยันการเชื่อมต่อส่วนขยายในหน้าต่าง KeePassXC"
+    },
+    "button_retry": {
+        "message": "ลองใหม่"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "ปลดล็อกใน KeePassXC"
+    },
+    "button_pair": {
+        "message": "จับคู่"
+    },
+    "section_saving": {
+        "message": "การบันทึก"
+    },
+    "section_autofill": {
+        "message": "การเติมอัตโนมัติ"
+    },
+    "settings_save_prompt": {
+        "message": "เสนอให้บันทึกรหัสผ่าน"
+    },
+    "settings_autofill": {
+        "message": "เติมอัตโนมัติเมื่อโหลดหน้า"
+    },
+    "settings_autofill_hint": {
+        "message": "เมื่อพบข้อมูลเข้าสู่ระบบเพียงรายการเดียวสำหรับไซต์"
+    },
+    "section_connection": {
+        "message": "การเชื่อมต่อ"
+    },
+    "settings_connected_to": {
+        "message": "เชื่อมต่อกับ KeePassXC $VERSION$ แล้ว",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "ไม่ได้เชื่อมต่อ"
+    },
+    "settings_reconnect": {
+        "message": "เชื่อมต่อใหม่"
+    },
+    "totp_copy_label": {
+        "message": "คัดลอกรหัส TOTP"
+    },
+    "generator_length": {
+        "message": "ความยาว"
+    },
+    "generator_phrase_length": {
+        "message": "ความยาววลี"
+    },
+    "generator_phrase": {
+        "message": "วลีรหัสผ่าน"
+    },
+    "generator_phrase_hint": {
+        "message": "คำที่คั่นด้วยขีดกลางจำได้ง่ายกว่า"
+    },
+    "generator_strength_weak": {
+        "message": "อ่อน"
+    },
+    "generator_strength_medium": {
+        "message": "ปานกลาง"
+    },
+    "generator_strength_strong": {
+        "message": "แข็งแรง"
+    },
+    "generator_strength_very_strong": {
+        "message": "แข็งแรงมาก"
+    },
+    "generator_keepassxc": {
+        "message": "รหัสผ่าน KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "สร้างใหม่"
+    },
+    "generator_copy": {
+        "message": "คัดลอกรหัสผ่าน"
+    },
+    "search_clear": {
+        "message": "ล้างการค้นหา"
+    },
+    "search_placeholder": {
+        "message": "ชื่อเรื่อง ชื่อผู้ใช้ หรือไซต์"
+    },
+    "search_hint": {
+        "message": "ค้นหาข้อมูลเข้าสู่ระบบสำหรับไซต์นี้"
+    },
+    "search_in_keepassxc": {
+        "message": "ค้นหาใน KeePassXC"
+    },
+    "search_results": {
+        "message": "พบ: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "รายการสำหรับไซต์นี้"
+    },
+    "search_empty": {
+        "message": "ไม่พบสิ่งใด"
+    },
+    "footer_author": {
+        "message": "โดย Markus Griesslehner"
+    }
+}

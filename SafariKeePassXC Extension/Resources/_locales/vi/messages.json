@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Điền thông tin đăng nhập, mật khẩu và mã TOTP từ KeePassXC vào Safari. Phát triển bởi Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Thông tin đăng nhập cho trang này"
+    },
+    "button_associate": {
+        "message": "Kết nối với KeePassXC"
+    },
+    "button_generate": {
+        "message": "Tạo mật khẩu"
+    },
+    "button_totp": {
+        "message": "Sao chép TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Ứng dụng SafariKeePassXC không chạy. Vui lòng khởi động và giữ nó mở."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "Không thể kết nối với KeePassXC. KeePassXC có đang chạy với tích hợp trình duyệt được bật không?"
+    },
+    "error_database_locked": {
+        "message": "Cơ sở dữ liệu KeePassXC đang bị khóa. Vui lòng mở khóa."
+    },
+    "error_not_associated": {
+        "message": "Chưa kết nối với KeePassXC."
+    },
+    "error_generic": {
+        "message": "Lỗi: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "không rõ"
+    },
+    "save_failed": {
+        "message": "Không thể lưu thông tin đăng nhập."
+    },
+    "entries_empty": {
+        "message": "Không có mục nào cho trang này."
+    },
+    "entry_fill_tooltip": {
+        "message": "Điền"
+    },
+    "fill_no_form": {
+        "message": "Không tìm thấy biểu mẫu đăng nhập trên trang này."
+    },
+    "fill_no_access": {
+        "message": "Tiện ích không có quyền truy cập trang này. Hãy cho phép truy cập trang web này trong cài đặt Safari và tải lại trang."
+    },
+    "status_associating": {
+        "message": "Đang kết nối… (vui lòng xác nhận hộp thoại trong KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – chưa kết nối.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "Đã kết nối với KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(đã sao chép vào clipboard)"
+    },
+    "password_copied": {
+        "message": "Đã tạo mật khẩu và sao chép vào clipboard."
+    },
+    "clipboard_failed": {
+        "message": "Clipboard không khả dụng. Mật khẩu không được hiển thị."
+    },
+    "totp_no_website": {
+        "message": "Không có trang web trong tab đang hoạt động."
+    },
+    "totp_no_entry": {
+        "message": "Không có mục TOTP cho trang này."
+    },
+    "save_banner_new": {
+        "message": "Lưu thông tin đăng nhập “$LOGIN$” cho trang này vào KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "Cập nhật mật khẩu đã lưu cho “$LOGIN$” trong KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Lưu"
+    },
+    "save_banner_button_update": {
+        "message": "Cập nhật"
+    },
+    "save_banner_dismiss": {
+        "message": "Để sau"
+    },
+    "save_group_label": {
+        "message": "Lưu thông tin đăng nhập mới vào"
+    },
+    "save_group_default": {
+        "message": "Nhóm mặc định (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkey qua KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Có hiệu lực sau khi tải lại trang. Khi tắt, Safari sẽ xử lý passkey."
+    },
+    "passkeys_reload_hint": {
+        "message": "Tải lại trang để thay đổi có hiệu lực."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkey không khả dụng: ứng dụng SafariKeePassXC không chạy."
+    },
+    "passkeys_not_associated": {
+        "message": "Kết nối với KeePassXC để dùng passkey."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkey cần KeePassXC 2.7.7 trở lên (đang dùng $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Cầu nối passkey không hoạt động trên trang này. Hãy tải lại trang và đảm bảo tiện ích có quyền truy cập trang web này."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Yêu cầu passkey gần nhất được Safari xử lý thay vì KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "Tìm kiếm"
+    },
+    "nav_generator": {
+        "message": "Trình tạo"
+    },
+    "nav_settings": {
+        "message": "Cài đặt"
+    },
+    "nav_back": {
+        "message": "Quay lại"
+    },
+    "screen_search_title": {
+        "message": "Tìm kiếm kho"
+    },
+    "screen_generator_title": {
+        "message": "Trình tạo mật khẩu"
+    },
+    "screen_settings_title": {
+        "message": "Cài đặt"
+    },
+    "status_connected_short": {
+        "message": "Đã kết nối · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "Kho đang bị khóa"
+    },
+    "status_offline": {
+        "message": "KeePassXC không chạy"
+    },
+    "status_unpaired": {
+        "message": "Tiện ích chưa được ghép nối"
+    },
+    "section_for_site": {
+        "message": "Cho trang này"
+    },
+    "home_empty_title": {
+        "message": "Không có thông tin đăng nhập cho $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Tìm một mục trong kho hoặc tìm kiếm thông tin đăng nhập của bạn."
+    },
+    "button_search": {
+        "message": "Tìm kiếm"
+    },
+    "button_create": {
+        "message": "Tạo"
+    },
+    "toast_filled": {
+        "message": "Đã điền: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Đã sao chép mã TOTP"
+    },
+    "toast_connected": {
+        "message": "Đã kết nối"
+    },
+    "toast_reconnected": {
+        "message": "Đã kết nối lại"
+    },
+    "toast_login_created": {
+        "message": "Đã tạo thông tin đăng nhập mới"
+    },
+    "toast_password_copied": {
+        "message": "Đã sao chép mật khẩu"
+    },
+    "toast_password_pasted": {
+        "message": "Đã dán mật khẩu"
+    },
+    "error_offline_hint": {
+        "message": "Mở KeePassXC và bật tích hợp trình duyệt."
+    },
+    "error_locked_hint": {
+        "message": "Mở khóa kho để xem thông tin đăng nhập của bạn."
+    },
+    "error_pairing_required": {
+        "message": "Cần ghép nối"
+    },
+    "error_unpaired_hint": {
+        "message": "Xác nhận kết nối tiện ích trong cửa sổ KeePassXC."
+    },
+    "button_retry": {
+        "message": "Thử lại"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Mở khóa trong KeePassXC"
+    },
+    "button_pair": {
+        "message": "Ghép nối"
+    },
+    "section_saving": {
+        "message": "Lưu"
+    },
+    "section_autofill": {
+        "message": "Tự động điền"
+    },
+    "settings_save_prompt": {
+        "message": "Đề nghị lưu mật khẩu"
+    },
+    "settings_autofill": {
+        "message": "Tự động điền khi tải trang"
+    },
+    "settings_autofill_hint": {
+        "message": "Khi chỉ tìm thấy một thông tin đăng nhập cho trang."
+    },
+    "section_connection": {
+        "message": "Kết nối"
+    },
+    "settings_connected_to": {
+        "message": "Đã kết nối với KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Chưa kết nối"
+    },
+    "settings_reconnect": {
+        "message": "Kết nối lại"
+    },
+    "totp_copy_label": {
+        "message": "Sao chép mã TOTP"
+    },
+    "generator_length": {
+        "message": "Độ dài"
+    },
+    "generator_phrase_length": {
+        "message": "Độ dài cụm từ"
+    },
+    "generator_phrase": {
+        "message": "Cụm mật khẩu"
+    },
+    "generator_phrase_hint": {
+        "message": "Các từ ngăn cách bằng dấu gạch nối dễ nhớ hơn."
+    },
+    "generator_strength_weak": {
+        "message": "Yếu"
+    },
+    "generator_strength_medium": {
+        "message": "Trung bình"
+    },
+    "generator_strength_strong": {
+        "message": "Mạnh"
+    },
+    "generator_strength_very_strong": {
+        "message": "Rất mạnh"
+    },
+    "generator_keepassxc": {
+        "message": "Mật khẩu KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Tạo lại"
+    },
+    "generator_copy": {
+        "message": "Sao chép mật khẩu"
+    },
+    "search_clear": {
+        "message": "Xóa tìm kiếm"
+    },
+    "search_placeholder": {
+        "message": "Tiêu đề, tên người dùng hoặc trang"
+    },
+    "search_hint": {
+        "message": "Tìm kiếm thông tin đăng nhập cho trang này."
+    },
+    "search_in_keepassxc": {
+        "message": "Tìm kiếm trong KeePassXC"
+    },
+    "search_results": {
+        "message": "Tìm thấy: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "Các mục cho trang này"
+    },
+    "search_empty": {
+        "message": "Không tìm thấy gì"
+    },
+    "footer_author": {
+        "message": "bởi Markus Griesslehner"
+    }
+}

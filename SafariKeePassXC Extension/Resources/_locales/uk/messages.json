@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Заповнює логіни, паролі та коди TOTP з KeePassXC у Safari. Розроблено Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Логіни для цієї сторінки"
+    },
+    "button_associate": {
+        "message": "Підключитися до KeePassXC"
+    },
+    "button_generate": {
+        "message": "Створити пароль"
+    },
+    "button_totp": {
+        "message": "Копіювати TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Застосунок SafariKeePassXC не запущено. Запустіть його й не закривайте."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC недоступний. Чи запущено KeePassXC з увімкненою інтеграцією з браузером?"
+    },
+    "error_database_locked": {
+        "message": "Базу даних KeePassXC заблоковано. Розблокуйте її."
+    },
+    "error_not_associated": {
+        "message": "Ще немає підключення до KeePassXC."
+    },
+    "error_generic": {
+        "message": "Помилка: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "невідомо"
+    },
+    "save_failed": {
+        "message": "Не вдалося зберегти логін."
+    },
+    "entries_empty": {
+        "message": "Немає записів для цієї сторінки."
+    },
+    "entry_fill_tooltip": {
+        "message": "Заповнити"
+    },
+    "fill_no_form": {
+        "message": "На цій сторінці не знайдено форми входу."
+    },
+    "fill_no_access": {
+        "message": "Розширення не має доступу до цієї сторінки. Дозвольте доступ до цього сайту в налаштуваннях Safari і перезавантажте сторінку."
+    },
+    "status_associating": {
+        "message": "Підключення… (підтвердьте діалог у KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ — ще не підключено.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "Підключено до KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(скопійовано до буфера обміну)"
+    },
+    "password_copied": {
+        "message": "Пароль створено й скопійовано до буфера обміну."
+    },
+    "clipboard_failed": {
+        "message": "Буфер обміну недоступний. Пароль не було показано."
+    },
+    "totp_no_website": {
+        "message": "В активній вкладці немає вебсайту."
+    },
+    "totp_no_entry": {
+        "message": "Немає запису TOTP для цієї сторінки."
+    },
+    "save_banner_new": {
+        "message": "Зберегти логін «$LOGIN$» для цього сайту в KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "Оновити збережений пароль для «$LOGIN$» у KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Зберегти"
+    },
+    "save_banner_button_update": {
+        "message": "Оновити"
+    },
+    "save_banner_dismiss": {
+        "message": "Не зараз"
+    },
+    "save_group_label": {
+        "message": "Зберігати нові логіни в"
+    },
+    "save_group_default": {
+        "message": "Група за замовчуванням (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys через KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Набуде чинності після перезавантаження сторінки. Якщо вимкнено, passkeys обробляє Safari."
+    },
+    "passkeys_reload_hint": {
+        "message": "Перезавантажте сторінку, щоб зміна набула чинності."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys недоступні: застосунок SafariKeePassXC не запущено."
+    },
+    "passkeys_not_associated": {
+        "message": "Підключіться до KeePassXC, щоб використовувати passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Для passkeys потрібен KeePassXC 2.7.7 або новіший (знайдено $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Міст passkeys неактивний на цій сторінці. Перезавантажте сторінку й переконайтеся, що розширення має доступ до цього сайту."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Останній запит passkey обробив Safari замість KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "Пошук"
+    },
+    "nav_generator": {
+        "message": "Генератор"
+    },
+    "nav_settings": {
+        "message": "Налаштування"
+    },
+    "nav_back": {
+        "message": "Назад"
+    },
+    "screen_search_title": {
+        "message": "Пошук у сховищі"
+    },
+    "screen_generator_title": {
+        "message": "Генератор паролів"
+    },
+    "screen_settings_title": {
+        "message": "Налаштування"
+    },
+    "status_connected_short": {
+        "message": "Підключено · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "Сховище заблоковано"
+    },
+    "status_offline": {
+        "message": "KeePassXC не запущено"
+    },
+    "status_unpaired": {
+        "message": "Розширення не спарено"
+    },
+    "section_for_site": {
+        "message": "Для цього сайту"
+    },
+    "home_empty_title": {
+        "message": "Немає логінів для $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Знайдіть запис у сховищі або серед своїх логінів."
+    },
+    "button_search": {
+        "message": "Знайти"
+    },
+    "button_create": {
+        "message": "Створити"
+    },
+    "toast_filled": {
+        "message": "Заповнено: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Код TOTP скопійовано"
+    },
+    "toast_connected": {
+        "message": "Підключено"
+    },
+    "toast_reconnected": {
+        "message": "Підключено знову"
+    },
+    "toast_login_created": {
+        "message": "Новий логін створено"
+    },
+    "toast_password_copied": {
+        "message": "Пароль скопійовано"
+    },
+    "toast_password_pasted": {
+        "message": "Пароль вставлено"
+    },
+    "error_offline_hint": {
+        "message": "Відкрийте KeePassXC і ввімкніть інтеграцію з браузером."
+    },
+    "error_locked_hint": {
+        "message": "Розблокуйте сховище, щоб побачити свої логіни."
+    },
+    "error_pairing_required": {
+        "message": "Потрібне спарювання"
+    },
+    "error_unpaired_hint": {
+        "message": "Підтвердьте підключення розширення у вікні KeePassXC."
+    },
+    "button_retry": {
+        "message": "Повторити"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Розблокувати в KeePassXC"
+    },
+    "button_pair": {
+        "message": "Спарувати"
+    },
+    "section_saving": {
+        "message": "Збереження"
+    },
+    "section_autofill": {
+        "message": "Автозаповнення"
+    },
+    "settings_save_prompt": {
+        "message": "Пропонувати зберігати паролі"
+    },
+    "settings_autofill": {
+        "message": "Автозаповнення під час завантаження"
+    },
+    "settings_autofill_hint": {
+        "message": "Якщо для сайту знайдено один логін."
+    },
+    "section_connection": {
+        "message": "Підключення"
+    },
+    "settings_connected_to": {
+        "message": "Підключено до KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Не підключено"
+    },
+    "settings_reconnect": {
+        "message": "Перепідключити"
+    },
+    "totp_copy_label": {
+        "message": "Копіювати код TOTP"
+    },
+    "generator_length": {
+        "message": "Довжина"
+    },
+    "generator_phrase_length": {
+        "message": "Довжина фрази"
+    },
+    "generator_phrase": {
+        "message": "Парольна фраза"
+    },
+    "generator_phrase_hint": {
+        "message": "Слова через дефіс легше запам’ятати."
+    },
+    "generator_strength_weak": {
+        "message": "Слабкий"
+    },
+    "generator_strength_medium": {
+        "message": "Середній"
+    },
+    "generator_strength_strong": {
+        "message": "Надійний"
+    },
+    "generator_strength_very_strong": {
+        "message": "Дуже надійний"
+    },
+    "generator_keepassxc": {
+        "message": "Пароль KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Створити заново"
+    },
+    "generator_copy": {
+        "message": "Копіювати пароль"
+    },
+    "search_clear": {
+        "message": "Очистити пошук"
+    },
+    "search_placeholder": {
+        "message": "Назва, ім’я користувача або сайт"
+    },
+    "search_hint": {
+        "message": "Шукає логіни для цього сайту."
+    },
+    "search_in_keepassxc": {
+        "message": "Шукати в KeePassXC"
+    },
+    "search_results": {
+        "message": "Знайдено: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "Записи для цього сайту"
+    },
+    "search_empty": {
+        "message": "Нічого не знайдено"
+    },
+    "footer_author": {
+        "message": "від Markus Griesslehner"
+    }
+}

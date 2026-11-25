@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "KeePassXC のログイン情報、パスワード、TOTP コードを Safari に入力します。開発: Markus Griesslehner。"
+    },
+    "entries_heading": {
+        "message": "このページのログイン"
+    },
+    "button_associate": {
+        "message": "KeePassXC に接続"
+    },
+    "button_generate": {
+        "message": "パスワードを生成"
+    },
+    "button_totp": {
+        "message": "TOTP をコピー"
+    },
+    "error_host_app_not_running": {
+        "message": "SafariKeePassXC アプリが実行されていません。起動したままにしてください。"
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC に接続できません。KeePassXC が実行され、ブラウザ連携が有効になっていますか？"
+    },
+    "error_database_locked": {
+        "message": "KeePassXC のデータベースがロックされています。ロックを解除してください。"
+    },
+    "error_not_associated": {
+        "message": "まだ KeePassXC に接続していません。"
+    },
+    "error_generic": {
+        "message": "エラー: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "不明"
+    },
+    "save_failed": {
+        "message": "ログイン情報を保存できませんでした。"
+    },
+    "entries_empty": {
+        "message": "このページのエントリはありません。"
+    },
+    "entry_fill_tooltip": {
+        "message": "入力"
+    },
+    "fill_no_form": {
+        "message": "このページにログインフォームが見つかりません。"
+    },
+    "fill_no_access": {
+        "message": "この拡張機能にはこのページへのアクセス権がありません。Safari の設定でこの Web サイトへのアクセスを許可し、ページを再読み込みしてください。"
+    },
+    "status_associating": {
+        "message": "接続中…（KeePassXC のダイアログで確認してください）"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – まだ接続していません。",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "KeePassXC $VERSION$ に接続済み",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "（クリップボードにコピーしました）"
+    },
+    "password_copied": {
+        "message": "パスワードを生成してクリップボードにコピーしました。"
+    },
+    "clipboard_failed": {
+        "message": "クリップボードを利用できません。パスワードは表示されませんでした。"
+    },
+    "totp_no_website": {
+        "message": "アクティブなタブに Web サイトがありません。"
+    },
+    "totp_no_entry": {
+        "message": "このページの TOTP エントリはありません。"
+    },
+    "save_banner_new": {
+        "message": "このサイトのログイン「$LOGIN$」を KeePassXC に保存しますか？",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "KeePassXC に保存されている「$LOGIN$」のパスワードを更新しますか？",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "保存"
+    },
+    "save_banner_button_update": {
+        "message": "更新"
+    },
+    "save_banner_dismiss": {
+        "message": "後で"
+    },
+    "save_group_label": {
+        "message": "新しいログインの保存先"
+    },
+    "save_group_default": {
+        "message": "既定のグループ (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "KeePassXC 経由のパスキー"
+    },
+    "passkeys_toggle_hint": {
+        "message": "ページを再読み込みすると有効になります。オフの場合、パスキーは Safari が処理します。"
+    },
+    "passkeys_reload_hint": {
+        "message": "変更を有効にするにはページを再読み込みしてください。"
+    },
+    "passkeys_bridge_stopped": {
+        "message": "パスキーを利用できません: SafariKeePassXC アプリが実行されていません。"
+    },
+    "passkeys_not_associated": {
+        "message": "パスキーを使用するには KeePassXC に接続してください。"
+    },
+    "passkeys_unsupported_version": {
+        "message": "パスキーには KeePassXC 2.7.7 以降が必要です（検出: $VERSION$）。",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "このページではパスキーブリッジが有効になっていません。ページを再読み込みし、拡張機能にこの Web サイトへのアクセスを許可してください。"
+    },
+    "passkeys_fallback_reason": {
+        "message": "最後のパスキー要求は KeePassXC ではなく Safari によって処理されました（$REASON$）。",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "検索"
+    },
+    "nav_generator": {
+        "message": "生成"
+    },
+    "nav_settings": {
+        "message": "設定"
+    },
+    "nav_back": {
+        "message": "戻る"
+    },
+    "screen_search_title": {
+        "message": "保管庫を検索"
+    },
+    "screen_generator_title": {
+        "message": "パスワード生成"
+    },
+    "screen_settings_title": {
+        "message": "設定"
+    },
+    "status_connected_short": {
+        "message": "接続済み · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "保管庫はロックされています"
+    },
+    "status_offline": {
+        "message": "KeePassXC が実行されていません"
+    },
+    "status_unpaired": {
+        "message": "拡張機能はペアリングされていません"
+    },
+    "section_for_site": {
+        "message": "このサイト"
+    },
+    "home_empty_title": {
+        "message": "$DOMAIN$ のログインはありません",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "保管庫でエントリを探すか、ログインを検索してください。"
+    },
+    "button_search": {
+        "message": "検索"
+    },
+    "button_create": {
+        "message": "作成"
+    },
+    "toast_filled": {
+        "message": "入力しました: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP コードをコピーしました"
+    },
+    "toast_connected": {
+        "message": "接続しました"
+    },
+    "toast_reconnected": {
+        "message": "再接続しました"
+    },
+    "toast_login_created": {
+        "message": "新しいログインを作成しました"
+    },
+    "toast_password_copied": {
+        "message": "パスワードをコピーしました"
+    },
+    "toast_password_pasted": {
+        "message": "パスワードを貼り付けました"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC を開き、ブラウザ連携を有効にしてください。"
+    },
+    "error_locked_hint": {
+        "message": "保管庫のロックを解除してログインを表示してください。"
+    },
+    "error_pairing_required": {
+        "message": "ペアリングが必要です"
+    },
+    "error_unpaired_hint": {
+        "message": "KeePassXC のウィンドウで拡張機能の接続を確認してください。"
+    },
+    "button_retry": {
+        "message": "再試行"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "KeePassXC でロック解除"
+    },
+    "button_pair": {
+        "message": "ペアリング"
+    },
+    "section_saving": {
+        "message": "保存"
+    },
+    "section_autofill": {
+        "message": "自動入力"
+    },
+    "settings_save_prompt": {
+        "message": "パスワードの保存を提案"
+    },
+    "settings_autofill": {
+        "message": "ページ読み込み時に自動入力"
+    },
+    "settings_autofill_hint": {
+        "message": "サイトにログインが 1 件だけ見つかった場合。"
+    },
+    "section_connection": {
+        "message": "接続"
+    },
+    "settings_connected_to": {
+        "message": "KeePassXC $VERSION$ に接続済み",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "未接続"
+    },
+    "settings_reconnect": {
+        "message": "再接続"
+    },
+    "totp_copy_label": {
+        "message": "TOTP コードをコピー"
+    },
+    "generator_length": {
+        "message": "長さ"
+    },
+    "generator_phrase_length": {
+        "message": "フレーズの長さ"
+    },
+    "generator_phrase": {
+        "message": "パスフレーズ"
+    },
+    "generator_phrase_hint": {
+        "message": "ハイフンで区切った単語は覚えやすくなります。"
+    },
+    "generator_strength_weak": {
+        "message": "弱い"
+    },
+    "generator_strength_medium": {
+        "message": "普通"
+    },
+    "generator_strength_strong": {
+        "message": "強い"
+    },
+    "generator_strength_very_strong": {
+        "message": "非常に強い"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC のパスワード"
+    },
+    "generator_regenerate": {
+        "message": "再生成"
+    },
+    "generator_copy": {
+        "message": "パスワードをコピー"
+    },
+    "search_clear": {
+        "message": "検索をクリア"
+    },
+    "search_placeholder": {
+        "message": "タイトル、ユーザー名、サイト"
+    },
+    "search_hint": {
+        "message": "このサイトのログインを検索します。"
+    },
+    "search_in_keepassxc": {
+        "message": "KeePassXC で検索"
+    },
+    "search_results": {
+        "message": "見つかった件数: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "このサイトのエントリ"
+    },
+    "search_empty": {
+        "message": "見つかりません"
+    },
+    "footer_author": {
+        "message": "作者: Markus Griesslehner"
+    }
+}

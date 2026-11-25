@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Uzupełnia loginy, hasła i kody TOTP z KeePassXC w Safari. Opracowane przez Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Loginy dla tej strony"
+    },
+    "button_associate": {
+        "message": "Połącz z KeePassXC"
+    },
+    "button_generate": {
+        "message": "Wygeneruj hasło"
+    },
+    "button_totp": {
+        "message": "Kopiuj TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Aplikacja SafariKeePassXC nie jest uruchomiona. Uruchom ją i pozostaw otwartą."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC jest nieosiągalny. Czy KeePassXC działa z włączoną integracją z przeglądarką?"
+    },
+    "error_database_locked": {
+        "message": "Baza danych KeePassXC jest zablokowana. Odblokuj ją."
+    },
+    "error_not_associated": {
+        "message": "Brak połączenia z KeePassXC."
+    },
+    "error_generic": {
+        "message": "Błąd: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "nieznany"
+    },
+    "save_failed": {
+        "message": "Nie udało się zapisać danych logowania."
+    },
+    "entries_empty": {
+        "message": "Brak wpisów dla tej strony."
+    },
+    "entry_fill_tooltip": {
+        "message": "Wypełnij"
+    },
+    "fill_no_form": {
+        "message": "Nie znaleziono formularza logowania na tej stronie."
+    },
+    "fill_no_access": {
+        "message": "Rozszerzenie nie ma dostępu do tej strony. Zezwól na dostęp do tej witryny w ustawieniach Safari i odśwież stronę."
+    },
+    "status_associating": {
+        "message": "Łączenie… (potwierdź okno dialogowe w KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – brak połączenia.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "Połączono z KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(skopiowano do schowka)"
+    },
+    "password_copied": {
+        "message": "Hasło wygenerowano i skopiowano do schowka."
+    },
+    "clipboard_failed": {
+        "message": "Schowek jest niedostępny. Hasło nie zostało wyświetlone."
+    },
+    "totp_no_website": {
+        "message": "Brak witryny w aktywnej karcie."
+    },
+    "totp_no_entry": {
+        "message": "Brak wpisu TOTP dla tej strony."
+    },
+    "save_banner_new": {
+        "message": "Zapisać login „$LOGIN$” dla tej witryny w KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "Zaktualizować zapisane hasło dla „$LOGIN$” w KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Zapisz"
+    },
+    "save_banner_button_update": {
+        "message": "Aktualizuj"
+    },
+    "save_banner_dismiss": {
+        "message": "Nie teraz"
+    },
+    "save_group_label": {
+        "message": "Zapisuj nowe loginy w"
+    },
+    "save_group_default": {
+        "message": "Grupa domyślna (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys przez KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Zadziała po odświeżeniu strony. Gdy wyłączone, passkeys obsługuje Safari."
+    },
+    "passkeys_reload_hint": {
+        "message": "Odśwież stronę, aby zmiana zadziałała."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys są niedostępne: aplikacja SafariKeePassXC nie jest uruchomiona."
+    },
+    "passkeys_not_associated": {
+        "message": "Połącz się z KeePassXC, aby używać passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys wymagają KeePassXC 2.7.7 lub nowszego (znaleziono $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Most passkeys nie jest aktywny na tej stronie. Odśwież stronę i upewnij się, że rozszerzenie ma dostęp do tej witryny."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Ostatnie żądanie passkey obsłużył Safari zamiast KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "Szukaj"
+    },
+    "nav_generator": {
+        "message": "Generator"
+    },
+    "nav_settings": {
+        "message": "Ustawienia"
+    },
+    "nav_back": {
+        "message": "Wstecz"
+    },
+    "screen_search_title": {
+        "message": "Przeszukaj sejf"
+    },
+    "screen_generator_title": {
+        "message": "Generator haseł"
+    },
+    "screen_settings_title": {
+        "message": "Ustawienia"
+    },
+    "status_connected_short": {
+        "message": "Połączono · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "Sejf jest zablokowany"
+    },
+    "status_offline": {
+        "message": "KeePassXC nie działa"
+    },
+    "status_unpaired": {
+        "message": "Rozszerzenie nie jest sparowane"
+    },
+    "section_for_site": {
+        "message": "Dla tej witryny"
+    },
+    "home_empty_title": {
+        "message": "Brak loginów dla $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Znajdź wpis w sejfie lub przeszukaj swoje loginy."
+    },
+    "button_search": {
+        "message": "Szukaj"
+    },
+    "button_create": {
+        "message": "Utwórz"
+    },
+    "toast_filled": {
+        "message": "Wypełniono: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Skopiowano kod TOTP"
+    },
+    "toast_connected": {
+        "message": "Połączono"
+    },
+    "toast_reconnected": {
+        "message": "Połączono ponownie"
+    },
+    "toast_login_created": {
+        "message": "Utworzono nowy login"
+    },
+    "toast_password_copied": {
+        "message": "Skopiowano hasło"
+    },
+    "toast_password_pasted": {
+        "message": "Wklejono hasło"
+    },
+    "error_offline_hint": {
+        "message": "Otwórz KeePassXC i włącz integrację z przeglądarką."
+    },
+    "error_locked_hint": {
+        "message": "Odblokuj sejf, aby zobaczyć swoje loginy."
+    },
+    "error_pairing_required": {
+        "message": "Wymagane sparowanie"
+    },
+    "error_unpaired_hint": {
+        "message": "Potwierdź połączenie rozszerzenia w oknie KeePassXC."
+    },
+    "button_retry": {
+        "message": "Ponów"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Odblokuj w KeePassXC"
+    },
+    "button_pair": {
+        "message": "Sparuj"
+    },
+    "section_saving": {
+        "message": "Zapisywanie"
+    },
+    "section_autofill": {
+        "message": "Autouzupełnianie"
+    },
+    "settings_save_prompt": {
+        "message": "Proponuj zapisywanie haseł"
+    },
+    "settings_autofill": {
+        "message": "Autouzupełnianie przy wczytywaniu"
+    },
+    "settings_autofill_hint": {
+        "message": "Gdy dla witryny znaleziono jeden login."
+    },
+    "section_connection": {
+        "message": "Połączenie"
+    },
+    "settings_connected_to": {
+        "message": "Połączono z KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Brak połączenia"
+    },
+    "settings_reconnect": {
+        "message": "Połącz ponownie"
+    },
+    "totp_copy_label": {
+        "message": "Kopiuj kod TOTP"
+    },
+    "generator_length": {
+        "message": "Długość"
+    },
+    "generator_phrase_length": {
+        "message": "Długość frazy"
+    },
+    "generator_phrase": {
+        "message": "Fraza hasłowa"
+    },
+    "generator_phrase_hint": {
+        "message": "Słowa oddzielone myślnikami łatwiej zapamiętać."
+    },
+    "generator_strength_weak": {
+        "message": "Słabe"
+    },
+    "generator_strength_medium": {
+        "message": "Średnie"
+    },
+    "generator_strength_strong": {
+        "message": "Silne"
+    },
+    "generator_strength_very_strong": {
+        "message": "Bardzo silne"
+    },
+    "generator_keepassxc": {
+        "message": "Hasło KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Wygeneruj ponownie"
+    },
+    "generator_copy": {
+        "message": "Kopiuj hasło"
+    },
+    "search_clear": {
+        "message": "Wyczyść wyszukiwanie"
+    },
+    "search_placeholder": {
+        "message": "Tytuł, nazwa użytkownika lub witryna"
+    },
+    "search_hint": {
+        "message": "Przeszukuje loginy dla tej witryny."
+    },
+    "search_in_keepassxc": {
+        "message": "Szukaj w KeePassXC"
+    },
+    "search_results": {
+        "message": "Znaleziono: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "Wpisy dla tej witryny"
+    },
+    "search_empty": {
+        "message": "Nic nie znaleziono"
+    },
+    "footer_author": {
+        "message": "autor: Markus Griesslehner"
+    }
+}

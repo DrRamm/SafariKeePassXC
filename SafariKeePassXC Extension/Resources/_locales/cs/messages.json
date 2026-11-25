@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Vyplňuje přihlašovací údaje, hesla a kódy TOTP z KeePassXC do Safari. Vyvinul Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Přihlašovací údaje pro tuto stránku"
+    },
+    "button_associate": {
+        "message": "Připojit ke KeePassXC"
+    },
+    "button_generate": {
+        "message": "Vygenerovat heslo"
+    },
+    "button_totp": {
+        "message": "Kopírovat TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Aplikace SafariKeePassXC neběží. Spusťte ji a nechte ji otevřenou."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC není dostupné. Běží KeePassXC se zapnutou integrací do prohlížeče?"
+    },
+    "error_database_locked": {
+        "message": "Databáze KeePassXC je uzamčená. Odemkněte ji."
+    },
+    "error_not_associated": {
+        "message": "Zatím není připojeno ke KeePassXC."
+    },
+    "error_generic": {
+        "message": "Chyba: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "neznámá"
+    },
+    "save_failed": {
+        "message": "Přihlašovací údaje se nepodařilo uložit."
+    },
+    "entries_empty": {
+        "message": "Pro tuto stránku nejsou žádné položky."
+    },
+    "entry_fill_tooltip": {
+        "message": "Vyplnit"
+    },
+    "fill_no_form": {
+        "message": "Na této stránce nebyl nalezen žádný přihlašovací formulář."
+    },
+    "fill_no_access": {
+        "message": "Rozšíření nemá přístup k této stránce. Povolte přístup k tomuto webu v nastavení Safari a znovu načtěte stránku."
+    },
+    "status_associating": {
+        "message": "Připojování… (potvrďte dialog v KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – zatím nepřipojeno.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "Připojeno ke KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(zkopírováno do schránky)"
+    },
+    "password_copied": {
+        "message": "Heslo vygenerováno a zkopírováno do schránky."
+    },
+    "clipboard_failed": {
+        "message": "Schránka není dostupná. Heslo nebylo zobrazeno."
+    },
+    "totp_no_website": {
+        "message": "V aktivním panelu není žádný web."
+    },
+    "totp_no_entry": {
+        "message": "Pro tuto stránku není žádná položka TOTP."
+    },
+    "save_banner_new": {
+        "message": "Uložit přihlašovací údaj „$LOGIN$“ pro tento web do KeePassXC?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "Aktualizovat uložené heslo pro „$LOGIN$“ v KeePassXC?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Uložit"
+    },
+    "save_banner_button_update": {
+        "message": "Aktualizovat"
+    },
+    "save_banner_dismiss": {
+        "message": "Teď ne"
+    },
+    "save_group_label": {
+        "message": "Ukládat nové přihlašovací údaje do"
+    },
+    "save_group_default": {
+        "message": "Výchozí skupina (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys přes KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Projeví se po znovunačtení stránky. Pokud je vypnuto, passkeys spravuje Safari."
+    },
+    "passkeys_reload_hint": {
+        "message": "Znovu načtěte stránku, aby se změna projevila."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys nejsou dostupné: aplikace SafariKeePassXC neběží."
+    },
+    "passkeys_not_associated": {
+        "message": "Pro používání passkeys se připojte ke KeePassXC."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys vyžadují KeePassXC 2.7.7 nebo novější (nalezeno: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Přemostění passkeys není na této stránce aktivní. Znovu načtěte stránku a ujistěte se, že rozšíření má přístup k tomuto webu."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Poslední požadavek na passkey zpracovalo Safari místo KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "Hledat"
+    },
+    "nav_generator": {
+        "message": "Generátor"
+    },
+    "nav_settings": {
+        "message": "Nastavení"
+    },
+    "nav_back": {
+        "message": "Zpět"
+    },
+    "screen_search_title": {
+        "message": "Prohledat trezor"
+    },
+    "screen_generator_title": {
+        "message": "Generátor hesel"
+    },
+    "screen_settings_title": {
+        "message": "Nastavení"
+    },
+    "status_connected_short": {
+        "message": "Připojeno · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "Trezor je uzamčen"
+    },
+    "status_offline": {
+        "message": "KeePassXC neběží"
+    },
+    "status_unpaired": {
+        "message": "Rozšíření není spárováno"
+    },
+    "section_for_site": {
+        "message": "Pro tento web"
+    },
+    "home_empty_title": {
+        "message": "Žádné přihlašovací údaje pro $DOMAIN$",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Najděte položku v trezoru nebo prohledejte své přihlašovací údaje."
+    },
+    "button_search": {
+        "message": "Hledat"
+    },
+    "button_create": {
+        "message": "Vytvořit"
+    },
+    "toast_filled": {
+        "message": "Vyplněno: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Kód TOTP zkopírován"
+    },
+    "toast_connected": {
+        "message": "Připojeno"
+    },
+    "toast_reconnected": {
+        "message": "Znovu připojeno"
+    },
+    "toast_login_created": {
+        "message": "Nový přihlašovací údaj vytvořen"
+    },
+    "toast_password_copied": {
+        "message": "Heslo zkopírováno"
+    },
+    "toast_password_pasted": {
+        "message": "Heslo vloženo"
+    },
+    "error_offline_hint": {
+        "message": "Otevřete KeePassXC a zapněte integraci do prohlížeče."
+    },
+    "error_locked_hint": {
+        "message": "Odemkněte trezor, abyste viděli své přihlašovací údaje."
+    },
+    "error_pairing_required": {
+        "message": "Je vyžadováno spárování"
+    },
+    "error_unpaired_hint": {
+        "message": "Potvrďte připojení rozšíření v okně KeePassXC."
+    },
+    "button_retry": {
+        "message": "Zkusit znovu"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Odemknout v KeePassXC"
+    },
+    "button_pair": {
+        "message": "Spárovat"
+    },
+    "section_saving": {
+        "message": "Ukládání"
+    },
+    "section_autofill": {
+        "message": "Automatické vyplňování"
+    },
+    "settings_save_prompt": {
+        "message": "Nabízet uložení hesel"
+    },
+    "settings_autofill": {
+        "message": "Automaticky vyplňovat při načtení"
+    },
+    "settings_autofill_hint": {
+        "message": "Když je pro web nalezen jediný přihlašovací údaj."
+    },
+    "section_connection": {
+        "message": "Připojení"
+    },
+    "settings_connected_to": {
+        "message": "Připojeno ke KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Nepřipojeno"
+    },
+    "settings_reconnect": {
+        "message": "Znovu připojit"
+    },
+    "totp_copy_label": {
+        "message": "Kopírovat kód TOTP"
+    },
+    "generator_length": {
+        "message": "Délka"
+    },
+    "generator_phrase_length": {
+        "message": "Délka fráze"
+    },
+    "generator_phrase": {
+        "message": "Přístupová fráze"
+    },
+    "generator_phrase_hint": {
+        "message": "Slova oddělená pomlčkami se snáze pamatují."
+    },
+    "generator_strength_weak": {
+        "message": "Slabé"
+    },
+    "generator_strength_medium": {
+        "message": "Střední"
+    },
+    "generator_strength_strong": {
+        "message": "Silné"
+    },
+    "generator_strength_very_strong": {
+        "message": "Velmi silné"
+    },
+    "generator_keepassxc": {
+        "message": "Heslo KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Vygenerovat znovu"
+    },
+    "generator_copy": {
+        "message": "Kopírovat heslo"
+    },
+    "search_clear": {
+        "message": "Vymazat hledání"
+    },
+    "search_placeholder": {
+        "message": "Název, uživatelské jméno nebo web"
+    },
+    "search_hint": {
+        "message": "Prohledá přihlašovací údaje pro tento web."
+    },
+    "search_in_keepassxc": {
+        "message": "Hledat v KeePassXC"
+    },
+    "search_results": {
+        "message": "Nalezeno: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "Položky pro tento web"
+    },
+    "search_empty": {
+        "message": "Nic nenalezeno"
+    },
+    "footer_author": {
+        "message": "od Markus Griesslehner"
+    }
+}

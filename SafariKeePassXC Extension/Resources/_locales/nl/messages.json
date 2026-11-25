@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Vult aanmeldgegevens, wachtwoorden en TOTP-codes uit KeePassXC in Safari in. Ontwikkeld door Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Aanmeldgegevens voor deze pagina"
+    },
+    "button_associate": {
+        "message": "Verbinden met KeePassXC"
+    },
+    "button_generate": {
+        "message": "Wachtwoord genereren"
+    },
+    "button_totp": {
+        "message": "TOTP kopiëren"
+    },
+    "error_host_app_not_running": {
+        "message": "De SafariKeePassXC-app draait niet. Start deze en houd hem open."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC is niet bereikbaar. Draait KeePassXC met browserextensie-integratie ingeschakeld?"
+    },
+    "error_database_locked": {
+        "message": "De KeePassXC-database is vergrendeld. Ontgrendel deze."
+    },
+    "error_not_associated": {
+        "message": "Nog niet verbonden met KeePassXC."
+    },
+    "error_generic": {
+        "message": "Fout: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "onbekend"
+    },
+    "save_failed": {
+        "message": "De aanmelding kon niet worden opgeslagen."
+    },
+    "entries_empty": {
+        "message": "Geen items voor deze pagina."
+    },
+    "entry_fill_tooltip": {
+        "message": "Invullen"
+    },
+    "fill_no_form": {
+        "message": "Geen aanmeldformulier op deze pagina gevonden."
+    },
+    "fill_no_access": {
+        "message": "De extensie heeft geen toegang tot deze pagina. Sta toegang tot deze website toe in de Safari-instellingen en herlaad de pagina."
+    },
+    "status_associating": {
+        "message": "Verbinden… (bevestig het dialoogvenster in KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – nog niet verbonden.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "Verbonden met KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(gekopieerd naar klembord)"
+    },
+    "password_copied": {
+        "message": "Wachtwoord gegenereerd en naar het klembord gekopieerd."
+    },
+    "clipboard_failed": {
+        "message": "Klembord niet beschikbaar. Het wachtwoord is niet weergegeven."
+    },
+    "totp_no_website": {
+        "message": "Geen website in het actieve tabblad."
+    },
+    "totp_no_entry": {
+        "message": "Geen TOTP-item voor deze pagina."
+    },
+    "save_banner_new": {
+        "message": "Het aanmeldgegeven ‘$LOGIN$’ voor deze site in KeePassXC opslaan?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "Het opgeslagen wachtwoord voor ‘$LOGIN$’ in KeePassXC bijwerken?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Opslaan"
+    },
+    "save_banner_button_update": {
+        "message": "Bijwerken"
+    },
+    "save_banner_dismiss": {
+        "message": "Niet nu"
+    },
+    "save_group_label": {
+        "message": "Nieuwe aanmeldgegevens opslaan in"
+    },
+    "save_group_default": {
+        "message": "Standaardgroep (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys via KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Wordt van kracht na het herladen van de pagina. Indien uitgeschakeld, beheert Safari de passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "Herlaad de pagina om de wijziging toe te passen."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys zijn niet beschikbaar: de SafariKeePassXC-app draait niet."
+    },
+    "passkeys_not_associated": {
+        "message": "Verbind met KeePassXC om passkeys te gebruiken."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys vereisen KeePassXC 2.7.7 of nieuwer (gevonden: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "De passkeys-brug is niet actief op deze pagina. Herlaad de pagina en zorg dat de extensie toegang heeft tot deze website."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Het laatste passkey-verzoek is door Safari afgehandeld in plaats van door KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "Zoeken"
+    },
+    "nav_generator": {
+        "message": "Generator"
+    },
+    "nav_settings": {
+        "message": "Instellingen"
+    },
+    "nav_back": {
+        "message": "Terug"
+    },
+    "screen_search_title": {
+        "message": "Kluis doorzoeken"
+    },
+    "screen_generator_title": {
+        "message": "Wachtwoordgenerator"
+    },
+    "screen_settings_title": {
+        "message": "Instellingen"
+    },
+    "status_connected_short": {
+        "message": "Verbonden · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "Kluis is vergrendeld"
+    },
+    "status_offline": {
+        "message": "KeePassXC draait niet"
+    },
+    "status_unpaired": {
+        "message": "Extensie is niet gekoppeld"
+    },
+    "section_for_site": {
+        "message": "Voor deze site"
+    },
+    "home_empty_title": {
+        "message": "Geen aanmeldgegevens voor $DOMAIN$",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Zoek een item in de kluis of zoek in je aanmeldgegevens."
+    },
+    "button_search": {
+        "message": "Zoeken"
+    },
+    "button_create": {
+        "message": "Aanmaken"
+    },
+    "toast_filled": {
+        "message": "Ingevuld: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP-code gekopieerd"
+    },
+    "toast_connected": {
+        "message": "Verbonden"
+    },
+    "toast_reconnected": {
+        "message": "Opnieuw verbonden"
+    },
+    "toast_login_created": {
+        "message": "Nieuw aanmeldgegeven aangemaakt"
+    },
+    "toast_password_copied": {
+        "message": "Wachtwoord gekopieerd"
+    },
+    "toast_password_pasted": {
+        "message": "Wachtwoord geplakt"
+    },
+    "error_offline_hint": {
+        "message": "Open KeePassXC en schakel browserextensie-integratie in."
+    },
+    "error_locked_hint": {
+        "message": "Ontgrendel de kluis om je aanmeldgegevens te zien."
+    },
+    "error_pairing_required": {
+        "message": "Koppeling vereist"
+    },
+    "error_unpaired_hint": {
+        "message": "Bevestig de verbinding van de extensie in het KeePassXC-venster."
+    },
+    "button_retry": {
+        "message": "Opnieuw proberen"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Ontgrendelen in KeePassXC"
+    },
+    "button_pair": {
+        "message": "Koppelen"
+    },
+    "section_saving": {
+        "message": "Opslaan"
+    },
+    "section_autofill": {
+        "message": "Automatisch invullen"
+    },
+    "settings_save_prompt": {
+        "message": "Aanbieden om wachtwoorden op te slaan"
+    },
+    "settings_autofill": {
+        "message": "Automatisch invullen bij laden"
+    },
+    "settings_autofill_hint": {
+        "message": "Wanneer er één aanmeldgegeven voor de site is gevonden."
+    },
+    "section_connection": {
+        "message": "Verbinding"
+    },
+    "settings_connected_to": {
+        "message": "Verbonden met KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Niet verbonden"
+    },
+    "settings_reconnect": {
+        "message": "Opnieuw verbinden"
+    },
+    "totp_copy_label": {
+        "message": "TOTP-code kopiëren"
+    },
+    "generator_length": {
+        "message": "Lengte"
+    },
+    "generator_phrase_length": {
+        "message": "Zinslengte"
+    },
+    "generator_phrase": {
+        "message": "Wachtwoordzin"
+    },
+    "generator_phrase_hint": {
+        "message": "Woorden met koppeltekens zijn makkelijker te onthouden."
+    },
+    "generator_strength_weak": {
+        "message": "Zwak"
+    },
+    "generator_strength_medium": {
+        "message": "Gemiddeld"
+    },
+    "generator_strength_strong": {
+        "message": "Sterk"
+    },
+    "generator_strength_very_strong": {
+        "message": "Zeer sterk"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC-wachtwoord"
+    },
+    "generator_regenerate": {
+        "message": "Opnieuw genereren"
+    },
+    "generator_copy": {
+        "message": "Wachtwoord kopiëren"
+    },
+    "search_clear": {
+        "message": "Zoekopdracht wissen"
+    },
+    "search_placeholder": {
+        "message": "Titel, gebruikersnaam of site"
+    },
+    "search_hint": {
+        "message": "Doorzoekt de aanmeldgegevens van deze site."
+    },
+    "search_in_keepassxc": {
+        "message": "Zoeken in KeePassXC"
+    },
+    "search_results": {
+        "message": "Gevonden: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "Items voor deze site"
+    },
+    "search_empty": {
+        "message": "Niets gevonden"
+    },
+    "footer_author": {
+        "message": "door Markus Griesslehner"
+    }
+}

@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "يملأ عمليات تسجيل الدخول وكلمات المرور ورموز TOTP من KeePassXC في Safari. طوّره Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "عمليات تسجيل الدخول لهذه الصفحة"
+    },
+    "button_associate": {
+        "message": "الاتصال بـ KeePassXC"
+    },
+    "button_generate": {
+        "message": "إنشاء كلمة مرور"
+    },
+    "button_totp": {
+        "message": "نسخ TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "تطبيق SafariKeePassXC لا يعمل. يرجى تشغيله وإبقائه مفتوحًا."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "تعذّر الوصول إلى KeePassXC. هل يعمل KeePassXC مع تفعيل تكامل المتصفح؟"
+    },
+    "error_database_locked": {
+        "message": "قاعدة بيانات KeePassXC مقفلة. يرجى فتحها."
+    },
+    "error_not_associated": {
+        "message": "لم يتم الاتصال بـ KeePassXC بعد."
+    },
+    "error_generic": {
+        "message": "خطأ: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "غير معروف"
+    },
+    "save_failed": {
+        "message": "تعذّر حفظ بيانات تسجيل الدخول."
+    },
+    "entries_empty": {
+        "message": "لا توجد إدخالات لهذه الصفحة."
+    },
+    "entry_fill_tooltip": {
+        "message": "تعبئة"
+    },
+    "fill_no_form": {
+        "message": "لم يتم العثور على نموذج تسجيل دخول في هذه الصفحة."
+    },
+    "fill_no_access": {
+        "message": "لا تملك الإضافة حق الوصول إلى هذه الصفحة. اسمح بالوصول إلى هذا الموقع في إعدادات Safari وأعد تحميل الصفحة."
+    },
+    "status_associating": {
+        "message": "جارٍ الاتصال… (يرجى تأكيد الحوار في KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – لم يتم الاتصال بعد.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "متصل بـ KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(نُسخ إلى الحافظة)"
+    },
+    "password_copied": {
+        "message": "تم إنشاء كلمة المرور ونسخها إلى الحافظة."
+    },
+    "clipboard_failed": {
+        "message": "الحافظة غير متاحة. لم تُعرض كلمة المرور."
+    },
+    "totp_no_website": {
+        "message": "لا يوجد موقع ويب في علامة التبويب النشطة."
+    },
+    "totp_no_entry": {
+        "message": "لا يوجد إدخال TOTP لهذه الصفحة."
+    },
+    "save_banner_new": {
+        "message": "هل تريد حفظ تسجيل الدخول «$LOGIN$» لهذا الموقع في KeePassXC؟",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "هل تريد تحديث كلمة المرور المحفوظة لـ «$LOGIN$» في KeePassXC؟",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "حفظ"
+    },
+    "save_banner_button_update": {
+        "message": "تحديث"
+    },
+    "save_banner_dismiss": {
+        "message": "ليس الآن"
+    },
+    "save_group_label": {
+        "message": "حفظ عمليات تسجيل الدخول الجديدة في"
+    },
+    "save_group_default": {
+        "message": "المجموعة الافتراضية (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "مفاتيح المرور عبر KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "يُفعّل بعد إعادة تحميل الصفحة. عند الإيقاف، يتولى Safari مفاتيح المرور."
+    },
+    "passkeys_reload_hint": {
+        "message": "أعد تحميل الصفحة ليُفعّل التغيير."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "مفاتيح المرور غير متاحة: تطبيق SafariKeePassXC لا يعمل."
+    },
+    "passkeys_not_associated": {
+        "message": "اتصل بـ KeePassXC لاستخدام مفاتيح المرور."
+    },
+    "passkeys_unsupported_version": {
+        "message": "تتطلب مفاتيح المرور KeePassXC 2.7.7 أو أحدث (الموجود: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "جسر مفاتيح المرور غير نشط في هذه الصفحة. أعد تحميل الصفحة وتأكد من أن الإضافة تملك حق الوصول إلى هذا الموقع."
+    },
+    "passkeys_fallback_reason": {
+        "message": "تمت معالجة آخر طلب لمفتاح مرور بواسطة Safari بدلًا من KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "بحث"
+    },
+    "nav_generator": {
+        "message": "المولّد"
+    },
+    "nav_settings": {
+        "message": "الإعدادات"
+    },
+    "nav_back": {
+        "message": "رجوع"
+    },
+    "screen_search_title": {
+        "message": "البحث في الخزنة"
+    },
+    "screen_generator_title": {
+        "message": "مولّد كلمات المرور"
+    },
+    "screen_settings_title": {
+        "message": "الإعدادات"
+    },
+    "status_connected_short": {
+        "message": "متصل · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "الخزنة مقفلة"
+    },
+    "status_offline": {
+        "message": "KeePassXC لا يعمل"
+    },
+    "status_unpaired": {
+        "message": "الإضافة غير مقترنة"
+    },
+    "section_for_site": {
+        "message": "لهذا الموقع"
+    },
+    "home_empty_title": {
+        "message": "لا توجد عمليات تسجيل دخول لـ $DOMAIN$",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "ابحث عن إدخال في الخزنة أو ابحث في عمليات تسجيل الدخول."
+    },
+    "button_search": {
+        "message": "بحث"
+    },
+    "button_create": {
+        "message": "إنشاء"
+    },
+    "toast_filled": {
+        "message": "تمت التعبئة: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "تم نسخ رمز TOTP"
+    },
+    "toast_connected": {
+        "message": "متصل"
+    },
+    "toast_reconnected": {
+        "message": "أُعيد الاتصال"
+    },
+    "toast_login_created": {
+        "message": "تم إنشاء تسجيل دخول جديد"
+    },
+    "toast_password_copied": {
+        "message": "تم نسخ كلمة المرور"
+    },
+    "toast_password_pasted": {
+        "message": "تم لصق كلمة المرور"
+    },
+    "error_offline_hint": {
+        "message": "افتح KeePassXC وفعّل تكامل المتصفح."
+    },
+    "error_locked_hint": {
+        "message": "افتح الخزنة لرؤية عمليات تسجيل الدخول."
+    },
+    "error_pairing_required": {
+        "message": "الاقتران مطلوب"
+    },
+    "error_unpaired_hint": {
+        "message": "أكّد اتصال الإضافة في نافذة KeePassXC."
+    },
+    "button_retry": {
+        "message": "إعادة المحاولة"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "فتح في KeePassXC"
+    },
+    "button_pair": {
+        "message": "اقتران"
+    },
+    "section_saving": {
+        "message": "الحفظ"
+    },
+    "section_autofill": {
+        "message": "التعبئة التلقائية"
+    },
+    "settings_save_prompt": {
+        "message": "اقتراح حفظ كلمات المرور"
+    },
+    "settings_autofill": {
+        "message": "التعبئة التلقائية عند تحميل الصفحة"
+    },
+    "settings_autofill_hint": {
+        "message": "عند العثور على تسجيل دخول واحد للموقع."
+    },
+    "section_connection": {
+        "message": "الاتصال"
+    },
+    "settings_connected_to": {
+        "message": "متصل بـ KeePassXC $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "غير متصل"
+    },
+    "settings_reconnect": {
+        "message": "إعادة الاتصال"
+    },
+    "totp_copy_label": {
+        "message": "نسخ رمز TOTP"
+    },
+    "generator_length": {
+        "message": "الطول"
+    },
+    "generator_phrase_length": {
+        "message": "طول العبارة"
+    },
+    "generator_phrase": {
+        "message": "عبارة مرور"
+    },
+    "generator_phrase_hint": {
+        "message": "الكلمات المفصولة بشرطة أسهل في التذكر."
+    },
+    "generator_strength_weak": {
+        "message": "ضعيفة"
+    },
+    "generator_strength_medium": {
+        "message": "متوسطة"
+    },
+    "generator_strength_strong": {
+        "message": "قوية"
+    },
+    "generator_strength_very_strong": {
+        "message": "قوية جدًا"
+    },
+    "generator_keepassxc": {
+        "message": "كلمة مرور KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "إعادة الإنشاء"
+    },
+    "generator_copy": {
+        "message": "نسخ كلمة المرور"
+    },
+    "search_clear": {
+        "message": "مسح البحث"
+    },
+    "search_placeholder": {
+        "message": "العنوان أو اسم المستخدم أو الموقع"
+    },
+    "search_hint": {
+        "message": "يبحث في عمليات تسجيل الدخول لهذا الموقع."
+    },
+    "search_in_keepassxc": {
+        "message": "البحث في KeePassXC"
+    },
+    "search_results": {
+        "message": "النتائج: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "إدخالات هذا الموقع"
+    },
+    "search_empty": {
+        "message": "لم يُعثر على شيء"
+    },
+    "footer_author": {
+        "message": "بواسطة Markus Griesslehner"
+    }
+}

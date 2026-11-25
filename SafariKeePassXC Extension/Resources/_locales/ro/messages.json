@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Completează datele de autentificare, parolele și codurile TOTP din KeePassXC în Safari. Dezvoltat de Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Date de autentificare pentru această pagină"
+    },
+    "button_associate": {
+        "message": "Conectează-te la KeePassXC"
+    },
+    "button_generate": {
+        "message": "Generează parolă"
+    },
+    "button_totp": {
+        "message": "Copiază TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Aplicația SafariKeePassXC nu rulează. Pornește-o și las-o deschisă."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC nu este accesibil. Rulează KeePassXC cu integrarea pentru browser activată?"
+    },
+    "error_database_locked": {
+        "message": "Baza de date KeePassXC este blocată. Deblocheaz-o."
+    },
+    "error_not_associated": {
+        "message": "Încă nu ești conectat la KeePassXC."
+    },
+    "error_generic": {
+        "message": "Eroare: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "necunoscut"
+    },
+    "save_failed": {
+        "message": "Datele de conectare nu au putut fi salvate."
+    },
+    "entries_empty": {
+        "message": "Nicio intrare pentru această pagină."
+    },
+    "entry_fill_tooltip": {
+        "message": "Completează"
+    },
+    "fill_no_form": {
+        "message": "Nu s-a găsit niciun formular de autentificare pe această pagină."
+    },
+    "fill_no_access": {
+        "message": "Extensia nu are acces la această pagină. Permite accesul la acest site în setările Safari și reîncarcă pagina."
+    },
+    "status_associating": {
+        "message": "Se conectează… (confirmă dialogul din KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – încă neconectat.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "Conectat la KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(copiat în clipboard)"
+    },
+    "password_copied": {
+        "message": "Parola a fost generată și copiată în clipboard."
+    },
+    "clipboard_failed": {
+        "message": "Clipboardul nu este disponibil. Parola nu a fost afișată."
+    },
+    "totp_no_website": {
+        "message": "Niciun site web în fila activă."
+    },
+    "totp_no_entry": {
+        "message": "Nicio intrare TOTP pentru această pagină."
+    },
+    "save_banner_new": {
+        "message": "Salvezi datele de autentificare „$LOGIN$” pentru acest site în KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "Actualizezi parola salvată pentru „$LOGIN$” în KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "Salvează"
+    },
+    "save_banner_button_update": {
+        "message": "Actualizează"
+    },
+    "save_banner_dismiss": {
+        "message": "Nu acum"
+    },
+    "save_group_label": {
+        "message": "Salvează datele de autentificare noi în"
+    },
+    "save_group_default": {
+        "message": "Grupul implicit (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys prin KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Se aplică după reîncărcarea paginii. Când este dezactivat, Safari gestionează passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "Reîncarcă pagina pentru ca modificarea să se aplice."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys nu sunt disponibile: aplicația SafariKeePassXC nu rulează."
+    },
+    "passkeys_not_associated": {
+        "message": "Conectează-te la KeePassXC pentru a folosi passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys necesită KeePassXC 2.7.7 sau mai nou (găsit $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Puntea passkeys nu este activă pe această pagină. Reîncarcă pagina și asigură-te că extensia are acces la acest site."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Ultima cerere passkey a fost gestionată de Safari în loc de KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "Căutare"
+    },
+    "nav_generator": {
+        "message": "Generator"
+    },
+    "nav_settings": {
+        "message": "Setări"
+    },
+    "nav_back": {
+        "message": "Înapoi"
+    },
+    "screen_search_title": {
+        "message": "Caută în seif"
+    },
+    "screen_generator_title": {
+        "message": "Generator de parole"
+    },
+    "screen_settings_title": {
+        "message": "Setări"
+    },
+    "status_connected_short": {
+        "message": "Conectat · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "Seiful este blocat"
+    },
+    "status_offline": {
+        "message": "KeePassXC nu rulează"
+    },
+    "status_unpaired": {
+        "message": "Extensia nu este asociată"
+    },
+    "section_for_site": {
+        "message": "Pentru acest site"
+    },
+    "home_empty_title": {
+        "message": "Nicio intrare pentru $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Găsește o intrare în seif sau caută printre datele tale de autentificare."
+    },
+    "button_search": {
+        "message": "Caută"
+    },
+    "button_create": {
+        "message": "Creează"
+    },
+    "toast_filled": {
+        "message": "Completat: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Cod TOTP copiat"
+    },
+    "toast_connected": {
+        "message": "Conectat"
+    },
+    "toast_reconnected": {
+        "message": "Reconectat"
+    },
+    "toast_login_created": {
+        "message": "Date de autentificare noi create"
+    },
+    "toast_password_copied": {
+        "message": "Parolă copiată"
+    },
+    "toast_password_pasted": {
+        "message": "Parolă lipită"
+    },
+    "error_offline_hint": {
+        "message": "Deschide KeePassXC și activează integrarea pentru browser."
+    },
+    "error_locked_hint": {
+        "message": "Deblochează seiful pentru a-ți vedea datele de autentificare."
+    },
+    "error_pairing_required": {
+        "message": "Asociere necesară"
+    },
+    "error_unpaired_hint": {
+        "message": "Confirmă conexiunea extensiei în fereastra KeePassXC."
+    },
+    "button_retry": {
+        "message": "Reîncearcă"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "Deblochează în KeePassXC"
+    },
+    "button_pair": {
+        "message": "Asociază"
+    },
+    "section_saving": {
+        "message": "Salvare"
+    },
+    "section_autofill": {
+        "message": "Completare automată"
+    },
+    "settings_save_prompt": {
+        "message": "Oferă să salvezi parolele"
+    },
+    "settings_autofill": {
+        "message": "Completare automată la încărcarea paginii"
+    },
+    "settings_autofill_hint": {
+        "message": "Când se găsește o singură intrare pentru site."
+    },
+    "section_connection": {
+        "message": "Conexiune"
+    },
+    "settings_connected_to": {
+        "message": "Conectat la KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Neconectat"
+    },
+    "settings_reconnect": {
+        "message": "Reconectează"
+    },
+    "totp_copy_label": {
+        "message": "Copiază codul TOTP"
+    },
+    "generator_length": {
+        "message": "Lungime"
+    },
+    "generator_phrase_length": {
+        "message": "Lungimea frazei"
+    },
+    "generator_phrase": {
+        "message": "Frază de acces"
+    },
+    "generator_phrase_hint": {
+        "message": "Cuvintele separate prin cratime sunt mai ușor de reținut."
+    },
+    "generator_strength_weak": {
+        "message": "Slabă"
+    },
+    "generator_strength_medium": {
+        "message": "Medie"
+    },
+    "generator_strength_strong": {
+        "message": "Puternică"
+    },
+    "generator_strength_very_strong": {
+        "message": "Foarte puternică"
+    },
+    "generator_keepassxc": {
+        "message": "Parolă KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "Regenerează"
+    },
+    "generator_copy": {
+        "message": "Copiază parola"
+    },
+    "search_clear": {
+        "message": "Golește căutarea"
+    },
+    "search_placeholder": {
+        "message": "Titlu, nume de utilizator sau site"
+    },
+    "search_hint": {
+        "message": "Caută datele de autentificare pentru acest site."
+    },
+    "search_in_keepassxc": {
+        "message": "Caută în KeePassXC"
+    },
+    "search_results": {
+        "message": "Găsite: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "Intrări pentru acest site"
+    },
+    "search_empty": {
+        "message": "Nimic găsit"
+    },
+    "footer_author": {
+        "message": "de Markus Griesslehner"
+    }
+}

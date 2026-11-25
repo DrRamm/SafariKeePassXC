@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "ממלא פרטי התחברות, סיסמאות וקודי TOTP מ-KeePassXC ב-Safari. פותח על ידי Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "פרטי התחברות עבור דף זה"
+    },
+    "button_associate": {
+        "message": "התחברות ל-KeePassXC"
+    },
+    "button_generate": {
+        "message": "יצירת סיסמה"
+    },
+    "button_totp": {
+        "message": "העתקת TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "האפליקציה SafariKeePassXC אינה פועלת. יש להפעיל אותה ולהשאיר אותה פתוחה."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "לא ניתן להגיע אל KeePassXC. האם KeePassXC פועל עם שילוב דפדפן מופעל?"
+    },
+    "error_database_locked": {
+        "message": "מסד הנתונים של KeePassXC נעול. יש לפתוח אותו."
+    },
+    "error_not_associated": {
+        "message": "עדיין אין חיבור אל KeePassXC."
+    },
+    "error_generic": {
+        "message": "שגיאה: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "לא ידוע"
+    },
+    "save_failed": {
+        "message": "לא ניתן היה לשמור את פרטי הכניסה."
+    },
+    "entries_empty": {
+        "message": "אין רשומות עבור דף זה."
+    },
+    "entry_fill_tooltip": {
+        "message": "מילוי"
+    },
+    "fill_no_form": {
+        "message": "לא נמצא טופס התחברות בדף זה."
+    },
+    "fill_no_access": {
+        "message": "להרחבה אין גישה לדף זה. יש לאפשר גישה לאתר זה בהגדרות Safari ולטעון מחדש את הדף."
+    },
+    "status_associating": {
+        "message": "מתחבר… (יש לאשר את תיבת הדו-שיח ב-KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – עדיין לא מחובר.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "מחובר אל KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(הועתק ללוח)"
+    },
+    "password_copied": {
+        "message": "הסיסמה נוצרה והועתקה ללוח."
+    },
+    "clipboard_failed": {
+        "message": "הלוח אינו זמין. הסיסמה לא הוצגה."
+    },
+    "totp_no_website": {
+        "message": "אין אתר בכרטיסייה הפעילה."
+    },
+    "totp_no_entry": {
+        "message": "אין רשומת TOTP עבור דף זה."
+    },
+    "save_banner_new": {
+        "message": "לשמור את פרטי ההתחברות „$LOGIN$” עבור אתר זה ב-KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "לעדכן את הסיסמה השמורה עבור „$LOGIN$” ב-KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "שמירה"
+    },
+    "save_banner_button_update": {
+        "message": "עדכון"
+    },
+    "save_banner_dismiss": {
+        "message": "לא עכשיו"
+    },
+    "save_group_label": {
+        "message": "שמירת פרטי התחברות חדשים ב"
+    },
+    "save_group_default": {
+        "message": "קבוצת ברירת המחדל (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Passkeys דרך KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "ייכנס לתוקף לאחר טעינת הדף מחדש. כאשר כבוי, Safari מטפל ב-passkeys."
+    },
+    "passkeys_reload_hint": {
+        "message": "יש לטעון מחדש את הדף כדי שהשינוי ייכנס לתוקף."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys אינם זמינים: האפליקציה SafariKeePassXC אינה פועלת."
+    },
+    "passkeys_not_associated": {
+        "message": "יש להתחבר אל KeePassXC כדי להשתמש ב-passkeys."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys דורשים KeePassXC 2.7.7 ואילך (נמצא $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "גשר ה-passkeys אינו פעיל בדף זה. יש לטעון מחדש את הדף ולוודא שלהרחבה יש גישה לאתר זה."
+    },
+    "passkeys_fallback_reason": {
+        "message": "הבקשה האחרונה ל-passkey טופלה על ידי Safari במקום KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "חיפוש"
+    },
+    "nav_generator": {
+        "message": "מחולל"
+    },
+    "nav_settings": {
+        "message": "הגדרות"
+    },
+    "nav_back": {
+        "message": "חזרה"
+    },
+    "screen_search_title": {
+        "message": "חיפוש בכספת"
+    },
+    "screen_generator_title": {
+        "message": "מחולל סיסמאות"
+    },
+    "screen_settings_title": {
+        "message": "הגדרות"
+    },
+    "status_connected_short": {
+        "message": "מחובר · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "הכספת נעולה"
+    },
+    "status_offline": {
+        "message": "KeePassXC אינו פועל"
+    },
+    "status_unpaired": {
+        "message": "ההרחבה אינה מותאמת"
+    },
+    "section_for_site": {
+        "message": "עבור אתר זה"
+    },
+    "home_empty_title": {
+        "message": "אין פרטי התחברות עבור $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "יש למצוא רשומה בכספת או לחפש בפרטי ההתחברות שלך."
+    },
+    "button_search": {
+        "message": "חיפוש"
+    },
+    "button_create": {
+        "message": "יצירה"
+    },
+    "toast_filled": {
+        "message": "מולא: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "קוד TOTP הועתק"
+    },
+    "toast_connected": {
+        "message": "מחובר"
+    },
+    "toast_reconnected": {
+        "message": "התחבר מחדש"
+    },
+    "toast_login_created": {
+        "message": "פרטי התחברות חדשים נוצרו"
+    },
+    "toast_password_copied": {
+        "message": "הסיסמה הועתקה"
+    },
+    "toast_password_pasted": {
+        "message": "הסיסמה הודבקה"
+    },
+    "error_offline_hint": {
+        "message": "יש לפתוח את KeePassXC ולהפעיל את שילוב הדפדפן."
+    },
+    "error_locked_hint": {
+        "message": "יש לפתוח את הכספת כדי לראות את פרטי ההתחברות שלך."
+    },
+    "error_pairing_required": {
+        "message": "נדרש צימוד"
+    },
+    "error_unpaired_hint": {
+        "message": "יש לאשר את חיבור ההרחבה בחלון KeePassXC."
+    },
+    "button_retry": {
+        "message": "ניסיון נוסף"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "פתיחה ב-KeePassXC"
+    },
+    "button_pair": {
+        "message": "צימוד"
+    },
+    "section_saving": {
+        "message": "שמירה"
+    },
+    "section_autofill": {
+        "message": "מילוי אוטומטי"
+    },
+    "settings_save_prompt": {
+        "message": "הצע לשמור סיסמאות"
+    },
+    "settings_autofill": {
+        "message": "מילוי אוטומטי בעת טעינת הדף"
+    },
+    "settings_autofill_hint": {
+        "message": "כאשר נמצאה התחברות אחת בלבד עבור האתר."
+    },
+    "section_connection": {
+        "message": "חיבור"
+    },
+    "settings_connected_to": {
+        "message": "מחובר אל KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "לא מחובר"
+    },
+    "settings_reconnect": {
+        "message": "התחברות מחדש"
+    },
+    "totp_copy_label": {
+        "message": "העתקת קוד TOTP"
+    },
+    "generator_length": {
+        "message": "אורך"
+    },
+    "generator_phrase_length": {
+        "message": "אורך הביטוי"
+    },
+    "generator_phrase": {
+        "message": "ביטוי סיסמה"
+    },
+    "generator_phrase_hint": {
+        "message": "מילים מופרדות במקפים קלות יותר לזכירה."
+    },
+    "generator_strength_weak": {
+        "message": "חלשה"
+    },
+    "generator_strength_medium": {
+        "message": "בינונית"
+    },
+    "generator_strength_strong": {
+        "message": "חזקה"
+    },
+    "generator_strength_very_strong": {
+        "message": "חזקה מאוד"
+    },
+    "generator_keepassxc": {
+        "message": "סיסמת KeePassXC"
+    },
+    "generator_regenerate": {
+        "message": "יצירה מחדש"
+    },
+    "generator_copy": {
+        "message": "העתקת סיסמה"
+    },
+    "search_clear": {
+        "message": "ניקוי החיפוש"
+    },
+    "search_placeholder": {
+        "message": "כותרת, שם משתמש או אתר"
+    },
+    "search_hint": {
+        "message": "מחפש פרטי התחברות עבור אתר זה."
+    },
+    "search_in_keepassxc": {
+        "message": "חיפוש ב-KeePassXC"
+    },
+    "search_results": {
+        "message": "נמצאו: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "רשומות עבור אתר זה"
+    },
+    "search_empty": {
+        "message": "לא נמצא דבר"
+    },
+    "footer_author": {
+        "message": "מאת Markus Griesslehner"
+    }
+}

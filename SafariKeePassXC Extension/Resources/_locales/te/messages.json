@@ -1,0 +1,335 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "KeePassXC నుండి లాగిన్లు, పాస్‌వర్డ్‌లు మరియు TOTP కోడ్‌లను Safari లో నింపుతుంది. Markus Griesslehner రూపొందించారు."
+    },
+    "entries_heading": {
+        "message": "ఈ పేజీ కోసం లాగిన్‌లు"
+    },
+    "button_associate": {
+        "message": "KeePassXC కు కనెక్ట్ చేయి"
+    },
+    "button_generate": {
+        "message": "పాస్‌వర్డ్ సృష్టించు"
+    },
+    "button_totp": {
+        "message": "TOTP కాపీ చేయి"
+    },
+    "error_host_app_not_running": {
+        "message": "SafariKeePassXC యాప్ నడుస్తోంది లేదు. దయచేసి దాన్ని ప్రారంభించి తెరిచి ఉంచండి."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "KeePassXC అందుబాటులో లేదు. KeePassXC నడుస్తోందా, బ్రౌజర్ ఇంటిగ్రేషన్ ప్రారంభంలో ఉందా?"
+    },
+    "error_database_locked": {
+        "message": "KeePassXC డేటాబేస్ లాక్ చేయబడింది. దయచేసి దాన్ని అన్‌లాక్ చేయండి."
+    },
+    "error_not_associated": {
+        "message": "ఇంకా KeePassXC కు కనెక్ట్ చేయలేదు."
+    },
+    "error_generic": {
+        "message": "లోపం: $DETAILS$",
+        "placeholders": {
+            "details": { "content": "$1" }
+        }
+    },
+    "error_unknown": {
+        "message": "తెలియదు"
+    },
+    "save_failed": {
+        "message": "లాగిన్ను సేవ్ చేయలేకపోయాము."
+    },
+    "entries_empty": {
+        "message": "ఈ పేజీ కోసం ఎంట్రీలు లేవు."
+    },
+    "entry_fill_tooltip": {
+        "message": "నింపు"
+    },
+    "fill_no_form": {
+        "message": "ఈ పేజీలో లాగిన్ ఫారం కనుగొనబడలేదు."
+    },
+    "fill_no_access": {
+        "message": "ఈ పేజీకి ఎక్స్‌టెన్షన్‌కు యాక్సెస్ లేదు. Safari సెట్టింగ్‌లలో ఈ వెబ్‌సైట్‌కు యాక్సెస్ ఇచ్చి పేజీని మళ్లీ లోడ్ చేయండి."
+    },
+    "status_associating": {
+        "message": "కనెక్ట్ అవుతోంది… (దయచేసి KeePassXC లోని డైలాగ్‌ను నిర్ధారించండి)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – ఇంకా కనెక్ట్ చేయలేదు.",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_connected": {
+        "message": "KeePassXC $VERSION$ కు కనెక్ట్ అయింది",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది)"
+    },
+    "password_copied": {
+        "message": "పాస్‌వర్డ్ సృష్టించి క్లిప్‌బోర్డ్‌కు కాపీ చేయబడింది."
+    },
+    "clipboard_failed": {
+        "message": "క్లిప్‌బోర్డ్ అందుబాటులో లేదు. పాస్‌వర్డ్ చూపబడలేదు."
+    },
+    "totp_no_website": {
+        "message": "యాక్టివ్ ట్యాబ్‌లో వెబ్‌సైట్ లేదు."
+    },
+    "totp_no_entry": {
+        "message": "ఈ పేజీ కోసం TOTP ఎంట్రీ లేదు."
+    },
+    "save_banner_new": {
+        "message": "“$LOGIN$” లాగిన్‌ను ఈ సైట్ కోసం KeePassXC లో సేవ్ చేయాలా?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_update": {
+        "message": "KeePassXC లో “$LOGIN$” కోసం సేవ్ చేసిన పాస్‌వర్డ్‌ను అప్‌డేట్ చేయాలా?",
+        "placeholders": {
+            "login": { "content": "$1" }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "సేవ్ చేయి"
+    },
+    "save_banner_button_update": {
+        "message": "అప్‌డేట్ చేయి"
+    },
+    "save_banner_dismiss": {
+        "message": "ఇప్పుడు వద్దు"
+    },
+    "save_group_label": {
+        "message": "కొత్త లాగిన్‌లను ఇక్కడ సేవ్ చేయి"
+    },
+    "save_group_default": {
+        "message": "డిఫాల్ట్ గ్రూప్ (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "KeePassXC ద్వారా Passkeys"
+    },
+    "passkeys_toggle_hint": {
+        "message": "పేజీ మళ్లీ లోడ్ అయిన తర్వాత అమలులోకి వస్తుంది. ఆఫ్ చేస్తే Safari Passkeys ను నిర్వహిస్తుంది."
+    },
+    "passkeys_reload_hint": {
+        "message": "మార్పు అమలులోకి రావడానికి పేజీని మళ్లీ లోడ్ చేయండి."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Passkeys అందుబాటులో లేవు: SafariKeePassXC యాప్ నడుస్తోంది లేదు."
+    },
+    "passkeys_not_associated": {
+        "message": "Passkeys ఉపయోగించడానికి KeePassXC కు కనెక్ట్ చేయండి."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Passkeys కు KeePassXC 2.7.7 లేదా కొత్తది అవసరం (కనుగొన్నది: $VERSION$).",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "ఈ పేజీలో Passkeys బ్రిడ్జ్ యాక్టివ్‌గా లేదు. పేజీని మళ్లీ లోడ్ చేసి, ఈ వెబ్‌సైట్‌కు ఎక్స్‌టెన్షన్‌కు యాక్సెస్ ఉందని నిర్ధారించుకోండి."
+    },
+    "passkeys_fallback_reason": {
+        "message": "చివరి Passkeys అభ్యర్థనను KeePassXC బదులు Safari నిర్వహించింది ($REASON$).",
+        "placeholders": {
+            "reason": { "content": "$1" }
+        }
+    },
+    "nav_search": {
+        "message": "వెతుకు"
+    },
+    "nav_generator": {
+        "message": "జనరేటర్"
+    },
+    "nav_settings": {
+        "message": "సెట్టింగ్‌లు"
+    },
+    "nav_back": {
+        "message": "వెనుకకు"
+    },
+    "screen_search_title": {
+        "message": "వాల్ట్‌ను వెతుకు"
+    },
+    "screen_generator_title": {
+        "message": "పాస్‌వర్డ్ జనరేటర్"
+    },
+    "screen_settings_title": {
+        "message": "సెట్టింగ్‌లు"
+    },
+    "status_connected_short": {
+        "message": "కనెక్ట్ అయింది · $VERSION$",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "status_locked": {
+        "message": "వాల్ట్ లాక్ చేయబడింది"
+    },
+    "status_offline": {
+        "message": "KeePassXC నడుస్తోంది లేదు"
+    },
+    "status_unpaired": {
+        "message": "ఎక్స్‌టెన్షన్ జత చేయబడలేదు"
+    },
+    "section_for_site": {
+        "message": "ఈ సైట్ కోసం"
+    },
+    "home_empty_title": {
+        "message": "$DOMAIN$ కోసం లాగిన్‌లు లేవు",
+        "placeholders": {
+            "domain": { "content": "$1" }
+        }
+    },
+    "home_empty_hint": {
+        "message": "వాల్ట్‌లో ఎంట్రీని కనుగొనండి లేదా మీ లాగిన్‌లను వెతకండి."
+    },
+    "button_search": {
+        "message": "వెతుకు"
+    },
+    "button_create": {
+        "message": "సృష్టించు"
+    },
+    "toast_filled": {
+        "message": "నింపబడింది: $TITLE$",
+        "placeholders": {
+            "title": { "content": "$1" }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "TOTP కోడ్ కాపీ చేయబడింది"
+    },
+    "toast_connected": {
+        "message": "కనెక్ట్ అయింది"
+    },
+    "toast_reconnected": {
+        "message": "మళ్లీ కనెక్ట్ అయింది"
+    },
+    "toast_login_created": {
+        "message": "కొత్త లాగిన్ సృష్టించబడింది"
+    },
+    "toast_password_copied": {
+        "message": "పాస్‌వర్డ్ కాపీ చేయబడింది"
+    },
+    "toast_password_pasted": {
+        "message": "పాస్‌వర్డ్ పేస్ట్ చేయబడింది"
+    },
+    "error_offline_hint": {
+        "message": "KeePassXC తెరిచి బ్రౌజర్ ఇంటిగ్రేషన్‌ను ప్రారంభించండి."
+    },
+    "error_locked_hint": {
+        "message": "మీ లాగిన్‌లను చూడటానికి వాల్ట్‌ను అన్‌లాక్ చేయండి."
+    },
+    "error_pairing_required": {
+        "message": "జత అవసరం"
+    },
+    "error_unpaired_hint": {
+        "message": "KeePassXC విండోలో ఎక్స్‌టెన్షన్ కనెక్షన్‌ను నిర్ధారించండి."
+    },
+    "button_retry": {
+        "message": "మళ్లీ ప్రయత్నించు"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "KeePassXC లో అన్‌లాక్ చేయి"
+    },
+    "button_pair": {
+        "message": "జత చేయి"
+    },
+    "section_saving": {
+        "message": "సేవ్ చేయడం"
+    },
+    "section_autofill": {
+        "message": "ఆటోఫిల్"
+    },
+    "settings_save_prompt": {
+        "message": "పాస్‌వర్డ్‌లను సేవ్ చేయమని అడుగు"
+    },
+    "settings_autofill": {
+        "message": "పేజీ లోడ్ అయినప్పుడు ఆటోఫిల్"
+    },
+    "settings_autofill_hint": {
+        "message": "సైట్ కోసం ఒకే లాగిన్ కనుగొనబడినప్పుడు."
+    },
+    "section_connection": {
+        "message": "కనెక్షన్"
+    },
+    "settings_connected_to": {
+        "message": "KeePassXC $VERSION$ కు కనెక్ట్ అయింది",
+        "placeholders": {
+            "version": { "content": "$1" }
+        }
+    },
+    "settings_not_connected": {
+        "message": "కనెక్ట్ చేయలేదు"
+    },
+    "settings_reconnect": {
+        "message": "మళ్లీ కనెక్ట్ చేయి"
+    },
+    "totp_copy_label": {
+        "message": "TOTP కోడ్‌ను కాపీ చేయి"
+    },
+    "generator_length": {
+        "message": "పొడవు"
+    },
+    "generator_phrase_length": {
+        "message": "పదబంధ పొడవు"
+    },
+    "generator_phrase": {
+        "message": "పదబంధం"
+    },
+    "generator_phrase_hint": {
+        "message": "హైఫన్‌తో కలిపిన పదాలు గుర్తుంచుకోవడం సులభం."
+    },
+    "generator_strength_weak": {
+        "message": "బలహీనం"
+    },
+    "generator_strength_medium": {
+        "message": "మధ్యస్థం"
+    },
+    "generator_strength_strong": {
+        "message": "బలమైనది"
+    },
+    "generator_strength_very_strong": {
+        "message": "చాలా బలమైనది"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC పాస్‌వర్డ్"
+    },
+    "generator_regenerate": {
+        "message": "మళ్లీ సృష్టించు"
+    },
+    "generator_copy": {
+        "message": "పాస్‌వర్డ్‌ను కాపీ చేయి"
+    },
+    "search_clear": {
+        "message": "వెతుకుడు తొలగించు"
+    },
+    "search_placeholder": {
+        "message": "శీర్షిక, వినియోగదారు పేరు లేదా సైట్"
+    },
+    "search_hint": {
+        "message": "ఈ సైట్ లాగిన్‌లలో వెతుకుతుంది."
+    },
+    "search_in_keepassxc": {
+        "message": "KeePassXC లో వెతుకు"
+    },
+    "search_results": {
+        "message": "కనుగొన్నవి: $COUNT$",
+        "placeholders": {
+            "count": { "content": "$1" }
+        }
+    },
+    "search_all": {
+        "message": "ఈ సైట్ కోసం ఎంట్రీలు"
+    },
+    "search_empty": {
+        "message": "ఏమీ కనుగొనబడలేదు"
+    },
+    "footer_author": {
+        "message": "Markus Griesslehner ద్వారా"
+    }
+}

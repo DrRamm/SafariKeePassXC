@@ -1,0 +1,359 @@
+{
+    "extension_name": {
+        "message": "SafariKeePassXC Extension"
+    },
+    "extension_description": {
+        "message": "Pinupunan ang mga login, password, at TOTP code mula sa KeePassXC papunta sa Safari. Binuo ni Markus Griesslehner."
+    },
+    "entries_heading": {
+        "message": "Mga login para sa page na ito"
+    },
+    "button_associate": {
+        "message": "Kumonekta sa KeePassXC"
+    },
+    "button_generate": {
+        "message": "Gumawa ng password"
+    },
+    "button_totp": {
+        "message": "Kopyahin ang TOTP"
+    },
+    "error_host_app_not_running": {
+        "message": "Hindi tumatakbo ang SafariKeePassXC app. Pakisimulan ito at panatilihing bukas."
+    },
+    "error_keepassxc_not_reachable": {
+        "message": "Hindi maabot ang KeePassXC. Tumatakbo ba ang KeePassXC na may naka-enable na browser integration?"
+    },
+    "error_database_locked": {
+        "message": "Naka-lock ang KeePassXC database. Pakibuksan ito."
+    },
+    "error_not_associated": {
+        "message": "Hindi pa konektado sa KeePassXC."
+    },
+    "error_generic": {
+        "message": "Error: $DETAILS$",
+        "placeholders": {
+            "details": {
+                "content": "$1"
+            }
+        }
+    },
+    "error_unknown": {
+        "message": "hindi alam"
+    },
+    "save_failed": {
+        "message": "Hindi na-save ang login."
+    },
+    "entries_empty": {
+        "message": "Walang entry para sa page na ito."
+    },
+    "entry_fill_tooltip": {
+        "message": "Punan"
+    },
+    "fill_no_form": {
+        "message": "Walang login form na natagpuan sa page na ito."
+    },
+    "fill_no_access": {
+        "message": "Walang access ang extension sa page na ito. Payagan ang access sa website na ito sa Safari settings at i-reload ang page."
+    },
+    "status_associating": {
+        "message": "Kumokonekta… (pakikumpirma ang dialog sa KeePassXC)"
+    },
+    "status_not_associated": {
+        "message": "KeePassXC $VERSION$ – hindi pa konektado.",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_connected": {
+        "message": "Konektado sa KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "copied_to_clipboard": {
+        "message": "(nakopya sa clipboard)"
+    },
+    "password_copied": {
+        "message": "Nagawa at nakopya ang password sa clipboard."
+    },
+    "clipboard_failed": {
+        "message": "Hindi available ang clipboard. Hindi ipinakita ang password."
+    },
+    "totp_no_website": {
+        "message": "Walang website sa aktibong tab."
+    },
+    "totp_no_entry": {
+        "message": "Walang TOTP entry para sa page na ito."
+    },
+    "save_banner_new": {
+        "message": "I-save ang login na “$LOGIN$” para sa site na ito sa KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_update": {
+        "message": "I-update ang naka-save na password para sa “$LOGIN$” sa KeePassXC?",
+        "placeholders": {
+            "login": {
+                "content": "$1"
+            }
+        }
+    },
+    "save_banner_button_save": {
+        "message": "I-save"
+    },
+    "save_banner_button_update": {
+        "message": "I-update"
+    },
+    "save_banner_dismiss": {
+        "message": "Mamaya na"
+    },
+    "save_group_label": {
+        "message": "I-save ang mga bagong login sa"
+    },
+    "save_group_default": {
+        "message": "Default na grupo (KeePassXC-Browser Passwords)"
+    },
+    "passkeys_toggle_label": {
+        "message": "Mga passkey sa pamamagitan ng KeePassXC"
+    },
+    "passkeys_toggle_hint": {
+        "message": "Magkakabisa pagkatapos mag-reload ng page. Kapag off, ang Safari ang humahawak ng mga passkey."
+    },
+    "passkeys_reload_hint": {
+        "message": "I-reload ang page para magkabisa ang pagbabago."
+    },
+    "passkeys_bridge_stopped": {
+        "message": "Hindi available ang mga passkey: hindi tumatakbo ang SafariKeePassXC app."
+    },
+    "passkeys_not_associated": {
+        "message": "Kumonekta sa KeePassXC para gumamit ng mga passkey."
+    },
+    "passkeys_unsupported_version": {
+        "message": "Kailangan ng mga passkey ang KeePassXC 2.7.7 o mas bago (nahanap: $VERSION$).",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "passkeys_page_not_active": {
+        "message": "Hindi aktibo ang passkey bridge sa page na ito. I-reload ang page at tiyaking may access ang extension sa website na ito."
+    },
+    "passkeys_fallback_reason": {
+        "message": "Ang huling passkey request ay pinangasiwaan ng Safari sa halip na KeePassXC ($REASON$).",
+        "placeholders": {
+            "reason": {
+                "content": "$1"
+            }
+        }
+    },
+    "nav_search": {
+        "message": "Maghanap"
+    },
+    "nav_generator": {
+        "message": "Generator"
+    },
+    "nav_settings": {
+        "message": "Mga setting"
+    },
+    "nav_back": {
+        "message": "Bumalik"
+    },
+    "screen_search_title": {
+        "message": "Maghanap sa vault"
+    },
+    "screen_generator_title": {
+        "message": "Password generator"
+    },
+    "screen_settings_title": {
+        "message": "Mga setting"
+    },
+    "status_connected_short": {
+        "message": "Konektado · $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "status_locked": {
+        "message": "Naka-lock ang vault"
+    },
+    "status_offline": {
+        "message": "Hindi tumatakbo ang KeePassXC"
+    },
+    "status_unpaired": {
+        "message": "Hindi naka-pair ang extension"
+    },
+    "section_for_site": {
+        "message": "Para sa site na ito"
+    },
+    "home_empty_title": {
+        "message": "Walang login para sa $DOMAIN$",
+        "placeholders": {
+            "domain": {
+                "content": "$1"
+            }
+        }
+    },
+    "home_empty_hint": {
+        "message": "Maghanap ng entry sa vault o hanapin ang iyong mga login."
+    },
+    "button_search": {
+        "message": "Maghanap"
+    },
+    "button_create": {
+        "message": "Gumawa"
+    },
+    "toast_filled": {
+        "message": "Napunan: $TITLE$",
+        "placeholders": {
+            "title": {
+                "content": "$1"
+            }
+        }
+    },
+    "toast_totp_copied": {
+        "message": "Nakopya ang TOTP code"
+    },
+    "toast_connected": {
+        "message": "Konektado"
+    },
+    "toast_reconnected": {
+        "message": "Muling konektado"
+    },
+    "toast_login_created": {
+        "message": "Nagawa ang bagong login"
+    },
+    "toast_password_copied": {
+        "message": "Nakopya ang password"
+    },
+    "toast_password_pasted": {
+        "message": "Na-paste ang password"
+    },
+    "error_offline_hint": {
+        "message": "Buksan ang KeePassXC at i-enable ang browser integration."
+    },
+    "error_locked_hint": {
+        "message": "I-unlock ang vault para makita ang iyong mga login."
+    },
+    "error_pairing_required": {
+        "message": "Kailangan ng pairing"
+    },
+    "error_unpaired_hint": {
+        "message": "Kumpirmahin ang koneksyon ng extension sa window ng KeePassXC."
+    },
+    "button_retry": {
+        "message": "Subukan muli"
+    },
+    "button_unlock_in_keepassxc": {
+        "message": "I-unlock sa KeePassXC"
+    },
+    "button_pair": {
+        "message": "I-pair"
+    },
+    "section_saving": {
+        "message": "Pag-save"
+    },
+    "section_autofill": {
+        "message": "Autofill"
+    },
+    "settings_save_prompt": {
+        "message": "Mag-alok na i-save ang mga password"
+    },
+    "settings_autofill": {
+        "message": "Autofill sa pag-load ng page"
+    },
+    "settings_autofill_hint": {
+        "message": "Kapag isang login lang ang natagpuan para sa site."
+    },
+    "section_connection": {
+        "message": "Koneksyon"
+    },
+    "settings_connected_to": {
+        "message": "Konektado sa KeePassXC $VERSION$",
+        "placeholders": {
+            "version": {
+                "content": "$1"
+            }
+        }
+    },
+    "settings_not_connected": {
+        "message": "Hindi konektado"
+    },
+    "settings_reconnect": {
+        "message": "Kumonekta muli"
+    },
+    "totp_copy_label": {
+        "message": "Kopyahin ang TOTP code"
+    },
+    "generator_length": {
+        "message": "Haba"
+    },
+    "generator_phrase_length": {
+        "message": "Haba ng parirala"
+    },
+    "generator_phrase": {
+        "message": "Passphrase"
+    },
+    "generator_phrase_hint": {
+        "message": "Mas madaling tandaan ang mga salitang pinaghihiwalay ng gitling."
+    },
+    "generator_strength_weak": {
+        "message": "Mahina"
+    },
+    "generator_strength_medium": {
+        "message": "Katamtaman"
+    },
+    "generator_strength_strong": {
+        "message": "Malakas"
+    },
+    "generator_strength_very_strong": {
+        "message": "Napakalakas"
+    },
+    "generator_keepassxc": {
+        "message": "KeePassXC password"
+    },
+    "generator_regenerate": {
+        "message": "Gumawa muli"
+    },
+    "generator_copy": {
+        "message": "Kopyahin ang password"
+    },
+    "search_clear": {
+        "message": "I-clear ang paghahanap"
+    },
+    "search_placeholder": {
+        "message": "Pamagat, username, o site"
+    },
+    "search_hint": {
+        "message": "Naghahanap ng mga login para sa site na ito."
+    },
+    "search_in_keepassxc": {
+        "message": "Maghanap sa KeePassXC"
+    },
+    "search_results": {
+        "message": "Natagpuan: $COUNT$",
+        "placeholders": {
+            "count": {
+                "content": "$1"
+            }
+        }
+    },
+    "search_all": {
+        "message": "Mga entry para sa site na ito"
+    },
+    "search_empty": {
+        "message": "Walang natagpuan"
+    },
+    "footer_author": {
+        "message": "ni Markus Griesslehner"
+    }
+}
