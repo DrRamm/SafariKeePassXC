@@ -33,8 +33,9 @@ A red CI run should block merging — enable branch protection on `main` to enfo
    - refuses to run unless the tag points to a commit on `main`;
    - fails immediately if the tag does not match the versions from step 1;
    - imports the signing certificates into a temporary keychain;
-   - archives the app in `Release` configuration and exports it with **Developer ID Application**
-     signing (automatic signing, profiles managed through the App Store Connect API key);
+   - installs the two Developer ID provisioning profiles;
+   - archives the app in `Release` configuration (automatic signing) and exports it with
+     **Developer ID Application** signing using the explicit profiles (manual signing);
    - verifies that the app and the embedded `.appex` carry a `Developer ID Application` authority;
    - notarizes the app, staples the ticket, and checks it with `spctl`;
    - builds `SafariKeePassXC-<version>.dmg` (app + `/Applications` shortcut), signs the DMG,
@@ -58,6 +59,8 @@ Add these under **Settings → Secrets and variables → Actions** (or with `gh 
 | `APPLE_NOTARY_KEY_P8` | Contents of the App Store Connect API key (`.p8`). |
 | `APPLE_NOTARY_KEY_ID` | Key ID of that API key. |
 | `APPLE_NOTARY_ISSUER_ID` | Issuer ID of the App Store Connect API key. |
+| `APPLE_PROFILE_APP_BASE64` | Base64 of the **Developer ID** provisioning profile for `yauheni.tech.SafariKeePassXC`. |
+| `APPLE_PROFILE_EXTENSION_BASE64` | Base64 of the **Developer ID** provisioning profile for `yauheni.tech.SafariKeePassXC.Extension`. |
 
 How to create them:
 
@@ -79,8 +82,16 @@ How to create them:
    copy the Key ID and Issuer ID.
 
 3. The App IDs `yauheni.tech.SafariKeePassXC` and
-   `yauheni.tech.SafariKeePassXC.Extension` must exist in that team, and the team must be allowed to
-   create Developer ID provisioning profiles.
+   `yauheni.tech.SafariKeePassXC.Extension` must exist in that team. Create a **Developer ID**
+   provisioning profile for each of them (Profiles → + → Distribution → Developer ID, select the
+   App ID and the Developer ID Application certificate), name them
+   `SafariKeePassXC Developer ID` and `SafariKeePassXC Extension Developer ID`, download them and
+   add them as the two profile secrets above:
+
+   ```bash
+   base64 -i SafariKeePassXC_Developer_ID.provisionprofile | pbcopy
+   base64 -i SafariKeePassXC_Extension_Developer_ID.provisionprofile | pbcopy
+   ```
 
 The certificates and the API key are only used inside the release workflow; the temporary keychain
 and the API key file are deleted at the end of the run.

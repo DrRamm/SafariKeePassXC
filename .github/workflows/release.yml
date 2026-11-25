@@ -106,11 +106,20 @@ jobs:
             -authenticationKeyID "$KEY_ID" \
             -authenticationKeyIssuerID "$ISSUER_ID"
 
+      - name: Install Developer ID provisioning profiles
+        env:
+          PROFILE_APP_BASE64: ${{ secrets.APPLE_PROFILE_APP_BASE64 }}
+          PROFILE_EXTENSION_BASE64: ${{ secrets.APPLE_PROFILE_EXTENSION_BASE64 }}
+        run: |
+          profiles="$HOME/Library/MobileDevice/Provisioning Profiles"
+          mkdir -p "$profiles"
+          printf '%s' "$PROFILE_APP_BASE64" | base64 -D > "$profiles/SafariKeePassXC_Developer_ID.provisionprofile"
+          printf '%s' "$PROFILE_EXTENSION_BASE64" | base64 -D > "$profiles/SafariKeePassXC_Extension_Developer_ID.provisionprofile"
+          ls -la "$profiles"
+
       - name: Export and sign with Developer ID
         env:
           TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          KEY_ID: ${{ secrets.APPLE_NOTARY_KEY_ID }}
-          ISSUER_ID: ${{ secrets.APPLE_NOTARY_ISSUER_ID }}
         run: |
           cat > "$RUNNER_TEMP/ExportOptions.plist" <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
@@ -120,11 +129,18 @@ jobs:
             <key>method</key>
             <string>developer-id</string>
             <key>signingStyle</key>
-            <string>automatic</string>
+            <string>manual</string>
             <key>signingCertificate</key>
             <string>Developer ID Application</string>
             <key>teamID</key>
             <string>$TEAM_ID</string>
+            <key>provisioningProfiles</key>
+            <dict>
+              <key>yauheni.tech.SafariKeePassXC</key>
+              <string>SafariKeePassXC Developer ID</string>
+              <key>yauheni.tech.SafariKeePassXC.Extension</key>
+              <string>SafariKeePassXC Extension Developer ID</string>
+            </dict>
           </dict>
           </plist>
           EOF
@@ -132,11 +148,7 @@ jobs:
           xcodebuild -exportArchive \
             -archivePath build/SafariKeePassXC.xcarchive \
             -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
-            -exportPath build/export \
-            -allowProvisioningUpdates \
-            -authenticationKeyPath "$RUNNER_TEMP/AuthKey.p8" \
-            -authenticationKeyID "$KEY_ID" \
-            -authenticationKeyIssuerID "$ISSUER_ID"
+            -exportPath build/export
 
       - name: Verify the app signature
         run: |
