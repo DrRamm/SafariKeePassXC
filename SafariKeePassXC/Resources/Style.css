@@ -15,12 +15,6 @@
     height: 96px;
 }
 
-@media (prefers-color-scheme: dark) {
-    .app-icon {
-        filter: brightness(0) invert(1);
-    }
-}
-
 html {
     height: 100%;
 }

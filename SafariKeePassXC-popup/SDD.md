@@ -163,7 +163,7 @@ The design's `--glass-bg` and `--glass-shadow` are intentionally not ported: the
 | Toast | Bottom pill, 1.8 s, check icon | Replaces the `<pre id="result">` block |
 | Theme | System only | `prefers-color-scheme` |
 
-**Brand mark.** One mark everywhere: a blue rounded square with a white diagonal key (the header tile). It is used for the Safari toolbar icon (`images/toolbar-icon-{16,19,32,38}.png`), the extension icons (`images/icon-{48..512}.png`), the macOS app icon (`Assets.xcassets/AppIcon.appiconset`) and the host window icon (`Resources/Icon.png`). The toolbar sizes are rendered from the same vector with a 1 px transparent margin so the square does not touch the slot edge.
+**Brand mark.** One key mark everywhere: the popup's thin key inside a blue rounded badge. It is used for the Safari toolbar icon (`images/toolbar-icon-{16,19,32,38}.png`, vector source `toolbar-icon.svg`), the extension icons (`images/icon-{48..512}.png`), the macOS app icon (`Assets.xcassets/AppIcon.appiconset`, vector master `scripts/app-icon.svg`) and the host window icon (`Resources/Icon.png`, full-bleed). The popup header keeps the design's flat blue tile with the same key glyph.
 
 Status text mapping (`AppState`):
 
