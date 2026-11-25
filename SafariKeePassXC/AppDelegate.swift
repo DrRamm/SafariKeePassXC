@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         Task {
             await bridgeServer.start()
         }
+        UpdateChecker.shared.startChecking()
     }
 
     // MARK: - Background mode

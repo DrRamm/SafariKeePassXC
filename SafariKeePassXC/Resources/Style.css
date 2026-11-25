@@ -81,3 +81,53 @@ button {
     font-size: 0.9em;
     color: color-mix(in srgb, currentColor 65%, transparent);
 }
+
+.update-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.2em 0.5em;
+
+    width: 100%;
+    max-width: 30em;
+    padding: 0.6em 1em;
+
+    border: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+    border-radius: 0.6em;
+    background: color-mix(in srgb, currentColor 6%, transparent);
+}
+
+.update-banner[hidden] {
+    display: none;
+}
+
+.update-banner .update-version {
+    font-weight: 600;
+}
+
+.update-banner .update-open {
+    cursor: pointer;
+    border: 1px solid color-mix(in srgb, currentColor 35%, transparent);
+    border-radius: 0.4em;
+    background: color-mix(in srgb, currentColor 10%, transparent);
+    color: inherit;
+    padding: 0.15em 0.7em;
+    font-size: 0.85em;
+    font-weight: 600;
+}
+
+.update-banner .update-open:hover {
+    background: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+/* Right-to-left languages (Arabic, Persian, Hebrew, Urdu) */
+
+[dir="rtl"] .setup {
+    text-align: right;
+}
+
+[dir="rtl"] .setup ol {
+    padding-left: 0;
+    padding-right: 1.4em;
+}
