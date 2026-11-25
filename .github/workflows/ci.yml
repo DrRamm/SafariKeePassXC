@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: Tests and consistency checks
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Show toolchain versions
+        run: |
+          xcodebuild -version
+          node --version
+
+      - name: Check version consistency
+        run: ./scripts/check-versions.sh
+
+      - name: Validate extension manifest and locales
+        run: |
+          python3 -m json.tool "SafariKeePassXC Extension/Resources/manifest.json" > /dev/null
+          count=0
+          while IFS= read -r -d '' file; do
+            python3 -m json.tool "$file" > /dev/null
+            count=$((count + 1))
+          done < <(find "SafariKeePassXC Extension/Resources/_locales" -name messages.json -print0)
+          if [[ "$count" -eq 0 ]]; then
+            echo "error: no locale message files found" >&2
+            exit 1
+          fi
+
+      - name: Run JavaScript tests
+        run: node --test tests/*.test.mjs
+
+      - name: Run Swift tests
+        run: |
+          xcodebuild test \
+            -project SafariKeePassXC.xcodeproj \
+            -scheme SafariKeePassXC \
+            -destination 'platform=macOS' \
+            -only-testing:SafariKeePassXCTests \
+            CODE_SIGNING_ALLOWED=NO

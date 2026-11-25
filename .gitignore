@@ -7,5 +7,10 @@ build/
 # Release artifacts
 dist/
 
+# Signing material (never commit certificates or API keys)
+*.p12
+AuthKey_*.p8
+*.cer
+
 # macOS
 .DS_Store

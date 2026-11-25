@@ -7,6 +7,7 @@ import Testing
 @testable import SafariKeePassXC
 import Foundation
 import Darwin
+import Security
 
 // MARK: - UnixSocketConnection
 
@@ -352,39 +353,56 @@ private struct EchoListener {
 
 // MARK: - BridgeToken.verify
 
-@Suite("BridgeToken.verify") struct BridgeTokenVerifyTests {
+// The data-protection keychain only works for a signed app that carries the
+// `keychain-access-groups` entitlement (and therefore a provisioning profile).
+// CI builds the tests with CODE_SIGNING_ALLOWED=NO, so skip the keychain-backed
+// tests there instead of failing on errSecMissingEntitlement.
+private let dataProtectionKeychainAvailable: Bool = {
+    guard let task = SecTaskCreateFromSelf(nil) else { return false }
+    let entitlementNames = [
+        "com.apple.application-identifier",
+        "keychain-access-groups",
+    ]
+    return entitlementNames.allSatisfy { name in
+        SecTaskCopyValueForEntitlement(task, name as CFString, nil) != nil
+    }
+}()
 
-    @Test func generatedTokenVerifiesItself() {
-        guard let token = BridgeToken.generate() else { return }
+@Suite("BridgeToken.verify", .enabled(if: dataProtectionKeychainAvailable))
+struct BridgeTokenVerifyTests {
+
+    @Test func generatedTokenVerifiesItself() throws {
+        let token = try #require(BridgeToken.generate())
         #expect(BridgeToken.verify(token))
     }
 
-    @Test func flippedFirstByteIsRejected() {
-        guard var token = BridgeToken.generate() else { return }
+    @Test func flippedFirstByteIsRejected() throws {
+        var token = try #require(BridgeToken.generate())
         token[0] ^= 0xFF
         #expect(!BridgeToken.verify(token))
     }
 
-    @Test func flippedLastByteIsRejected() {
-        guard var token = BridgeToken.generate() else { return }
+    @Test func flippedLastByteIsRejected() throws {
+        var token = try #require(BridgeToken.generate())
         token[token.count - 1] ^= 0x01
         #expect(!BridgeToken.verify(token))
     }
 
-    @Test func shorterDataIsRejected() {
-        _ = BridgeToken.generate()
+    @Test func shorterDataIsRejected() throws {
+        _ = try #require(BridgeToken.generate())
         #expect(!BridgeToken.verify(Data(repeating: 0, count: 16)))
     }
 
-    @Test func emptyDataIsRejected() {
-        _ = BridgeToken.generate()
+    @Test func emptyDataIsRejected() throws {
+        _ = try #require(BridgeToken.generate())
         #expect(!BridgeToken.verify(Data()))
     }
 }
 
 // MARK: - AssociationStore (Keychain integration)
 
-@Suite("AssociationStore", .serialized) struct AssociationStoreTests {
+@Suite("AssociationStore", .serialized, .enabled(if: dataProtectionKeychainAvailable))
+struct AssociationStoreTests {
 
     @Test func saveAndLoad() throws {
         let store = AssociationStore()
