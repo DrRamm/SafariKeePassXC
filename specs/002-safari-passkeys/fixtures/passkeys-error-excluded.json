@@ -1,6 +1,0 @@
-{
-  "_comment": "Synthetic decrypted passkeys error response. BrowserService::getPasskeyError wraps an integer code in the response object (KeePassXC 2.7.9).",
-  "response": {
-    "errorCode": 21
-  }
-}
